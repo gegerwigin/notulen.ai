@@ -1,0 +1,10 @@
+{
+  "name": "s3-cors-config",
+  "version": "1.0.0",
+  "description": "Script to configure CORS for S3 bucket",
+  "main": "configure-s3-cors.js",
+  "type": "commonjs",
+  "dependencies": {
+    "aws-sdk": "^2.1000.0"
+  }
+}

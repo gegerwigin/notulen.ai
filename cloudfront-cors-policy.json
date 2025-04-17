@@ -1,0 +1,37 @@
+{
+  "CORSRules": [
+    {
+      "AllowedHeaders": [
+        "Authorization",
+        "Content-Length",
+        "Content-Type",
+        "Content-Disposition",
+        "Content-Range",
+        "Range",
+        "X-Requested-With"
+      ],
+      "AllowedMethods": [
+        "GET",
+        "PUT",
+        "POST",
+        "DELETE",
+        "HEAD",
+        "OPTIONS"
+      ],
+      "AllowedOrigins": [
+        "http://localhost:5173",
+        "https://notula.ai",
+        "https://www.notula.ai",
+        "*"
+      ],
+      "ExposeHeaders": [
+        "ETag",
+        "Content-Length",
+        "Content-Type",
+        "Content-Disposition",
+        "Content-Range"
+      ],
+      "MaxAgeSeconds": 3600
+    }
+  ]
+}

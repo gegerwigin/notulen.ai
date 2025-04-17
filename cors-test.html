@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S3 CORS Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .success {
+            color: green;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>S3 CORS Test</h1>
+    
+    <div class="container">
+        <h2>Test GET Request</h2>
+        <p>This will test if we can make a GET request to your S3 bucket.</p>
+        <button id="testGet">Test GET Request</button>
+        <div id="getResult"></div>
+    </div>
+    
+    <div class="container">
+        <h2>Test PUT Request</h2>
+        <p>This will test if we can upload a file to your S3 bucket.</p>
+        <input type="file" id="fileInput">
+        <button id="testPut">Test PUT Request</button>
+        <div id="putResult"></div>
+    </div>
+    
+    <div class="container">
+        <h2>Test OPTIONS Request</h2>
+        <p>This will test the preflight OPTIONS request to your S3 bucket.</p>
+        <button id="testOptions">Test OPTIONS Request</button>
+        <div id="optionsResult"></div>
+    </div>
+
+    <script>
+        // S3 bucket configuration
+        const bucketName = 'catatai-audio-file';
+        const region = 'ap-southeast-1';
+        const endpoint = `https://s3.${region}.amazonaws.com/${bucketName}`;
+        
+        // Test GET request
+        document.getElementById('testGet').addEventListener('click', async () => {
+            const resultDiv = document.getElementById('getResult');
+            resultDiv.innerHTML = '<p>Testing GET request...</p>';
+            
+            try {
+                // Try to get a list of objects (or a specific object if you know one)
+                const response = await fetch(`${endpoint}/test-cors.txt`, {
+                    method: 'GET',
+                    mode: 'cors'
+                });
+                
+                if (response.ok) {
+                    resultDiv.innerHTML = `
+                        <p class="success">GET request successful!</p>
+                        <pre>${JSON.stringify(await response.text(), null, 2)}</pre>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `
+                        <p class="error">GET request failed with status: ${response.status}</p>
+                        <pre>${JSON.stringify(await response.text(), null, 2)}</pre>
+                    `;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <p class="error">GET request failed with error:</p>
+                    <pre>${error.message}</pre>
+                `;
+                console.error('GET Error:', error);
+            }
+        });
+        
+        // Test PUT request
+        document.getElementById('testPut').addEventListener('click', async () => {
+            const fileInput = document.getElementById('fileInput');
+            const resultDiv = document.getElementById('putResult');
+            
+            if (!fileInput.files.length) {
+                resultDiv.innerHTML = '<p class="error">Please select a file first</p>';
+                return;
+            }
+            
+            const file = fileInput.files[0];
+            resultDiv.innerHTML = '<p>Testing PUT request...</p>';
+            
+            try {
+                // Generate a unique key for the file
+                const key = `test-cors-${Date.now()}-${file.name}`;
+                
+                // Try to upload the file
+                const response = await fetch(`${endpoint}/${key}`, {
+                    method: 'PUT',
+                    mode: 'cors',
+                    headers: {
+                        'Content-Type': file.type,
+                    },
+                    body: file
+                });
+                
+                if (response.ok) {
+                    resultDiv.innerHTML = `
+                        <p class="success">PUT request successful!</p>
+                        <p>File uploaded to: ${endpoint}/${key}</p>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `
+                        <p class="error">PUT request failed with status: ${response.status}</p>
+                        <pre>${JSON.stringify(await response.text(), null, 2)}</pre>
+                    `;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <p class="error">PUT request failed with error:</p>
+                    <pre>${error.message}</pre>
+                `;
+                console.error('PUT Error:', error);
+            }
+        });
+        
+        // Test OPTIONS request
+        document.getElementById('testOptions').addEventListener('click', async () => {
+            const resultDiv = document.getElementById('optionsResult');
+            resultDiv.innerHTML = '<p>Testing OPTIONS request...</p>';
+            
+            try {
+                // Try to send an OPTIONS request
+                const xhr = new XMLHttpRequest();
+                xhr.open('OPTIONS', `${endpoint}/test-cors.txt`, true);
+                
+                xhr.onload = function() {
+                    resultDiv.innerHTML = `
+                        <p class="success">OPTIONS request completed with status: ${xhr.status}</p>
+                        <p>Response headers:</p>
+                        <pre>${xhr.getAllResponseHeaders()}</pre>
+                    `;
+                };
+                
+                xhr.onerror = function(error) {
+                    resultDiv.innerHTML = `
+                        <p class="error">OPTIONS request failed</p>
+                        <pre>Check console for details</pre>
+                    `;
+                    console.error('OPTIONS Error:', error);
+                };
+                
+                xhr.send();
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <p class="error">OPTIONS request failed with error:</p>
+                    <pre>${error.message}</pre>
+                `;
+                console.error('OPTIONS Error:', error);
+            }
+        });
+    </script>
+</body>
+</html>

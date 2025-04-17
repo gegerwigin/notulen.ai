@@ -1,0 +1,15 @@
+[Unit]
+Description=Meeting Bot Service
+After=network.target
+
+[Service]
+Type=simple
+User=bitnami
+WorkingDirectory=/home/bitnami/notulen.ai
+ExecStart=/usr/bin/node dist/index.js
+Restart=always
+RestartSec=10
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target 

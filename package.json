@@ -1,0 +1,29 @@
+{
+  "name": "notulen-ai-bot",
+  "version": "1.0.0",
+  "description": "Google Meet bot for Notulen AI",
+  "main": "src/meet.js",
+  "scripts": {
+    "start": "node src/meet.js"
+  },
+  "dependencies": {
+    "@types/axios": "^0.9.36",
+    "@types/uuid": "^10.0.0",
+    "axios": "^1.8.4",
+    "chromedriver": "^135.0.2",
+    "firebase": "^11.6.0",
+    "lucide-react": "^0.488.0",
+    "puppeteer": "^24.6.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.5.0",
+    "selenium-webdriver": "^4.31.0",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "typescript": "^5.8.3"
+  }
+}

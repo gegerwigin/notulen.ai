@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S3 CORS Test Sederhana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .success {
+            color: green;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>S3 CORS Test Sederhana</h1>
+    
+    <div class="container">
+        <h2>Upload File ke S3</h2>
+        <p>Pilih file untuk diupload ke S3 bucket Anda.</p>
+        <input type="file" id="fileInput">
+        <button id="uploadButton">Upload File</button>
+        <div id="uploadResult"></div>
+    </div>
+    
+    <script>
+        document.getElementById('uploadButton').addEventListener('click', async () => {
+            const fileInput = document.getElementById('fileInput');
+            const resultDiv = document.getElementById('uploadResult');
+            
+            if (!fileInput.files.length) {
+                resultDiv.innerHTML = '<p class="error">Silakan pilih file terlebih dahulu</p>';
+                return;
+            }
+            
+            const file = fileInput.files[0];
+            resultDiv.innerHTML = '<p>Mengupload file...</p>';
+            
+            // Konfigurasi S3
+            const bucketName = 'catatai-audio-file';
+            const region = 'ap-southeast-1';
+            const fileName = `test-cors-${Date.now()}-${file.name}`;
+            const endpoint = `https://s3.${region}.amazonaws.com/${bucketName}/${fileName}`;
+            
+            try {
+                // Upload file dengan fetch API
+                const response = await fetch(endpoint, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': file.type,
+                        'x-amz-acl': 'public-read'
+                    },
+                    body: file,
+                    mode: 'cors'
+                });
+                
+                if (response.ok) {
+                    resultDiv.innerHTML = `
+                        <p class="success">Upload berhasil!</p>
+                        <p>File diupload ke: ${endpoint}</p>
+                        <p>Coba akses file: <a href="${endpoint}" target="_blank">Buka File</a></p>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `
+                        <p class="error">Upload gagal dengan status: ${response.status}</p>
+                        <p>Detail:</p>
+                        <pre>${await response.text()}</pre>
+                        <p>Ini mungkin karena masalah CORS. Periksa konsol browser untuk detail lebih lanjut.</p>
+                    `;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <p class="error">Upload gagal dengan error:</p>
+                    <pre>${error.message}</pre>
+                    <p>Ini mungkin karena masalah CORS. Periksa konsol browser untuk detail lebih lanjut.</p>
+                `;
+                console.error('Upload Error:', error);
+            }
+        });
+    </script>
+</body>
+</html>

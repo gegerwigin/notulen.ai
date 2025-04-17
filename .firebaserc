@@ -1,0 +1,22 @@
+{
+  "projects": {
+    "staging": "sekreai",
+    "default": "sekreai"
+  },
+  "targets": {
+    "sekreai": {
+      "hosting": {
+        "production": [
+          "sekreai"
+        ],
+        "notula-ai": [
+          "notula-ai"
+        ],
+        "notula-custom": [
+          "notula"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

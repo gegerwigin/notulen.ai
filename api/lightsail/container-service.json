@@ -1,0 +1,25 @@
+{
+    "serviceName": "notulen-api",
+    "power": "small",
+    "scale": 1,
+    "containers": {
+        "api": {
+            "image": "notulen-api:latest",
+            "ports": {
+                "3001": "HTTP"
+            },
+            "environment": {
+                "DEEPSEEK_API_KEY": "sk-62b766e700124103aa727a53799be6ae",
+                "NODE_ENV": "production",
+                "CORS_ORIGIN": "*"
+            }
+        }
+    },
+    "publicEndpoint": {
+        "containerName": "api",
+        "containerPort": 3001,
+        "healthCheck": {
+            "path": "/health"
+        }
+    }
+} 

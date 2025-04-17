@@ -1,0 +1,41 @@
+2025-04-17T02:47:29.925Z: Starting browser (attempt 1/3)...
+2025-04-17T02:47:29.936Z: Starting browser initialization...
+2025-04-17T02:47:29.940Z: Created user data directory
+2025-04-17T02:47:32.314Z: Browser started successfully
+2025-04-17T02:47:32.332Z: Attempting to join meeting: https://meet.google.com/coh-kyoz-oga
+2025-04-17T02:47:32.772Z: Error in joinMeet:
+TypeError: page.setPermissions is not a function
+    at joinMeet (D:\Project\notulen.ai\src\meet.cjs:133:16)
+    at async main (D:\Project\notulen.ai\src\meet.cjs:242:23)
+2025-04-17T02:47:32.974Z: Saved error screenshot
+2025-04-17T02:47:32.988Z: Attempt 1 failed:
+TypeError: page.setPermissions is not a function
+    at joinMeet (D:\Project\notulen.ai\src\meet.cjs:133:16)
+    at async main (D:\Project\notulen.ai\src\meet.cjs:242:23)
+2025-04-17T02:47:32.990Z: Retrying in 5 seconds...
+2025-04-17T02:47:38.007Z: Attempting to join meeting: https://meet.google.com/coh-kyoz-oga
+2025-04-17T02:47:38.238Z: Error in joinMeet:
+TypeError: page.setPermissions is not a function
+    at joinMeet (D:\Project\notulen.ai\src\meet.cjs:133:16)
+    at async main (D:\Project\notulen.ai\src\meet.cjs:242:23)
+2025-04-17T02:47:38.397Z: Saved error screenshot
+2025-04-17T02:47:38.403Z: Attempt 2 failed:
+TypeError: page.setPermissions is not a function
+    at joinMeet (D:\Project\notulen.ai\src\meet.cjs:133:16)
+    at async main (D:\Project\notulen.ai\src\meet.cjs:242:23)
+2025-04-17T02:47:38.405Z: Retrying in 10 seconds...
+2025-04-17T02:47:48.410Z: Attempting to join meeting: https://meet.google.com/coh-kyoz-oga
+2025-04-17T02:47:48.562Z: Error in joinMeet:
+TypeError: page.setPermissions is not a function
+    at joinMeet (D:\Project\notulen.ai\src\meet.cjs:133:16)
+    at async main (D:\Project\notulen.ai\src\meet.cjs:242:23)
+2025-04-17T02:47:48.689Z: Saved error screenshot
+2025-04-17T02:47:48.691Z: Attempt 3 failed:
+TypeError: page.setPermissions is not a function
+    at joinMeet (D:\Project\notulen.ai\src\meet.cjs:133:16)
+    at async main (D:\Project\notulen.ai\src\meet.cjs:242:23)
+2025-04-17T02:47:48.692Z: Max retries reached, exiting...
+2025-04-17T02:47:48.693Z: Fatal error:
+TypeError: page.setPermissions is not a function
+    at joinMeet (D:\Project\notulen.ai\src\meet.cjs:133:16)
+    at async main (D:\Project\notulen.ai\src\meet.cjs:242:23)

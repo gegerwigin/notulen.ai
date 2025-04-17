@@ -1,0 +1,14 @@
+[15396:14592:0416/141108.511:INFO:chrome_browser_cloud_management_controller.cc(202)] No machine level policy manager exists.
+[16036:4016:0416/141108.824:INFO:cpu_info.cc(53)] Available number of cores: 4
+[15152:22708:0416/141109.249:VERBOSE1:viz_main_impl.cc(85)] VizNullHypothesis is disabled (not a warning)
+[5688:13212:0416/141109.482:INFO:cpu_info.cc(53)] Available number of cores: 4
+[7044:22872:0416/141109.720:INFO:cpu_info.cc(53)] Available number of cores: 4
+[15396:14592:0416/141110.281:INFO:CONSOLE(700)] "%c%s color:teal;font-size:24px Developing an extension for Meet? An add-on would work better.", source: /_/scs/mss-static/_/js/k=boq-rtc.MeetingsDesktopUi.en.BE4p06XSqHg.2020.O/am=DgSAQBoNEQBGkAMAKiAAAIAysDGMgAHk4AAgwAAAAARQFIIYAwAA4QYAAR1_AV8nUg7AAg/d=1/excm=_b,_tp,errorview/ed=1/dg=0/br=0/wt=2/ujg=1/rs=AL5CKSFvLg3nVxq_3bLS0M2AXmfsc0vzXg/m=_b,_tp (700)
+[15396:14592:0416/141110.281:INFO:CONSOLE(700)] "%c%s color:teal;font-size:16px Extensions frequently cause user issues by altering the page.", source: /_/scs/mss-static/_/js/k=boq-rtc.MeetingsDesktopUi.en.BE4p06XSqHg.2020.O/am=DgSAQBoNEQBGkAMAKiAAAIAysDGMgAHk4AAgwAAAAARQFIIYAwAA4QYAAR1_AV8nUg7AAg/d=1/excm=_b,_tp,errorview/ed=1/dg=0/br=0/wt=2/ujg=1/rs=AL5CKSFvLg3nVxq_3bLS0M2AXmfsc0vzXg/m=_b,_tp (700)
+[15396:14592:0416/141110.281:INFO:CONSOLE(701)] "%c%s font-size:16px https://developers.google.com/meet/add-ons", source: /_/scs/mss-static/_/js/k=boq-rtc.MeetingsDesktopUi.en.BE4p06XSqHg.2020.O/am=DgSAQBoNEQBGkAMAKiAAAIAysDGMgAHk4AAgwAAAAARQFIIYAwAA4QYAAR1_AV8nUg7AAg/d=1/excm=_b,_tp,errorview/ed=1/dg=0/br=0/wt=2/ujg=1/rs=AL5CKSFvLg3nVxq_3bLS0M2AXmfsc0vzXg/m=_b,_tp (701)
+[10424:15804:0416/141110.289:INFO:cpu_info.cc(53)] Available number of cores: 4
+[15396:14592:0416/141110.298:INFO:CONSOLE(630)] "%c%s color: red; background: yellow; font-size: 24px; WARNING!", source: /_/scs/mss-static/_/js/k=boq-rtc.MeetingsDesktopUi.en.BE4p06XSqHg.2020.O/am=DgSAQBoNEQBGkAMAKiAAAIAysDGMgAHk4AAgwAAAAARQFIIYAwAA4QYAAR1_AV8nUg7AAg/d=1/excm=_b,_tp,errorview/ed=1/dg=0/br=0/wt=2/ujg=1/rs=AL5CKSFvLg3nVxq_3bLS0M2AXmfsc0vzXg/m=_b,_tp (630)
+[15396:14592:0416/141110.298:INFO:CONSOLE(630)] "%c%s font-size: 18px; Using this console may allow attackers to impersonate you and steal your information using an attack called Self-XSS.
+Do not enter or paste code that you do not understand.", source: /_/scs/mss-static/_/js/k=boq-rtc.MeetingsDesktopUi.en.BE4p06XSqHg.2020.O/am=DgSAQBoNEQBGkAMAKiAAAIAysDGMgAHk4AAgwAAAAARQFIIYAwAA4QYAAR1_AV8nUg7AAg/d=1/excm=_b,_tp,errorview/ed=1/dg=0/br=0/wt=2/ujg=1/rs=AL5CKSFvLg3nVxq_3bLS0M2AXmfsc0vzXg/m=_b,_tp (630)
+[15396:14592:0416/141110.905:INFO:CONSOLE(0)] "Banner not shown: beforeinstallpromptevent.preventDefault() called. The page must call beforeinstallpromptevent.prompt() to show the banner.", source: https://meet.google.com/_meet/whoops?sc=232&authuser=0 (0)
+[20264:14904:0416/141110.965:INFO:cpu_info.cc(53)] Available number of cores: 4

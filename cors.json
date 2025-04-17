@@ -1,0 +1,25 @@
+[
+  {
+    "origin": [
+      "http://localhost:5173",
+      "https://notula.ai",
+      "https://www.notula.ai",
+      "https://notula.web.app",
+      "https://notula-ai.web.app",
+      "https://sekreai.web.app"
+    ],
+    "method": ["GET", "PUT", "POST", "DELETE", "HEAD", "OPTIONS"],
+    "maxAgeSeconds": 3600,
+    "responseHeader": [
+      "Content-Type",
+      "Content-Disposition",
+      "Content-Length",
+      "Authorization",
+      "Content-Range",
+      "Range",
+      "X-Requested-With",
+      "Access-Control-Allow-Origin",
+      "*"
+    ]
+  }
+]

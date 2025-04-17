@@ -1,0 +1,19 @@
+[Unit]
+Description=Notulen AI Meeting Bot
+After=network.target
+
+[Service]
+Type=simple
+User=bitnami
+WorkingDirectory=/home/bitnami/notulen-bot
+Environment=GOOGLE_EMAIL=notula.ai2025@gmail.com
+Environment=GOOGLE_PASSWORD=1sampai9
+Environment=NODE_ENV=production
+Environment=DISPLAY=:99
+ExecStartPre=/bin/bash -c 'Xvfb :99 -screen 0 1280x720x24 > /dev/null 2>&1 &'
+ExecStart=/usr/bin/node meet.cjs
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target 

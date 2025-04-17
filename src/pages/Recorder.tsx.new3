@@ -1,0 +1,801 @@
+import { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import {
+  serverTimestamp,
+  doc,
+  setDoc
+} from 'firebase/firestore';
+import { db } from '../firebase';
+import { useAuth } from '../contexts/AuthContext';
+import Navbar from '../components/Navbar';
+import TranscriptionSettings from '../components/TranscriptionSettings';
+import { v4 as uuidv4 } from 'uuid';
+import { 
+  CircleAlert, 
+  Mic, 
+  Save, 
+  Square, 
+  Trash2, 
+  User, 
+  Users, 
+  Settings 
+} from 'lucide-react';
+import { generateSemanticTitle } from '../services/deepseekAPI';
+import { 
+  initializeAudioProcessing, 
+  enableNoiseReduction, 
+  cleanupAudioProcessing 
+} from '../services/audioProcessingService';
+import { 
+  correctTranscription 
+} from '../services/transcriptionCorrectionService';
+import {
+  initializeDiarization,
+  cleanupDiarization
+} from '../services/speakerDiarizationService';
+
+// Define the SpeechRecognition type
+interface SpeechRecognition extends EventTarget {
+  continuous: boolean;
+  interimResults: boolean;
+  lang: string;
+  start: () => void;
+  stop: () => void;
+  abort: () => void;
+  onerror: (event: any) => void;
+  onresult: (event: any) => void;
+  onend: () => void;
+}
+
+// Define the window with SpeechRecognition property
+declare global {
+  interface Window {
+    SpeechRecognition: new () => SpeechRecognition;
+    webkitSpeechRecognition: new () => SpeechRecognition;
+  }
+}
+
+// Track transcript segments by potential speaker
+interface TranscriptSegment {
+  text: string;
+  speaker: number;
+  isFinal: boolean;
+  confidence?: number;
+  startTime?: number;
+  endTime?: number;
+}
+
+export default function Recorder() {
+  const [isRecording, setIsRecording] = useState(false);
+  const [transcription, setTranscription] = useState('');
+  const [title, setTitle] = useState('');
+  const [recordingTime, setRecordingTime] = useState(0);
+  const [error, setError] = useState('');
+  const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'success' | 'error'>('idle');
+  const [isRecognitionSupported, setIsRecognitionSupported] = useState(true);
+  const [interimTranscript, setInterimTranscript] = useState('');
+  const [transcriptSegments, setTranscriptSegments] = useState<TranscriptSegment[]>([]);
+  const [currentSpeaker, setCurrentSpeaker] = useState(1);
+  const [silenceTimer, setSilenceTimer] = useState<null | NodeJS.Timeout>(null);
+  const [isGeneratingTitle, setIsGeneratingTitle] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
+  
+  // New transcription settings state
+  const [selectedLanguage, setSelectedLanguage] = useState('id-ID');
+  const [speakerCount, setSpeakerCount] = useState(3);
+  const [noiseReductionEnabled, setNoiseReductionEnabled] = useState(true);
+  const [aiCorrectionEnabled, setAiCorrectionEnabled] = useState(true);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  
+  // Handler functions for transcription settings
+  const toggleSettings = () => {
+    setIsSettingsOpen(!isSettingsOpen);
+  };
+  
+  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedLanguage(e.target.value);
+    // If currently recording, stop and restart with new language
+    if (isRecording && recognitionRef.current) {
+      try {
+        recognitionRef.current.stop();
+        // Recognition will auto-restart with new language due to the onend handler
+      } catch (err) {
+        console.error('Error stopping recognition for language change', err);
+      }
+    }
+  };
+  
+  const handleSpeakerCountChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const count = parseInt(e.target.value);
+    setSpeakerCount(count);
+    // Reinitialize diarization with new speaker count
+    initializeDiarization(count);
+  };
+  
+  const toggleNoiseReduction = () => {
+    const newState = !noiseReductionEnabled;
+    setNoiseReductionEnabled(newState);
+    enableNoiseReduction(newState);
+  };
+  
+  const toggleAiCorrection = () => {
+    setAiCorrectionEnabled(!aiCorrectionEnabled);
+  };
+  
+  const { currentUser } = useAuth();
+  const navigate = useNavigate();
+  
+  const recognitionRef = useRef<SpeechRecognition | null>(null);
+  const timerRef = useRef<number | null>(null);
+  const lastSpeechRef = useRef<number>(Date.now());
+
+  // Safe text rendering helper function
+  const safeText = (text: any): string => {
+    if (text === null || text === undefined) return '';
+    if (typeof text === 'string') return text;
+    if (text instanceof Promise) return '';
+    return String(text);
+  };
+
+  // Check if speech recognition is supported
+  useEffect(() => {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+      setIsRecognitionSupported(false);
+      setError('Speech recognition tidak didukung oleh browser Anda. Silakan gunakan Chrome atau Edge terbaru, atau gunakan input manual.');
+    }
+  }, []);
+  
+  // Setup speech recognition
+  useEffect(() => {
+    if (!isRecognitionSupported) return;
+    
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    const recognition = new SpeechRecognition();
+    
+    recognition.continuous = true;
+    recognition.interimResults = true;
+    recognition.lang = selectedLanguage; // Set to selected language
+    
+    recognition.onresult = (event) => {
+      let currentInterimTranscript = '';
+      let finalTranscript = '';
+      let confidence = 0;
+      
+      for (let i = event.resultIndex; i < event.results.length; i++) {
+        const transcript = event.results[i][0].transcript;
+        confidence = event.results[i][0].confidence;
+        
+        if (event.results[i].isFinal) {
+          finalTranscript += transcript;
+          
+          // Process audio features for speaker diarization if available
+          let speakerId = currentSpeaker;
+          
+          // In a real implementation, we would get actual audio data
+          // For now, we'll use the current speaker with a chance of changing based on silence
+          const timeSinceLastSpeech = Date.now() - lastSpeechRef.current;
+          if (timeSinceLastSpeech > 2000) {
+            // More likely to be a new speaker if there was silence
+            speakerId = (currentSpeaker % speakerCount) + 1;
+            setCurrentSpeaker(speakerId);
+          }
+          
+          // Apply AI correction if enabled
+          let processedTranscript = transcript;
+          if (aiCorrectionEnabled) {
+            processedTranscript = correctTranscription(transcript, selectedLanguage);
+          }
+          
+          // Add the segment with speaker information
+          const newSegment: TranscriptSegment = {
+            text: processedTranscript,
+            speaker: speakerId,
+            isFinal: true,
+            confidence: confidence,
+            startTime: recordingTime - (transcript.length / 10), // Rough estimate of start time
+            endTime: recordingTime
+          };
+          
+          setTranscriptSegments(prev => [...prev, newSegment]);
+          
+          // Update last speech timestamp
+          lastSpeechRef.current = Date.now();
+          
+          // Clear any existing silence timer
+          if (silenceTimer) {
+            clearTimeout(silenceTimer);
+          }
+          
+          // Set a new silence timer to detect potential speaker changes
+          const newTimer = setTimeout(() => {
+            // If significant silence (3 seconds), we might have a new speaker
+            const timeSinceLastSpeech = Date.now() - lastSpeechRef.current;
+            if (timeSinceLastSpeech > 3000) {
+              // Switch to a new speaker
+              setCurrentSpeaker(prev => (prev % speakerCount) + 1); // Cycle between speakers
+            }
+          }, 3000);
+          
+          setSilenceTimer(newTimer);
+        } else {
+          currentInterimTranscript += transcript;
+          
+          // Update interim segment
+          setTranscriptSegments(prev => [
+            ...prev.filter(segment => segment.isFinal),
+            {
+              text: currentInterimTranscript,
+              speaker: currentSpeaker,
+              isFinal: false,
+              confidence: confidence,
+              startTime: recordingTime - (currentInterimTranscript.length / 10),
+              endTime: recordingTime
+            }
+          ]);
+        }
+      }
+      
+      if (finalTranscript) {
+        setTranscription(prev => {
+          // Only add a space if the previous transcript doesn't end with a space or punctuation
+          const needsSpace = prev.length > 0 && 
+                            !prev.endsWith(' ') && 
+                            !prev.endsWith('.') && 
+                            !prev.endsWith('?') && 
+                            !prev.endsWith('!') && 
+                            !prev.endsWith(',');
+          
+          return prev + (needsSpace ? ' ' : '') + finalTranscript;
+        });
+      }
+      
+      setInterimTranscript(currentInterimTranscript);
+    };
+    
+    recognition.onerror = (event) => {
+      console.error('Speech recognition error', event);
+      
+      if (event.error === 'not-allowed') {
+        setError('Izin mikrofon ditolak. Silakan berikan izin mikrofon untuk merekam.');
+      } else if (event.error === 'no-speech') {
+        // This is a common error, ignore it or handle specially
+      } else {
+        setError(`Error dengan recognition: ${event.error}. Coba refresh halaman atau gunakan input manual.`);
+      }
+    };
+    
+    recognition.onend = () => {
+      // Only restart if still recording (user hasn't clicked stop)
+      if (isRecording) {
+        try {
+          recognition.start();
+        } catch (err) {
+          console.error('Failed to restart recognition', err);
+          setIsRecording(false);
+          setError('Rekaman terhenti secara tidak terduga. Silakan coba lagi.');
+        }
+      }
+    };
+    
+    recognitionRef.current = recognition;
+    
+    return () => {
+      if (recognitionRef.current) {
+        try {
+          recognitionRef.current.stop();
+        } catch (err) {
+          console.error('Error stopping recognition on cleanup', err);
+        }
+      }
+      
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
+      
+      if (silenceTimer) {
+        clearTimeout(silenceTimer);
+      }
+    };
+  }, [isRecognitionSupported, isRecording, silenceTimer, currentSpeaker, speakerCount, selectedLanguage, aiCorrectionEnabled]);
+  
+  // Request microphone permission explicitly
+  const requestMicrophonePermission = async () => {
+    try {
+      setError('');
+      // This will trigger the browser's permission prompt
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      
+      // Stop the tracks immediately, we just needed to request permission
+      stream.getTracks().forEach(track => track.stop());
+      
+      return true;
+    } catch (err: any) {
+      console.error('Error requesting microphone permission:', err);
+      
+      if (err.name === 'NotAllowedError' || err.name === 'PermissionDeniedError') {
+        setError('Izin akses mikrofon ditolak. Silakan berikan izin mikrofon untuk aplikasi ini di pengaturan browser Anda.');
+      } else if (err.name === 'NotFoundError' || err.name === 'DevicesNotFoundError') {
+        setError('Mikrofon tidak ditemukan. Pastikan mikrofon terhubung ke komputer Anda.');
+      } else {
+        setError(`Gagal mengakses mikrofon: ${err.message || 'Kesalahan tidak diketahui'}`);
+      }
+      
+      return false;
+    }
+  };
+  
+  const startRecording = async () => {
+    if (!recognitionRef.current || !isRecognitionSupported) {
+      setError('Speech recognition tidak didukung atau belum siap. Silakan gunakan browser yang kompatibel.');
+      return;
+    }
+    
+    // First explicitly request microphone permission
+    const permissionGranted = await requestMicrophonePermission();
+    if (!permissionGranted) {
+      return; // Don't proceed if permission wasn't granted
+    }
+    
+    setIsRecording(true);
+    setTranscription('');
+    setInterimTranscript('');
+    setTranscriptSegments([]);
+    setRecordingTime(0);
+    setError('');
+    setSaveStatus('idle');
+    setCurrentSpeaker(1);
+    lastSpeechRef.current = Date.now();
+    
+    try {
+      // Check if mediaDevices is supported
+      if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+        throw new Error('Browser Anda tidak mendukung akses mikrofon. Silakan gunakan browser modern seperti Chrome atau Firefox.');
+      }
+      
+      // Request microphone access with specific error handling
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        
+        // Apply audio processing if noise reduction is enabled
+        if (noiseReductionEnabled) {
+          await initializeAudioProcessing(stream);
+          enableNoiseReduction(true);
+        }
+        
+        // Initialize speaker diarization
+        initializeDiarization(speakerCount);
+        
+        // Set up recognition with selected language
+        recognitionRef.current.lang = selectedLanguage;
+        recognitionRef.current.start();
+        
+        // Start timer
+        timerRef.current = window.setInterval(() => {
+          setRecordingTime(prev => prev + 1);
+        }, 1000);
+      } catch (mediaError: any) {
+        console.error('Media access error:', mediaError);
+        
+        if (mediaError.name === 'NotFoundError' || mediaError.name === 'DevicesNotFoundError') {
+          throw new Error('Mikrofon tidak ditemukan. Pastikan mikrofon terhubung ke komputer Anda dan tidak digunakan oleh aplikasi lain.');
+        } else if (mediaError.name === 'NotAllowedError' || mediaError.name === 'PermissionDeniedError') {
+          throw new Error('Izin akses mikrofon ditolak. Silakan berikan izin akses mikrofon untuk aplikasi ini di pengaturan browser Anda.');
+        } else if (mediaError.name === 'NotReadableError' || mediaError.name === 'TrackStartError') {
+          throw new Error('Mikrofon tidak dapat diakses. Mikrofon mungkin sedang digunakan oleh aplikasi lain.');
+        } else {
+          throw new Error(`Gagal mengakses mikrofon: ${mediaError.message || 'Kesalahan tidak diketahui'}`);
+        }
+      }
+    } catch (err: any) {
+      console.error('Failed to start recording', err);
+      setError(err.message || 'Gagal memulai rekaman. Silakan refresh dan coba lagi.');
+      setIsRecording(false);
+    }
+  };
+  
+  const stopRecording = async () => {
+    setIsRecording(false);
+    
+    if (recognitionRef.current) {
+      try {
+        recognitionRef.current.stop();
+      } catch (err) {
+        console.error('Error stopping recognition', err);
+      }
+    }
+    
+    // Clean up audio processing
+    cleanupAudioProcessing();
+    
+    // Clean up diarization
+    cleanupDiarization();
+    
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+      timerRef.current = null;
+    }
+    
+    if (silenceTimer) {
+      clearTimeout(silenceTimer);
+      setSilenceTimer(null);
+    }
+    
+    // Add any remaining interim transcript to the final transcript
+    if (interimTranscript) {
+      setTranscription(prev => prev + interimTranscript + ' ');
+      setInterimTranscript('');
+      
+      // Also finalize any interim segments
+      setTranscriptSegments(prev => 
+        prev.map(segment => ({...segment, isFinal: true}))
+      );
+    }
+    
+    // Generate a title using Deepseek API
+    if (!title && transcription.length > 20) {
+      setIsGeneratingTitle(true);
+      
+      // Use an immediately invoked async function to properly handle the Promise
+      (async () => {
+        try {
+          const finalTranscription = transcription + (interimTranscript ? interimTranscript : '');
+          const aiTitle = await generateSemanticTitle(finalTranscription);
+          // Only set the title after the Promise has resolved
+          setTitle(typeof aiTitle === 'string' ? aiTitle : 'New Recording');
+        } catch (err) {
+          console.error('Error generating title:', err);
+          // Fallback to timestamp
+          const now = new Date();
+          setTitle(`Rekaman ${now.toLocaleDateString()} ${now.toLocaleTimeString()}`);
+        } finally {
+          setIsGeneratingTitle(false);
+        }
+      })();
+    }
+  };
+  
+  const saveTranscription = async () => {
+    if (!currentUser) {
+      setError('Anda harus login untuk menyimpan transkripsi');
+      return;
+    }
+    
+    if (!transcription && !interimTranscript) {
+      setError('Tidak ada transkripsi untuk disimpan');
+      return;
+    }
+    
+    try {
+      setIsSaving(true);
+      setSaveStatus('saving');
+      setError('');
+      
+      // Make sure we have a valid title
+      const finalTitle = safeText(title) || 'New Recording';
+      
+      // Make sure text is a string
+      const textToSave = safeText(transcription);
+      
+      console.log('Saving transcription to Firebase...');
+      console.log('User ID:', currentUser.uid);
+      console.log('Title:', finalTitle);
+      console.log('Content length:', textToSave.length);
+      
+      // Generate a custom ID
+      const docId = uuidv4();
+      
+      // Create the document with the custom ID
+      const docRef = doc(db, 'transcriptions', docId);
+      
+      // Prepare the data - ensure all values are serializable
+      const transcriptData = {
+        userId: currentUser.uid,
+        title: finalTitle,
+        content: textToSave,
+        duration: recordingTime,
+        createdAt: serverTimestamp(),
+        // Store speaker segments data in case we want to display it later
+        speakers: transcriptSegments
+          .filter(segment => segment.isFinal)
+          .map(segment => ({
+            text: safeText(segment.text),
+            speaker: segment.speaker
+          }))
+      };
+      
+      // Set the document with the data
+      await setDoc(docRef, transcriptData);
+      
+      console.log('Transcription saved successfully with ID:', docId);
+      setSaveStatus('success');
+      
+      // Navigate to the view page with the new document ID
+      navigate(`/view/${docId}`);
+    } catch (err: any) {
+      console.error('Error saving transcription:', err);
+      const errorMessage = err.message || 'Terjadi kesalahan saat menyimpan transkrip';
+      setError(`Gagal menyimpan transkrip: ${errorMessage}`);
+      setSaveStatus('error');
+    } finally {
+      setIsSaving(false);
+    }
+  };
+  
+  const clearTranscription = () => {
+    if (window.confirm('Yakin ingin menghapus transkripsi ini?')) {
+      setTranscription('');
+      setInterimTranscript('');
+      setTranscriptSegments([]);
+      setTitle('');
+      setRecordingTime(0);
+      setSaveStatus('idle');
+    }
+  };
+  
+  const formatTime = (seconds: number) => {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+  };
+  
+  return (
+    <div className="min-h-screen bg-gray-50 flex flex-col">
+      <Navbar />
+      
+      <div className="py-10 flex-grow">
+        <header>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 className="text-3xl font-bold leading-tight text-gray-900 tracking-tight">Rekam & Transkripsi</h1>
+          </div>
+        </header>
+        
+        <main className="flex-grow">
+          <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div className="px-4 py-8 sm:px-0">
+              {error && (
+                <div className="mb-4 p-4 bg-red-100 border border-red-400 text-red-800 rounded-md flex items-start">
+                  <CircleAlert className="h-5 w-5 mr-2 flex-shrink-0 mt-0.5" />
+                  <div className="text-base font-medium">{error}</div>
+                </div>
+              )}
+              
+              {!isRecognitionSupported && (
+                <div className="mb-4 p-4 bg-yellow-100 border border-yellow-400 text-yellow-800 rounded-md">
+                  <h3 className="text-lg font-semibold mb-2">Browser Anda tidak mendukung Speech Recognition</h3>
+                  <p className="text-base">
+                    Silakan gunakan browser terbaru seperti Chrome, Edge, atau Safari. Atau, Anda bisa menggunakan mode input manual di bawah.
+                  </p>
+                </div>
+              )}
+              
+              {/* Microphone permission notice */}
+              <div className="mb-4 p-4 bg-yellow-50 border border-yellow-200 rounded-md">
+                <p className="text-yellow-800 mb-2">
+                  Aplikasi ini memerlukan akses ke mikrofon Anda untuk transkripsi. Klik tombol di bawah untuk memberikan izin.
+                </p>
+                <button
+                  onClick={requestMicrophonePermission}
+                  className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  <Mic className="h-4 w-4 mr-2 inline" />
+                  Berikan Izin Mikrofon
+                </button>
+              </div>
+              
+              <div className="bg-white shadow-md overflow-hidden sm:rounded-lg">
+                <div className="px-4 py-5 sm:p-6">
+                  <div className="flex justify-between items-center mb-6">
+                    <div className="flex-grow mr-4 relative">
+                      <input
+                        type="text"
+                        placeholder="Judul transkripsi Anda"
+                        value={safeText(title)}
+                        onChange={(e) => setTitle(e.target.value)}
+                        className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-base text-gray-900"
+                        disabled={isRecording || isGeneratingTitle}
+                      />
+                      {isGeneratingTitle && (
+                        <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-700"></div>
+                        </div>
+                      )}
+                    </div>
+                    <div className="text-right">
+                      <div className="text-xl font-mono font-bold text-gray-900">
+                        {formatTime(recordingTime)}
+                      </div>
+                      {isRecording && (
+                        <div className="text-sm text-red-600 flex items-center justify-end mt-1 font-semibold">
+                          <span className="h-2 w-2 bg-red-600 rounded-full animate-pulse mr-1"></span>
+                          Merekam
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                  
+                  <div className="mb-6">
+                    <div className="relative">
+                      <div className="mt-4">
+                        <h3 className="text-lg font-semibold mb-2">Transkripsi:</h3>
+                        <div className="bg-white rounded-lg shadow-sm p-4 min-h-[200px] max-h-[400px] overflow-y-auto">
+                          {transcriptSegments.length > 0 ? (
+                            <div className="space-y-2">
+                              {transcriptSegments.map((segment, index) => (
+                                segment.isFinal && (
+                                  <div key={index} className="flex items-start">
+                                    <div 
+                                      className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mr-2 ${
+                                        segment.speaker === 1 ? 'bg-blue-100 text-blue-800' :
+                                        segment.speaker === 2 ? 'bg-green-100 text-green-800' :
+                                        segment.speaker === 3 ? 'bg-purple-100 text-purple-800' :
+                                        segment.speaker === 4 ? 'bg-yellow-100 text-yellow-800' :
+                                        segment.speaker === 5 ? 'bg-pink-100 text-pink-800' :
+                                        'bg-gray-100 text-gray-800'
+                                      }`}
+                                    >
+                                      <User className="h-4 w-4" />
+                                    </div>
+                                    <div className="flex-1">
+                                      <div className="flex items-center mb-1">
+                                        <span className="text-sm font-medium">
+                                          {`Speaker ${segment.speaker}`}
+                                        </span>
+                                        {segment.confidence && (
+                                          <span className="ml-2 text-xs text-gray-500">
+                                            {`${Math.round(segment.confidence * 100)}% confidence`}
+                                          </span>
+                                        )}
+                                        {segment.startTime && segment.endTime && (
+                                          <span className="ml-2 text-xs text-gray-500">
+                                            {`${Math.floor(segment.startTime / 60)}:${(segment.startTime % 60).toString().padStart(2, '0')} - ${Math.floor(segment.endTime / 60)}:${(segment.endTime % 60).toString().padStart(2, '0')}`}
+                                          </span>
+                                        )}
+                                      </div>
+                                      <p className="text-gray-800">{safeText(segment.text)}</p>
+                                    </div>
+                                  </div>
+                                )
+                              ))}
+                              
+                              {/* Interim transcript */}
+                              {interimTranscript && (
+                                <div className="flex items-start">
+                                  <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center mr-2 ${
+                                    currentSpeaker === 1 ? 'bg-blue-100 text-blue-800' :
+                                    currentSpeaker === 2 ? 'bg-green-100 text-green-800' :
+                                    currentSpeaker === 3 ? 'bg-purple-100 text-purple-800' :
+                                    currentSpeaker === 4 ? 'bg-yellow-100 text-yellow-800' :
+                                    currentSpeaker === 5 ? 'bg-pink-100 text-pink-800' :
+                                    'bg-gray-100 text-gray-800'
+                                  }`}>
+                                    <User className="h-4 w-4" />
+                                  </div>
+                                  <div className="flex-1">
+                                    <div className="flex items-center mb-1">
+                                      <span className="text-sm font-medium">
+                                        {`Speaker ${currentSpeaker}`}
+                                      </span>
+                                      <span className="ml-2 text-xs text-gray-500 italic">
+                                        (mendengarkan...)
+                                      </span>
+                                    </div>
+                                    <p className="text-gray-500 italic">{safeText(interimTranscript)}</p>
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                          ) : (
+                            <p className="text-gray-500 italic">
+                              {isRecording 
+                                ? "Mendengarkan... Mulai bicara untuk melihat transkripsi." 
+                                : "Klik tombol rekam untuk memulai transkripsi."}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {isRecognitionSupported && (
+                      <div className="mt-2 text-sm text-gray-600 flex items-center">
+                        <Users className="h-4 w-4 mr-1 text-gray-500" />
+                        Sistem akan mencoba mendeteksi pergantian pembicara berdasarkan jeda berbicara
+                      </div>
+                    )}
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-3 justify-center sm:justify-between">
+                    {!isRecording ? (
+                      <button
+                        onClick={startRecording}
+                        className="inline-flex items-center px-4 py-2 border border-transparent text-base font-semibold rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                        disabled={saveStatus === 'saving' || !isRecognitionSupported}
+                      >
+                        <Mic className="h-5 w-5 mr-2" />
+                        Mulai Rekaman
+                      </button>
+                    ) : (
+                      <button
+                        onClick={stopRecording}
+                        className="inline-flex items-center px-4 py-2 border border-transparent text-base font-semibold rounded-md shadow-sm text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+                      >
+                        <Square className="h-5 w-5 mr-2" />
+                        Hentikan Rekaman
+                      </button>
+                    )}
+                    
+                    <div className="flex gap-3">
+                      <button
+                        onClick={clearTranscription}
+                        className="inline-flex items-center px-4 py-2 border border-gray-300 text-base font-semibold rounded-md shadow-sm text-gray-800 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                        disabled={isRecording || (!transcription && !interimTranscript) || saveStatus === 'saving' || isGeneratingTitle}
+                      >
+                        <Trash2 className="h-5 w-5 mr-2" />
+                        Hapus
+                      </button>
+                      
+                      <button
+                        onClick={saveTranscription}
+                        disabled={isSaving || saveStatus === 'success'}
+                        className={`inline-flex items-center px-4 py-2 rounded-md text-white ${
+                          isSaving || saveStatus === 'success' 
+                            ? 'bg-gray-400 cursor-not-allowed' 
+                            : 'bg-green-600 hover:bg-green-700'
+                        }`}
+                      >
+                        <Save className="w-4 h-4 mr-2" />
+                        {isSaving ? 'Menyimpan...' : 'Simpan Transkripsi'}
+                      </button>
+                    </div>
+                    
+                    <button
+                      onClick={toggleSettings}
+                      className="inline-flex items-center px-4 py-2 border border-gray-300 text-base font-semibold rounded-md shadow-sm text-gray-800 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                    >
+                      <Settings className="h-5 w-5 mr-2" />
+                      Pengaturan
+                    </button>
+                  </div>
+                  
+                  {saveStatus === 'saving' && (
+                    <div className="mt-4 p-3 bg-yellow-50 border border-yellow-200 rounded-md flex items-center">
+                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-yellow-700 mr-2"></div>
+                      <p className="text-yellow-800 font-medium">Sedang menyimpan transkripsi ke database...</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+              
+              {!isRecognitionSupported && (
+                <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-md">
+                  <h3 className="text-lg font-semibold text-blue-900 mb-2">Tips untuk input manual:</h3>
+                  <ul className="list-disc pl-5 text-blue-800">
+                    <li className="mb-1">Gunakan text area di atas untuk mengetik transkripsi Anda</li>
+                    <li className="mb-1">Beri judul yang deskriptif untuk memudahkan pencarian</li>
+                    <li>Klik tombol "Simpan Transkripsi" setelah selesai</li>
+                  </ul>
+                </div>
+              )}
+              
+              {isSettingsOpen && (
+                <TranscriptionSettings
+                  selectedLanguage={selectedLanguage}
+                  onLanguageChange={handleLanguageChange}
+                  speakerCount={speakerCount}
+                  onSpeakerCountChange={handleSpeakerCountChange}
+                  noiseReductionEnabled={noiseReductionEnabled}
+                  onToggleNoiseReduction={toggleNoiseReduction}
+                  aiCorrectionEnabled={aiCorrectionEnabled}
+                  onToggleAiCorrection={toggleAiCorrection}
+                  isOpen={isSettingsOpen}
+                  onToggle={toggleSettings}
+                />
+              )}
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  );
+}
+

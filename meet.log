@@ -1,0 +1,2605 @@
+[2025-04-16T03:37:30.981Z] Starting script...
+[2025-04-16T03:37:31.146Z] Killed existing Chrome processes
+[2025-04-16T03:37:33.164Z] Initializing driver with persistent profile
+[2025-04-16T03:37:34.197Z] Browser started successfully
+[2025-04-16T03:37:34.197Z] Checking login status...
+[2025-04-16T03:37:38.223Z] Login diperlukan, mencoba login otomatis...
+[2025-04-16T03:37:42.149Z] Memasukkan email...
+[2025-04-16T03:37:43.529Z] Mencoba selector next button: button[jsname="LgbsSe"]
+[2025-04-16T03:37:43.591Z] Mencoba selector next button: #identifierNext
+[2025-04-16T03:37:46.759Z] Memasukkan password...
+[2025-04-16T03:37:47.976Z] Mencoba selector password next button: button[jsname="LgbsSe"]
+[2025-04-16T03:37:48.031Z] Mencoba selector password next button: #passwordNext
+[2025-04-16T03:37:48.156Z] Menunggu proses login...
+[2025-04-16T03:37:53.194Z] Login berhasil!
+[2025-04-16T03:37:58.207Z] Navigasi ke meeting...
+[2025-04-16T03:38:11.289Z] No dismiss button found, continuing...
+[2025-04-16T03:38:11.290Z] Waiting for Join now button...
+[2025-04-16T03:38:11.501Z] Saved pre-join screenshot
+[2025-04-16T03:38:11.502Z] Trying to find button with selector: button[jsname="Qx7uuf"]
+[2025-04-16T03:38:16.597Z] Could not find button with selector button[jsname="Qx7uuf"]: Waiting for element to be located By(css selector, button[jsname="Qx7uuf"])
+Wait timed out after 5094ms
+[2025-04-16T03:38:16.599Z] Trying to find button with selector: button[jsname="QkA63b"]
+[2025-04-16T03:38:21.766Z] Could not find button with selector button[jsname="QkA63b"]: Waiting for element to be located By(css selector, button[jsname="QkA63b"])
+Wait timed out after 5165ms
+[2025-04-16T03:38:21.768Z] Trying to find button with selector: [aria-label*="Ask to join"]
+[2025-04-16T03:38:26.878Z] Could not find button with selector [aria-label*="Ask to join"]: Waiting for element to be located By(css selector, [aria-label*="Ask to join"])
+Wait timed out after 5107ms
+[2025-04-16T03:38:26.881Z] Trying to find button with selector: [aria-label*="Join now"]
+[2025-04-16T03:38:31.965Z] Could not find button with selector [aria-label*="Join now"]: Waiting for element to be located By(css selector, [aria-label*="Join now"])
+Wait timed out after 5083ms
+[2025-04-16T03:38:31.966Z] Trying to find button with selector: button[data-is-muted="true"]
+[2025-04-16T03:38:37.045Z] Could not find button with selector button[data-is-muted="true"]: Waiting for element to be located By(css selector, button[data-is-muted="true"])
+Wait timed out after 5078ms
+[2025-04-16T03:38:37.048Z] No button found with standard selectors, trying alternative methods...
+[2025-04-16T03:38:37.399Z] Saved failure screenshot
+[2025-04-16T03:38:37.399Z] Fatal error in meeting session: Could not find or click any join button
+[2025-04-16T03:38:37.401Z] Cleaning up browser session...
+[2025-04-16T03:38:37.671Z] Fatal error in main function (attempt 1/3): Could not find or click any join button
+[2025-04-16T03:38:37.673Z] Retrying in 10 seconds...
+[2025-04-16T03:38:47.794Z] No Chrome processes to kill or unable to kill them
+[2025-04-16T03:38:49.807Z] Initializing driver with persistent profile
+[2025-04-16T03:38:51.048Z] Browser started successfully
+[2025-04-16T03:38:51.049Z] Checking login status...
+[2025-04-16T03:38:56.056Z] Sudah login dengan profil tersimpan
+[2025-04-16T03:38:56.057Z] Navigasi ke meeting...
+[2025-04-16T03:39:08.681Z] No dismiss button found, continuing...
+[2025-04-16T03:39:08.682Z] Waiting for Join now button...
+[2025-04-16T03:39:08.906Z] Saved pre-join screenshot
+[2025-04-16T03:39:08.907Z] Trying to find button with selector: button[jsname="Qx7uuf"]
+[2025-04-16T03:39:13.937Z] Could not find button with selector button[jsname="Qx7uuf"]: Waiting for element to be located By(css selector, button[jsname="Qx7uuf"])
+Wait timed out after 5030ms
+[2025-04-16T03:39:13.938Z] Trying to find button with selector: button[jsname="QkA63b"]
+[2025-04-16T03:39:18.981Z] Could not find button with selector button[jsname="QkA63b"]: Waiting for element to be located By(css selector, button[jsname="QkA63b"])
+Wait timed out after 5043ms
+[2025-04-16T03:39:18.982Z] Trying to find button with selector: [aria-label*="Ask to join"]
+[2025-04-16T03:39:24.098Z] Could not find button with selector [aria-label*="Ask to join"]: Waiting for element to be located By(css selector, [aria-label*="Ask to join"])
+Wait timed out after 5116ms
+[2025-04-16T03:39:24.099Z] Trying to find button with selector: [aria-label*="Join now"]
+2025-04-16T03:59:22.922Z: No Chrome processes to kill
+2025-04-16T03:59:22.927Z: Starting browser...
+2025-04-16T03:59:22.930Z: Attempt 1 failed: not a chrome.ServiceBuilder object
+2025-04-16T03:59:22.931Z: Retrying in 5 seconds...
+2025-04-16T03:59:28.059Z: No Chrome processes to kill
+2025-04-16T03:59:28.060Z: Starting browser...
+2025-04-16T03:59:28.060Z: Attempt 2 failed: not a chrome.ServiceBuilder object
+2025-04-16T03:59:28.061Z: Retrying in 5 seconds...
+2025-04-16T03:59:33.192Z: No Chrome processes to kill
+2025-04-16T03:59:33.193Z: Starting browser...
+2025-04-16T03:59:33.194Z: Attempt 3 failed: not a chrome.ServiceBuilder object
+2025-04-16T03:59:33.194Z: Max retries reached, exiting...
+2025-04-16T04:00:06.257Z: No Chrome processes to kill
+2025-04-16T04:00:06.265Z: Starting browser...
+2025-04-16T04:00:10.422Z: Navigated to meeting URL
+2025-04-16T04:00:10.604Z: Login required - taking screenshot
+2025-04-16T04:00:10.984Z: Error in joinMeet: Login required
+2025-04-16T04:00:11.014Z: Attempt 1 failed: Login required
+2025-04-16T04:00:11.774Z: Retrying in 5 seconds...
+2025-04-16T04:00:17.007Z: No Chrome processes to kill
+2025-04-16T04:00:17.008Z: Starting browser...
+2025-04-16T05:37:05.583Z: Killed existing Chrome processes
+2025-04-16T05:37:05.611Z: Starting browser (attempt 1/3)...
+2025-04-16T05:37:08.660Z: Attempting to join meeting: https://meet.google.com/gpx-qdzm-twm
+2025-04-16T05:37:11.562Z: Navigated to meeting URL
+2025-04-16T05:37:11.563Z: Waiting for join/login button...
+2025-04-16T05:37:41.644Z: Error in joinMeet
+Error: TimeoutError: Waiting for element to be located By(xpath, //span[contains(text(), 'Join now') or contains(text(), 'Ask to join')]|//a[contains(@href, 'accounts.google.com')])
+Wait timed out after 30079ms
+    at D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:929:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-16T05:37:41.645Z: Attempt 1 failed
+Error: TimeoutError: Waiting for element to be located By(xpath, //span[contains(text(), 'Join now') or contains(text(), 'Ask to join')]|//a[contains(@href, 'accounts.google.com')])
+Wait timed out after 30079ms
+    at D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:929:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-16T05:37:41.896Z: Retrying in 5 seconds...
+2025-04-16T05:37:47.053Z: No Chrome processes to kill
+2025-04-16T05:37:47.054Z: Starting browser (attempt 2/3)...
+2025-04-16T05:37:48.456Z: Attempting to join meeting: https://meet.google.com/gpx-qdzm-twm
+2025-04-16T05:37:51.144Z: Navigated to meeting URL
+2025-04-16T05:37:51.145Z: Waiting for join/login button...
+2025-04-16T05:38:21.379Z: Error in joinMeet
+Error: TimeoutError: Waiting for element to be located By(xpath, //span[contains(text(), 'Join now') or contains(text(), 'Ask to join')]|//a[contains(@href, 'accounts.google.com')])
+Wait timed out after 30228ms
+    at D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:929:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-16T05:38:21.381Z: Attempt 2 failed
+Error: TimeoutError: Waiting for element to be located By(xpath, //span[contains(text(), 'Join now') or contains(text(), 'Ask to join')]|//a[contains(@href, 'accounts.google.com')])
+Wait timed out after 30228ms
+    at D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:929:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-16T05:38:21.633Z: Retrying in 5 seconds...
+2025-04-16T05:38:26.784Z: No Chrome processes to kill
+2025-04-16T05:38:26.785Z: Starting browser (attempt 3/3)...
+2025-04-16T05:38:28.219Z: Attempting to join meeting: https://meet.google.com/gpx-qdzm-twm
+2025-04-16T05:38:30.209Z: Navigated to meeting URL
+2025-04-16T05:38:30.210Z: Waiting for join/login button...
+2025-04-16T05:39:00.261Z: Error in joinMeet
+Error: TimeoutError: Waiting for element to be located By(xpath, //span[contains(text(), 'Join now') or contains(text(), 'Ask to join')]|//a[contains(@href, 'accounts.google.com')])
+Wait timed out after 30050ms
+    at D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:929:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-16T05:39:00.263Z: Attempt 3 failed
+Error: TimeoutError: Waiting for element to be located By(xpath, //span[contains(text(), 'Join now') or contains(text(), 'Ask to join')]|//a[contains(@href, 'accounts.google.com')])
+Wait timed out after 30050ms
+    at D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:929:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-16T05:39:00.493Z: Max retries reached, exiting...
+2025-04-16T05:39:43.345Z: No Chrome processes to kill
+2025-04-16T05:39:43.349Z: Starting browser (attempt 1/3)...
+2025-04-16T05:39:45.173Z: Attempting to join meeting: https://meet.google.com/gpx-qdzm-twm
+2025-04-16T05:39:47.814Z: Navigated to meeting URL
+2025-04-16T05:39:47.816Z: Waiting for join/login button...
+2025-04-16T05:39:48.122Z: Looking for join button...
+2025-04-16T05:40:49.655Z: Error in joinMeet
+Error: TimeoutError: Waiting for element to be located By(xpath, //span[contains(text(), 'Join now') or contains(text(), 'Ask to join')])
+Wait timed out after 61523ms
+    at D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:929:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-16T05:40:49.657Z: Attempt 1 failed
+Error: TimeoutError: Waiting for element to be located By(xpath, //span[contains(text(), 'Join now') or contains(text(), 'Ask to join')])
+Wait timed out after 61523ms
+    at D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:929:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-16T05:40:50.004Z: Retrying in 5 seconds...
+2025-04-16T05:40:55.137Z: No Chrome processes to kill
+2025-04-16T05:40:55.138Z: Starting browser (attempt 2/3)...
+2025-04-16T05:40:56.519Z: Attempting to join meeting: https://meet.google.com/gpx-qdzm-twm
+2025-04-16T05:40:58.521Z: Navigated to meeting URL
+2025-04-16T05:40:58.522Z: Waiting for join/login button...
+2025-04-16T05:40:58.716Z: Looking for join button...
+2025-04-16T05:42:00.801Z: Error in joinMeet
+Error: TimeoutError: Waiting for element to be located By(xpath, //span[contains(text(), 'Join now') or contains(text(), 'Ask to join')])
+Wait timed out after 62084ms
+    at D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:929:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-16T05:42:00.804Z: Attempt 2 failed
+Error: TimeoutError: Waiting for element to be located By(xpath, //span[contains(text(), 'Join now') or contains(text(), 'Ask to join')])
+Wait timed out after 62084ms
+    at D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:929:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-16T05:42:01.139Z: Retrying in 5 seconds...
+2025-04-16T05:42:06.272Z: No Chrome processes to kill
+2025-04-16T05:42:06.273Z: Starting browser (attempt 3/3)...
+2025-04-16T05:42:07.667Z: Attempting to join meeting: https://meet.google.com/gpx-qdzm-twm
+2025-04-16T05:42:09.614Z: Navigated to meeting URL
+2025-04-16T05:42:09.619Z: Waiting for join/login button...
+2025-04-16T05:42:09.813Z: Looking for join button...
+2025-04-16T06:53:17.255Z: Error: Google account credentials not provided
+2025-04-16T06:53:36.887Z: Error: Google account credentials not provided
+2025-04-16T06:55:04.244Z: Error: Google account credentials not provided
+2025-04-16T06:56:12.475Z: Killed existing Chrome processes
+2025-04-16T06:56:12.517Z: Starting browser...
+2025-04-16T06:56:12.552Z: Starting browser initialization...
+2025-04-16T06:56:12.602Z: Chrome options configured
+2025-04-16T06:56:12.650Z: ChromeDriver service configured
+2025-04-16T06:56:12.686Z: Error in startBrowser:
+Error: TypeError: not a chrome.ServiceBuilder object
+    at Builder.setChromeService (D:\Project\notulen.ai\node_modules\selenium-webdriver\index.js:452:13)
+    at startBrowser (D:\Project\notulen.ai\src\meet.js:99:14)
+    at main (D:\Project\notulen.ai\src\meet.js:310:28)
+2025-04-16T06:56:12.716Z: Attempt 1/3 failed: not a chrome.ServiceBuilder object
+2025-04-16T06:56:12.740Z: Retrying in 5 seconds...
+2025-04-16T06:56:18.038Z: No Chrome processes to kill
+2025-04-16T06:56:18.064Z: Starting browser...
+2025-04-16T06:56:18.087Z: Starting browser initialization...
+2025-04-16T06:56:18.119Z: Chrome options configured
+2025-04-16T06:56:18.151Z: ChromeDriver service configured
+2025-04-16T06:56:18.186Z: Error in startBrowser:
+Error: TypeError: not a chrome.ServiceBuilder object
+    at Builder.setChromeService (D:\Project\notulen.ai\node_modules\selenium-webdriver\index.js:452:13)
+    at startBrowser (D:\Project\notulen.ai\src\meet.js:99:14)
+    at main (D:\Project\notulen.ai\src\meet.js:310:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-16T06:56:18.219Z: Attempt 2/3 failed: not a chrome.ServiceBuilder object
+2025-04-16T06:56:18.252Z: Retrying in 10 seconds...
+2025-04-16T06:56:28.477Z: No Chrome processes to kill
+2025-04-16T06:56:28.499Z: Starting browser...
+2025-04-16T06:56:28.520Z: Starting browser initialization...
+2025-04-16T06:56:28.541Z: Chrome options configured
+2025-04-16T06:56:28.565Z: ChromeDriver service configured
+2025-04-16T06:56:28.588Z: Error in startBrowser:
+Error: TypeError: not a chrome.ServiceBuilder object
+    at Builder.setChromeService (D:\Project\notulen.ai\node_modules\selenium-webdriver\index.js:452:13)
+    at startBrowser (D:\Project\notulen.ai\src\meet.js:99:14)
+    at main (D:\Project\notulen.ai\src\meet.js:310:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-16T06:56:28.616Z: Attempt 3/3 failed: not a chrome.ServiceBuilder object
+2025-04-16T06:56:28.639Z: Max retries reached, exiting...
+2025-04-16T06:57:08.780Z: No Chrome processes to kill
+2025-04-16T06:57:08.801Z: Starting browser...
+2025-04-16T06:57:08.817Z: Starting browser initialization...
+2025-04-16T06:57:08.834Z: Chrome options configured
+2025-04-16T06:57:08.857Z: ChromeDriver service configured
+2025-04-16T06:57:15.072Z: Browser started successfully
+2025-04-16T06:57:15.095Z: Browser initialized successfully
+2025-04-16T06:57:15.123Z: Attempting to join meeting: https://meet.google.com/test
+2025-04-16T06:57:16.837Z: Navigated to meeting URL
+2025-04-16T06:57:24.869Z: Initial page load wait complete
+2025-04-16T06:57:25.070Z: Login required - attempting login
+2025-04-16T06:57:25.086Z: Starting login process...
+2025-04-16T06:57:29.284Z: Entering email...
+2025-04-16T06:57:39.398Z: Error during login
+Error: TimeoutError: Waiting for element to be located By(css selector, *[name="identifier"])
+Wait timed out after 10089ms
+    at D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:929:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-16T06:57:39.419Z: Error checking login status:
+Error: TimeoutError: Waiting for element to be located By(css selector, *[name="identifier"])
+Wait timed out after 10089ms
+    at D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:929:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-16T06:57:39.619Z: Looking for join button...
+2025-04-16T06:57:39.636Z: Trying selector: //span[contains(text(), 'Join now')]
+2025-04-16T06:57:44.843Z: Failed with selector //span[contains(text(), 'Join now')]: Waiting for element to be located By(xpath, //span[contains(text(), 'Join now')])
+Wait timed out after 5187ms
+2025-04-16T06:57:44.871Z: Trying selector: //span[contains(text(), 'Ask to join')]
+2025-04-16T06:57:49.979Z: Failed with selector //span[contains(text(), 'Ask to join')]: Waiting for element to be located By(xpath, //span[contains(text(), 'Ask to join')])
+Wait timed out after 5086ms
+2025-04-16T06:57:49.999Z: Trying selector: //div[@role='button']//span[contains(text(), 'Join now')]
+2025-04-16T06:57:55.105Z: Failed with selector //div[@role='button']//span[contains(text(), 'Join now')]: Waiting for element to be located By(xpath, //div[@role='button']//span[contains(text(), 'Join now')])
+Wait timed out after 5086ms
+2025-04-16T06:57:55.127Z: Trying selector: //div[@role='button']//span[contains(text(), 'Ask to join')]
+2025-04-16T06:58:00.271Z: Failed with selector //div[@role='button']//span[contains(text(), 'Ask to join')]: Waiting for element to be located By(xpath, //div[@role='button']//span[contains(text(), 'Ask to join')])
+Wait timed out after 5119ms
+2025-04-16T06:58:00.294Z: Trying selector: //button[contains(., 'Join now')]
+2025-04-16T06:58:05.446Z: Failed with selector //button[contains(., 'Join now')]: Waiting for element to be located By(xpath, //button[contains(., 'Join now')])
+Wait timed out after 5131ms
+2025-04-16T06:58:05.479Z: Trying selector: //button[contains(., 'Ask to join')]
+2025-04-16T06:58:10.679Z: Failed with selector //button[contains(., 'Ask to join')]: Waiting for element to be located By(xpath, //button[contains(., 'Ask to join')])
+Wait timed out after 5176ms
+2025-04-16T06:58:10.716Z: Trying selector: [aria-label*='Join now']
+2025-04-16T06:58:15.938Z: Failed with selector [aria-label*='Join now']: Waiting for element to be located By(css selector, [aria-label*='Join now'])
+Wait timed out after 5160ms
+2025-04-16T06:58:15.965Z: Trying selector: [aria-label*='Ask to join']
+2025-04-16T06:58:21.074Z: Failed with selector [aria-label*='Ask to join']: Waiting for element to be located By(css selector, [aria-label*='Ask to join'])
+Wait timed out after 5010ms
+2025-04-16T06:58:21.103Z: Trying selector: button[jsname='Qx7uuf']
+2025-04-16T06:58:26.361Z: Failed with selector button[jsname='Qx7uuf']: Waiting for element to be located By(css selector, button[jsname='Qx7uuf'])
+Wait timed out after 5231ms
+2025-04-16T06:58:26.393Z: Trying selector: button[jsname='QkA63b']
+2025-04-16T06:58:31.688Z: Failed with selector button[jsname='QkA63b']: Waiting for element to be located By(css selector, button[jsname='QkA63b'])
+Wait timed out after 5207ms
+2025-04-16T06:58:31.717Z: Trying selector: [data-is-muted='true']
+2025-04-16T06:58:36.911Z: Failed with selector [data-is-muted='true']: Waiting for element to be located By(css selector, [data-is-muted='true'])
+Wait timed out after 5171ms
+2025-04-16T06:58:36.938Z: Trying selector: //button[contains(@data-tooltip, 'join')]
+2025-04-16T06:58:42.010Z: Failed with selector //button[contains(@data-tooltip, 'join')]: Waiting for element to be located By(xpath, //button[contains(@data-tooltip, 'join')])
+Wait timed out after 5049ms
+2025-04-16T06:58:42.036Z: Trying selector: //div[@role='button' and contains(@data-tooltip, 'join')]
+2025-04-16T06:58:47.250Z: Failed with selector //div[@role='button' and contains(@data-tooltip, 'join')]: Waiting for element to be located By(xpath, //div[@role='button' and contains(@data-tooltip, 'join')])
+Wait timed out after 5194ms
+2025-04-16T06:58:47.274Z: Trying selector: //button[contains(@aria-label, 'join')]
+2025-04-16T06:58:52.448Z: Failed with selector //button[contains(@aria-label, 'join')]: Waiting for element to be located By(xpath, //button[contains(@aria-label, 'join')])
+Wait timed out after 5148ms
+2025-04-16T06:58:52.467Z: Trying selector: //div[@role='button' and contains(@aria-label, 'join')]
+2025-04-16T06:58:57.676Z: Failed with selector //div[@role='button' and contains(@aria-label, 'join')]: Waiting for element to be located By(xpath, //div[@role='button' and contains(@aria-label, 'join')])
+Wait timed out after 5189ms
+2025-04-16T06:58:58.592Z: Error joining meeting:
+Error: Error: Could not find or click any join button
+    at joinMeet (D:\Project\notulen.ai\src\meet.js:278:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async main (D:\Project\notulen.ai\src\meet.js:305:13)
+2025-04-16T06:58:58.616Z: Attempt 1/3 failed: Could not find or click any join button
+2025-04-16T06:58:58.954Z: Retrying in 5 seconds...
+2025-04-16T06:59:04.301Z: Killed existing Chrome processes
+2025-04-16T06:59:04.335Z: Starting browser...
+2025-04-16T06:59:04.362Z: Starting browser initialization...
+2025-04-16T06:59:04.396Z: Chrome options configured
+2025-04-16T06:59:04.433Z: ChromeDriver service configured
+2025-04-16T06:59:06.285Z: Browser started successfully
+2025-04-16T06:59:06.312Z: Browser initialized successfully
+2025-04-16T06:59:06.334Z: Attempting to join meeting: https://meet.google.com/test
+2025-04-16T06:59:07.621Z: Navigated to meeting URL
+2025-04-16T06:59:15.667Z: Initial page load wait complete
+2025-04-16T06:59:15.865Z: Login required - attempting login
+2025-04-16T06:59:15.878Z: Starting login process...
+2025-04-16T06:59:20.396Z: Entering email...
+2025-04-16T06:59:30.607Z: Error during login
+Error: TimeoutError: Waiting for element to be located By(css selector, *[name="identifier"])
+Wait timed out after 10182ms
+    at D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:929:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-16T06:59:30.628Z: Error checking login status:
+Error: TimeoutError: Waiting for element to be located By(css selector, *[name="identifier"])
+Wait timed out after 10182ms
+    at D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:929:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-16T06:59:30.804Z: Looking for join button...
+2025-04-16T06:59:30.821Z: Trying selector: //span[contains(text(), 'Join now')]
+2025-04-16T06:59:35.948Z: Failed with selector //span[contains(text(), 'Join now')]: Waiting for element to be located By(xpath, //span[contains(text(), 'Join now')])
+Wait timed out after 5113ms
+2025-04-16T06:59:35.973Z: Trying selector: //span[contains(text(), 'Ask to join')]
+2025-04-16T06:59:41.117Z: Failed with selector //span[contains(text(), 'Ask to join')]: Waiting for element to be located By(xpath, //span[contains(text(), 'Ask to join')])
+Wait timed out after 5124ms
+2025-04-16T06:59:41.142Z: Trying selector: //div[@role='button']//span[contains(text(), 'Join now')]
+2025-04-16T06:59:46.292Z: Failed with selector //div[@role='button']//span[contains(text(), 'Join now')]: Waiting for element to be located By(xpath, //div[@role='button']//span[contains(text(), 'Join now')])
+Wait timed out after 5129ms
+2025-04-16T06:59:46.314Z: Trying selector: //div[@role='button']//span[contains(text(), 'Ask to join')]
+2025-04-16T06:59:51.863Z: Failed with selector //div[@role='button']//span[contains(text(), 'Ask to join')]: Waiting for element to be located By(xpath, //div[@role='button']//span[contains(text(), 'Ask to join')])
+Wait timed out after 5529ms
+2025-04-16T06:59:51.897Z: Trying selector: //button[contains(., 'Join now')]
+2025-04-16T06:59:57.128Z: Failed with selector //button[contains(., 'Join now')]: Waiting for element to be located By(xpath, //button[contains(., 'Join now')])
+Wait timed out after 5172ms
+2025-04-16T06:59:57.155Z: Trying selector: //button[contains(., 'Ask to join')]
+2025-04-16T07:00:02.314Z: Failed with selector //button[contains(., 'Ask to join')]: Waiting for element to be located By(xpath, //button[contains(., 'Ask to join')])
+Wait timed out after 5102ms
+2025-04-16T07:00:02.351Z: Trying selector: [aria-label*='Join now']
+2025-04-16T07:00:07.508Z: Failed with selector [aria-label*='Join now']: Waiting for element to be located By(css selector, [aria-label*='Join now'])
+Wait timed out after 5062ms
+2025-04-16T07:00:07.529Z: Trying selector: [aria-label*='Ask to join']
+2025-04-16T07:00:12.664Z: Failed with selector [aria-label*='Ask to join']: Waiting for element to be located By(css selector, [aria-label*='Ask to join'])
+Wait timed out after 5112ms
+2025-04-16T07:00:12.741Z: Trying selector: button[jsname='Qx7uuf']
+2025-04-16T07:00:17.928Z: Failed with selector button[jsname='Qx7uuf']: Waiting for element to be located By(css selector, button[jsname='Qx7uuf'])
+Wait timed out after 5133ms
+2025-04-16T07:00:17.949Z: Trying selector: button[jsname='QkA63b']
+2025-04-16T07:00:23.137Z: Failed with selector button[jsname='QkA63b']: Waiting for element to be located By(css selector, button[jsname='QkA63b'])
+Wait timed out after 5167ms
+2025-04-16T07:00:23.156Z: Trying selector: [data-is-muted='true']
+2025-04-16T07:00:28.384Z: Failed with selector [data-is-muted='true']: Waiting for element to be located By(css selector, [data-is-muted='true'])
+Wait timed out after 5209ms
+2025-04-16T07:00:28.408Z: Trying selector: //button[contains(@data-tooltip, 'join')]
+2025-04-16T07:00:33.764Z: Failed with selector //button[contains(@data-tooltip, 'join')]: Waiting for element to be located By(xpath, //button[contains(@data-tooltip, 'join')])
+Wait timed out after 5321ms
+2025-04-16T07:00:33.786Z: Trying selector: //div[@role='button' and contains(@data-tooltip, 'join')]
+2025-04-16T07:00:39.023Z: Failed with selector //div[@role='button' and contains(@data-tooltip, 'join')]: Waiting for element to be located By(xpath, //div[@role='button' and contains(@data-tooltip, 'join')])
+Wait timed out after 5217ms
+2025-04-16T07:00:39.049Z: Trying selector: //button[contains(@aria-label, 'join')]
+2025-04-16T07:00:44.239Z: Failed with selector //button[contains(@aria-label, 'join')]: Waiting for element to be located By(xpath, //button[contains(@aria-label, 'join')])
+Wait timed out after 5166ms
+2025-04-16T07:00:44.265Z: Trying selector: //div[@role='button' and contains(@aria-label, 'join')]
+2025-04-16T07:00:49.355Z: Failed with selector //div[@role='button' and contains(@aria-label, 'join')]: Waiting for element to be located By(xpath, //div[@role='button' and contains(@aria-label, 'join')])
+Wait timed out after 5001ms
+2025-04-16T07:00:50.245Z: Error joining meeting:
+Error: Error: Could not find or click any join button
+    at joinMeet (D:\Project\notulen.ai\src\meet.js:278:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async main (D:\Project\notulen.ai\src\meet.js:305:13)
+2025-04-16T07:00:50.285Z: Attempt 2/3 failed: Could not find or click any join button
+2025-04-16T07:00:50.651Z: Retrying in 10 seconds...
+2025-04-16T07:01:01.033Z: Killed existing Chrome processes
+2025-04-16T07:01:01.063Z: Starting browser...
+2025-04-16T07:01:01.095Z: Starting browser initialization...
+2025-04-16T07:01:01.125Z: Chrome options configured
+2025-04-16T07:01:01.153Z: ChromeDriver service configured
+2025-04-16T07:01:03.103Z: Browser started successfully
+2025-04-16T07:01:03.132Z: Browser initialized successfully
+2025-04-16T07:01:03.155Z: Attempting to join meeting: https://meet.google.com/test
+2025-04-16T07:01:04.494Z: Navigated to meeting URL
+2025-04-16T07:01:12.527Z: Initial page load wait complete
+2025-04-16T07:01:12.713Z: Login required - attempting login
+2025-04-16T07:01:12.732Z: Starting login process...
+2025-04-16T07:01:17.158Z: Entering email...
+2025-04-16T07:01:27.370Z: Error during login
+Error: TimeoutError: Waiting for element to be located By(css selector, *[name="identifier"])
+Wait timed out after 10188ms
+    at D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:929:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-16T07:01:27.390Z: Error checking login status:
+Error: TimeoutError: Waiting for element to be located By(css selector, *[name="identifier"])
+Wait timed out after 10188ms
+    at D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:929:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-16T07:01:27.603Z: Looking for join button...
+2025-04-16T07:01:27.621Z: Trying selector: //span[contains(text(), 'Join now')]
+2025-04-16T07:01:32.952Z: Failed with selector //span[contains(text(), 'Join now')]: Waiting for element to be located By(xpath, //span[contains(text(), 'Join now')])
+Wait timed out after 5309ms
+2025-04-16T07:01:32.975Z: Trying selector: //span[contains(text(), 'Ask to join')]
+2025-04-16T07:01:38.178Z: Failed with selector //span[contains(text(), 'Ask to join')]: Waiting for element to be located By(xpath, //span[contains(text(), 'Ask to join')])
+Wait timed out after 5180ms
+2025-04-16T07:01:38.194Z: Trying selector: //div[@role='button']//span[contains(text(), 'Join now')]
+2025-04-16T07:01:40.540Z: Killed existing Chrome processes
+2025-04-16T07:01:40.567Z: Starting browser...
+2025-04-16T07:01:40.589Z: Starting browser initialization...
+2025-04-16T07:01:40.610Z: Chrome options configured
+2025-04-16T07:01:40.633Z: ChromeDriver service configured
+2025-04-16T07:01:40.820Z: Failed with selector //div[@role='button']//span[contains(text(), 'Join now')]: invalid session id: session deleted as the browser has closed the connection
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=135.0.7049.85)
+2025-04-16T07:01:40.845Z: Trying selector: //div[@role='button']//span[contains(text(), 'Ask to join')]
+2025-04-16T07:01:40.879Z: Failed with selector //div[@role='button']//span[contains(text(), 'Ask to join')]: invalid session id
+2025-04-16T07:01:40.908Z: Trying selector: //button[contains(., 'Join now')]
+2025-04-16T07:01:40.944Z: Failed with selector //button[contains(., 'Join now')]: invalid session id
+2025-04-16T07:01:40.982Z: Trying selector: //button[contains(., 'Ask to join')]
+2025-04-16T07:01:41.011Z: Failed with selector //button[contains(., 'Ask to join')]: invalid session id
+2025-04-16T07:01:41.035Z: Trying selector: [aria-label*='Join now']
+2025-04-16T07:01:41.066Z: Failed with selector [aria-label*='Join now']: invalid session id
+2025-04-16T07:01:41.087Z: Trying selector: [aria-label*='Ask to join']
+2025-04-16T07:01:41.110Z: Failed with selector [aria-label*='Ask to join']: invalid session id
+2025-04-16T07:01:41.128Z: Trying selector: button[jsname='Qx7uuf']
+2025-04-16T07:01:41.151Z: Failed with selector button[jsname='Qx7uuf']: invalid session id
+2025-04-16T07:01:41.174Z: Trying selector: button[jsname='QkA63b']
+2025-04-16T07:01:41.219Z: Failed with selector button[jsname='QkA63b']: invalid session id
+2025-04-16T07:01:41.242Z: Trying selector: [data-is-muted='true']
+2025-04-16T07:01:41.276Z: Failed with selector [data-is-muted='true']: invalid session id
+2025-04-16T07:01:41.304Z: Trying selector: //button[contains(@data-tooltip, 'join')]
+2025-04-16T07:01:41.364Z: Failed with selector //button[contains(@data-tooltip, 'join')]: invalid session id
+2025-04-16T07:01:41.393Z: Trying selector: //div[@role='button' and contains(@data-tooltip, 'join')]
+2025-04-16T07:01:41.438Z: Failed with selector //div[@role='button' and contains(@data-tooltip, 'join')]: invalid session id
+2025-04-16T07:01:41.458Z: Trying selector: //button[contains(@aria-label, 'join')]
+2025-04-16T07:01:41.485Z: Failed with selector //button[contains(@aria-label, 'join')]: invalid session id
+2025-04-16T07:01:41.510Z: Trying selector: //div[@role='button' and contains(@aria-label, 'join')]
+2025-04-16T07:01:41.554Z: Failed with selector //div[@role='button' and contains(@aria-label, 'join')]: invalid session id
+2025-04-16T07:01:41.619Z: Error joining meeting:
+Error: NoSuchSessionError: invalid session id
+    at Object.throwDecodedError (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\error.js:523:15)
+    at parseHttpResponse (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:524:13)
+    at Executor.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:456:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Driver.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:745:17)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.js:270:13)
+    at async main (D:\Project\notulen.ai\src\meet.js:305:13)
+2025-04-16T07:01:41.644Z: Attempt 3/3 failed: invalid session id
+2025-04-16T07:01:41.674Z: Max retries reached, exiting...
+2025-04-16T07:01:43.488Z: Browser started successfully
+2025-04-16T07:01:43.510Z: Browser initialized successfully
+2025-04-16T07:01:43.538Z: Attempting to join meeting: https://meet.google.com/abc-defg-hij
+2025-04-16T07:01:48.839Z: Navigated to meeting URL
+2025-04-16T07:01:56.873Z: Initial page load wait complete
+2025-04-16T07:01:57.336Z: Looking for join button...
+2025-04-16T07:01:57.363Z: Trying selector: //span[contains(text(), 'Join now')]
+2025-04-16T07:02:27.048Z: Killed existing Chrome processes
+2025-04-16T07:02:27.087Z: Starting browser...
+2025-04-16T07:02:27.121Z: Starting browser initialization...
+2025-04-16T07:02:27.150Z: Chrome options configured
+2025-04-16T07:02:27.207Z: ChromeDriver service configured
+2025-04-16T07:02:28.761Z: Browser started successfully
+2025-04-16T07:02:28.787Z: Browser initialized successfully
+2025-04-16T07:02:28.818Z: Attempting to join meeting: https://meet.google.com/gpx-qdzm-twm
+2025-04-16T07:02:31.276Z: Navigated to meeting URL
+2025-04-16T07:02:39.300Z: Initial page load wait complete
+2025-04-16T07:02:39.731Z: Looking for join button...
+2025-04-16T07:02:39.746Z: Trying selector: //span[contains(text(), 'Join now')]
+2025-04-16T07:02:44.885Z: Failed with selector //span[contains(text(), 'Join now')]: Waiting for element to be located By(xpath, //span[contains(text(), 'Join now')])
+Wait timed out after 5119ms
+2025-04-16T07:02:44.907Z: Trying selector: //span[contains(text(), 'Ask to join')]
+2025-04-16T07:02:50.090Z: Failed with selector //span[contains(text(), 'Ask to join')]: Waiting for element to be located By(xpath, //span[contains(text(), 'Ask to join')])
+Wait timed out after 5163ms
+2025-04-16T07:02:50.122Z: Trying selector: //div[@role='button']//span[contains(text(), 'Join now')]
+2025-04-16T07:02:55.272Z: Failed with selector //div[@role='button']//span[contains(text(), 'Join now')]: Waiting for element to be located By(xpath, //div[@role='button']//span[contains(text(), 'Join now')])
+Wait timed out after 5109ms
+2025-04-16T07:02:55.316Z: Trying selector: //div[@role='button']//span[contains(text(), 'Ask to join')]
+2025-04-16T07:03:00.584Z: Failed with selector //div[@role='button']//span[contains(text(), 'Ask to join')]: Waiting for element to be located By(xpath, //div[@role='button']//span[contains(text(), 'Ask to join')])
+Wait timed out after 5209ms
+2025-04-16T07:03:00.607Z: Trying selector: //button[contains(., 'Join now')]
+2025-04-16T07:03:05.743Z: Failed with selector //button[contains(., 'Join now')]: Waiting for element to be located By(xpath, //button[contains(., 'Join now')])
+Wait timed out after 5112ms
+2025-04-16T07:03:05.775Z: Trying selector: //button[contains(., 'Ask to join')]
+2025-04-16T07:03:10.970Z: Failed with selector //button[contains(., 'Ask to join')]: Waiting for element to be located By(xpath, //button[contains(., 'Ask to join')])
+Wait timed out after 5172ms
+2025-04-16T07:03:10.998Z: Trying selector: [aria-label*='Join now']
+2025-04-16T07:03:16.111Z: Failed with selector [aria-label*='Join now']: Waiting for element to be located By(css selector, [aria-label*='Join now'])
+Wait timed out after 5087ms
+2025-04-16T07:03:16.140Z: Trying selector: [aria-label*='Ask to join']
+2025-04-16T07:03:21.280Z: Failed with selector [aria-label*='Ask to join']: Waiting for element to be located By(css selector, [aria-label*='Ask to join'])
+Wait timed out after 5116ms
+2025-04-16T07:03:21.303Z: Trying selector: button[jsname='Qx7uuf']
+2025-04-16T07:03:26.385Z: Failed with selector button[jsname='Qx7uuf']: Waiting for element to be located By(css selector, button[jsname='Qx7uuf'])
+Wait timed out after 5060ms
+2025-04-16T07:03:26.405Z: Trying selector: button[jsname='QkA63b']
+2025-04-16T07:03:33.486Z: Failed with selector button[jsname='QkA63b']: Waiting for element to be located By(css selector, button[jsname='QkA63b'])
+Wait timed out after 7062ms
+2025-04-16T07:03:33.513Z: Trying selector: [data-is-muted='true']
+2025-04-16T07:03:38.699Z: Failed with selector [data-is-muted='true']: Waiting for element to be located By(css selector, [data-is-muted='true'])
+Wait timed out after 5152ms
+2025-04-16T07:03:38.725Z: Trying selector: //button[contains(@data-tooltip, 'join')]
+2025-04-16T07:03:43.866Z: Failed with selector //button[contains(@data-tooltip, 'join')]: Waiting for element to be located By(xpath, //button[contains(@data-tooltip, 'join')])
+Wait timed out after 5122ms
+2025-04-16T07:03:43.890Z: Trying selector: //div[@role='button' and contains(@data-tooltip, 'join')]
+2025-04-16T07:03:48.975Z: Failed with selector //div[@role='button' and contains(@data-tooltip, 'join')]: Waiting for element to be located By(xpath, //div[@role='button' and contains(@data-tooltip, 'join')])
+Wait timed out after 5065ms
+2025-04-16T07:03:48.995Z: Trying selector: //button[contains(@aria-label, 'join')]
+2025-04-16T07:03:54.075Z: Failed with selector //button[contains(@aria-label, 'join')]: Waiting for element to be located By(xpath, //button[contains(@aria-label, 'join')])
+Wait timed out after 5046ms
+2025-04-16T07:03:54.093Z: Trying selector: //div[@role='button' and contains(@aria-label, 'join')]
+2025-04-16T07:03:59.226Z: Failed with selector //div[@role='button' and contains(@aria-label, 'join')]: Waiting for element to be located By(xpath, //div[@role='button' and contains(@aria-label, 'join')])
+Wait timed out after 5114ms
+2025-04-16T07:04:00.760Z: Error joining meeting:
+Error: Error: Could not find or click any join button
+    at joinMeet (D:\Project\notulen.ai\src\meet.js:292:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async main (D:\Project\notulen.ai\src\meet.js:325:13)
+2025-04-16T07:04:00.783Z: Attempt 1/3 failed: Could not find or click any join button
+2025-04-16T07:04:01.162Z: Retrying in 5 seconds...
+2025-04-16T07:04:06.512Z: Killed existing Chrome processes
+2025-04-16T07:04:06.545Z: Starting browser...
+2025-04-16T07:04:06.575Z: Starting browser initialization...
+2025-04-16T07:04:06.608Z: Chrome options configured
+2025-04-16T07:04:06.646Z: ChromeDriver service configured
+2025-04-16T07:04:08.614Z: Browser started successfully
+2025-04-16T07:04:08.653Z: Browser initialized successfully
+2025-04-16T07:04:08.678Z: Attempting to join meeting: https://meet.google.com/gpx-qdzm-twm
+2025-04-16T07:04:11.508Z: Navigated to meeting URL
+2025-04-16T07:04:19.531Z: Initial page load wait complete
+2025-04-16T07:04:19.963Z: Looking for join button...
+2025-04-16T07:04:19.979Z: Trying selector: //span[contains(text(), 'Join now')]
+2025-04-16T07:04:25.050Z: Failed with selector //span[contains(text(), 'Join now')]: Waiting for element to be located By(xpath, //span[contains(text(), 'Join now')])
+Wait timed out after 5053ms
+2025-04-16T07:04:25.072Z: Trying selector: //span[contains(text(), 'Ask to join')]
+2025-04-16T07:04:30.252Z: Failed with selector //span[contains(text(), 'Ask to join')]: Waiting for element to be located By(xpath, //span[contains(text(), 'Ask to join')])
+Wait timed out after 5158ms
+2025-04-16T07:04:30.270Z: Trying selector: //div[@role='button']//span[contains(text(), 'Join now')]
+2025-04-16T07:04:35.436Z: Failed with selector //div[@role='button']//span[contains(text(), 'Join now')]: Waiting for element to be located By(xpath, //div[@role='button']//span[contains(text(), 'Join now')])
+Wait timed out after 5146ms
+2025-04-16T07:04:35.457Z: Trying selector: //div[@role='button']//span[contains(text(), 'Ask to join')]
+2025-04-16T07:04:40.578Z: Failed with selector //div[@role='button']//span[contains(text(), 'Ask to join')]: Waiting for element to be located By(xpath, //div[@role='button']//span[contains(text(), 'Ask to join')])
+Wait timed out after 5102ms
+2025-04-16T07:04:40.599Z: Trying selector: //button[contains(., 'Join now')]
+2025-04-16T07:04:45.734Z: Failed with selector //button[contains(., 'Join now')]: Waiting for element to be located By(xpath, //button[contains(., 'Join now')])
+Wait timed out after 5114ms
+2025-04-16T07:04:45.762Z: Trying selector: //button[contains(., 'Ask to join')]
+2025-04-16T07:04:51.012Z: Failed with selector //button[contains(., 'Ask to join')]: Waiting for element to be located By(xpath, //button[contains(., 'Ask to join')])
+Wait timed out after 5220ms
+2025-04-16T07:04:51.037Z: Trying selector: [aria-label*='Join now']
+2025-04-16T07:04:56.203Z: Failed with selector [aria-label*='Join now']: Waiting for element to be located By(css selector, [aria-label*='Join now'])
+Wait timed out after 5137ms
+2025-04-16T07:04:56.228Z: Trying selector: [aria-label*='Ask to join']
+2025-04-16T07:05:01.408Z: Failed with selector [aria-label*='Ask to join']: Waiting for element to be located By(css selector, [aria-label*='Ask to join'])
+Wait timed out after 5152ms
+2025-04-16T07:05:01.427Z: Trying selector: button[jsname='Qx7uuf']
+2025-04-16T07:05:06.637Z: Failed with selector button[jsname='Qx7uuf']: Waiting for element to be located By(css selector, button[jsname='Qx7uuf'])
+Wait timed out after 5192ms
+2025-04-16T07:05:06.663Z: Trying selector: button[jsname='QkA63b']
+2025-04-16T07:05:14.743Z: Failed with selector button[jsname='QkA63b']: Waiting for element to be located By(css selector, button[jsname='QkA63b'])
+Wait timed out after 8060ms
+2025-04-16T07:05:14.770Z: Trying selector: [data-is-muted='true']
+2025-04-16T07:05:20.004Z: Failed with selector [data-is-muted='true']: Waiting for element to be located By(css selector, [data-is-muted='true'])
+Wait timed out after 5211ms
+2025-04-16T07:05:20.044Z: Trying selector: //button[contains(@data-tooltip, 'join')]
+2025-04-16T07:05:20.235Z: Killed existing Chrome processes
+2025-04-16T07:05:20.258Z: Starting browser...
+2025-04-16T07:05:20.277Z: Starting browser initialization...
+2025-04-16T07:05:20.297Z: Chrome options configured
+2025-04-16T07:05:20.317Z: ChromeDriver service configured
+2025-04-16T07:05:22.083Z: Browser started successfully
+2025-04-16T07:05:22.112Z: Browser initialized successfully
+2025-04-16T07:05:22.155Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T07:05:22.486Z: Failed with selector //button[contains(@data-tooltip, 'join')]: invalid session id: session deleted as the browser has closed the connection
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=135.0.7049.85)
+2025-04-16T07:05:22.511Z: Trying selector: //div[@role='button' and contains(@data-tooltip, 'join')]
+2025-04-16T07:05:22.641Z: Failed with selector //div[@role='button' and contains(@data-tooltip, 'join')]: invalid session id
+2025-04-16T07:05:22.667Z: Trying selector: //button[contains(@aria-label, 'join')]
+2025-04-16T07:05:22.727Z: Failed with selector //button[contains(@aria-label, 'join')]: invalid session id
+2025-04-16T07:05:22.751Z: Trying selector: //div[@role='button' and contains(@aria-label, 'join')]
+2025-04-16T07:05:22.804Z: Failed with selector //div[@role='button' and contains(@aria-label, 'join')]: invalid session id
+2025-04-16T07:05:22.853Z: Error joining meeting:
+Error: NoSuchSessionError: invalid session id
+    at Object.throwDecodedError (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\error.js:523:15)
+    at parseHttpResponse (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:524:13)
+    at Executor.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:456:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Driver.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:745:17)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.js:284:13)
+    at async main (D:\Project\notulen.ai\src\meet.js:325:13)
+2025-04-16T07:05:22.879Z: Attempt 2/3 failed: invalid session id
+2025-04-16T07:05:22.909Z: Retrying in 10 seconds...
+2025-04-16T07:05:28.680Z: Looking for join button...
+2025-04-16T07:05:33.157Z: Killed existing Chrome processes
+2025-04-16T07:05:33.186Z: Starting browser...
+2025-04-16T07:05:33.212Z: Starting browser initialization...
+2025-04-16T07:05:33.242Z: Chrome options configured
+2025-04-16T07:05:33.276Z: ChromeDriver service configured
+2025-04-16T07:05:33.319Z: Failed with selector //span[contains(text(), 'Join now')]: invalid session id: session deleted as the browser has closed the connection
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=135.0.7049.85)
+2025-04-16T07:05:33.355Z: Failed with selector //span[contains(text(), 'Ask to join')]: invalid session id
+2025-04-16T07:05:33.396Z: Failed with selector //div[contains(@aria-label, 'Join now')]: invalid session id
+2025-04-16T07:05:33.429Z: Failed with selector //div[contains(@aria-label, 'Ask to join')]: invalid session id
+2025-04-16T07:05:33.459Z: Failed with selector [aria-label*='Join now']: invalid session id
+2025-04-16T07:05:33.493Z: Failed with selector [aria-label*='Ask to join']: invalid session id
+2025-04-16T07:05:33.521Z: Join button not found on attempt 1, waiting and retrying...
+2025-04-16T07:05:35.176Z: Browser started successfully
+2025-04-16T07:05:35.222Z: Browser initialized successfully
+2025-04-16T07:05:35.267Z: Attempting to join meeting: https://meet.google.com/gpx-qdzm-twm
+2025-04-16T07:05:38.569Z: Failed with selector //span[contains(text(), 'Join now')]: invalid session id
+2025-04-16T07:05:38.611Z: Failed with selector //span[contains(text(), 'Ask to join')]: invalid session id
+2025-04-16T07:05:38.637Z: Navigated to meeting URL
+2025-04-16T07:05:38.654Z: Failed with selector //div[contains(@aria-label, 'Join now')]: invalid session id
+2025-04-16T07:05:38.712Z: Failed with selector //div[contains(@aria-label, 'Ask to join')]: invalid session id
+2025-04-16T07:05:38.743Z: Failed with selector [aria-label*='Join now']: invalid session id
+2025-04-16T07:05:38.773Z: Failed with selector [aria-label*='Ask to join']: invalid session id
+2025-04-16T07:05:38.803Z: Join button not found on attempt 2, waiting and retrying...
+2025-04-16T07:05:43.837Z: Failed with selector //span[contains(text(), 'Join now')]: invalid session id
+2025-04-16T07:05:43.866Z: Failed with selector //span[contains(text(), 'Ask to join')]: invalid session id
+2025-04-16T07:05:43.892Z: Failed with selector //div[contains(@aria-label, 'Join now')]: invalid session id
+2025-04-16T07:05:43.920Z: Failed with selector //div[contains(@aria-label, 'Ask to join')]: invalid session id
+2025-04-16T07:05:43.948Z: Failed with selector [aria-label*='Join now']: invalid session id
+2025-04-16T07:05:43.978Z: Failed with selector [aria-label*='Ask to join']: invalid session id
+2025-04-16T07:05:44.002Z: Error joining meeting:
+Error: NoSuchSessionError: invalid session id
+    at Object.throwDecodedError (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\error.js:523:15)
+    at parseHttpResponse (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:524:13)
+    at Executor.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:456:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Driver.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:745:17)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.js:247:13)
+    at async main (D:\Project\notulen.ai\src\meet.js:288:13)
+2025-04-16T07:05:44.027Z: Attempt 1/3 failed: invalid session id
+2025-04-16T07:05:44.060Z: Retrying in 5 seconds...
+2025-04-16T07:05:46.678Z: Initial page load wait complete
+2025-04-16T07:05:47.137Z: Looking for join button...
+2025-04-16T07:05:47.159Z: Trying selector: //span[contains(text(), 'Join now')]
+2025-04-16T07:05:49.366Z: Killed existing Chrome processes
+2025-04-16T07:05:49.390Z: Starting browser...
+2025-04-16T07:05:49.414Z: Starting browser initialization...
+2025-04-16T07:05:49.439Z: Chrome options configured
+2025-04-16T07:05:49.463Z: ChromeDriver service configured
+2025-04-16T07:05:49.734Z: Failed with selector //span[contains(text(), 'Join now')]: invalid session id: session deleted as the browser has closed the connection
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=135.0.7049.85)
+2025-04-16T07:05:49.762Z: Trying selector: //span[contains(text(), 'Ask to join')]
+2025-04-16T07:05:49.792Z: Failed with selector //span[contains(text(), 'Ask to join')]: invalid session id
+2025-04-16T07:05:49.818Z: Trying selector: //div[@role='button']//span[contains(text(), 'Join now')]
+2025-04-16T07:05:49.854Z: Failed with selector //div[@role='button']//span[contains(text(), 'Join now')]: invalid session id
+2025-04-16T07:05:49.882Z: Trying selector: //div[@role='button']//span[contains(text(), 'Ask to join')]
+2025-04-16T07:05:49.919Z: Failed with selector //div[@role='button']//span[contains(text(), 'Ask to join')]: invalid session id
+2025-04-16T07:05:49.943Z: Trying selector: //button[contains(., 'Join now')]
+2025-04-16T07:05:49.974Z: Failed with selector //button[contains(., 'Join now')]: invalid session id
+2025-04-16T07:05:50.004Z: Trying selector: //button[contains(., 'Ask to join')]
+2025-04-16T07:05:50.038Z: Failed with selector //button[contains(., 'Ask to join')]: invalid session id
+2025-04-16T07:05:50.070Z: Trying selector: [aria-label*='Join now']
+2025-04-16T07:05:50.118Z: Failed with selector [aria-label*='Join now']: invalid session id
+2025-04-16T07:05:50.144Z: Trying selector: [aria-label*='Ask to join']
+2025-04-16T07:05:50.192Z: Failed with selector [aria-label*='Ask to join']: invalid session id
+2025-04-16T07:05:50.214Z: Trying selector: button[jsname='Qx7uuf']
+2025-04-16T07:05:50.241Z: Failed with selector button[jsname='Qx7uuf']: invalid session id
+2025-04-16T07:05:50.267Z: Trying selector: button[jsname='QkA63b']
+2025-04-16T07:05:50.309Z: Failed with selector button[jsname='QkA63b']: invalid session id
+2025-04-16T07:05:50.336Z: Trying selector: [data-is-muted='true']
+2025-04-16T07:05:50.368Z: Failed with selector [data-is-muted='true']: invalid session id
+2025-04-16T07:05:50.395Z: Trying selector: //button[contains(@data-tooltip, 'join')]
+2025-04-16T07:05:50.427Z: Failed with selector //button[contains(@data-tooltip, 'join')]: invalid session id
+2025-04-16T07:05:50.456Z: Trying selector: //div[@role='button' and contains(@data-tooltip, 'join')]
+2025-04-16T07:05:50.518Z: Failed with selector //div[@role='button' and contains(@data-tooltip, 'join')]: invalid session id
+2025-04-16T07:05:50.543Z: Trying selector: //button[contains(@aria-label, 'join')]
+2025-04-16T07:05:50.809Z: Failed with selector //button[contains(@aria-label, 'join')]: invalid session id
+2025-04-16T07:05:50.835Z: Trying selector: //div[@role='button' and contains(@aria-label, 'join')]
+2025-04-16T07:05:50.957Z: Failed with selector //div[@role='button' and contains(@aria-label, 'join')]: invalid session id
+2025-04-16T07:05:51.022Z: Error joining meeting:
+Error: NoSuchSessionError: invalid session id
+    at Object.throwDecodedError (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\error.js:523:15)
+    at parseHttpResponse (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:524:13)
+    at Executor.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:456:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Driver.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:745:17)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.js:284:13)
+    at async main (D:\Project\notulen.ai\src\meet.js:325:13)
+2025-04-16T07:05:51.054Z: Attempt 3/3 failed: invalid session id
+2025-04-16T07:05:51.134Z: Max retries reached, exiting...
+2025-04-16T07:05:51.675Z: Browser started successfully
+2025-04-16T07:05:51.705Z: Browser initialized successfully
+2025-04-16T07:05:51.749Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T07:05:58.294Z: Looking for join button...
+2025-04-16T07:06:08.457Z: Failed with selector //span[contains(text(), 'Join now')]: Waiting for element to be located By(xpath, //span[contains(text(), 'Join now')])
+Wait timed out after 10141ms
+2025-04-16T07:06:18.696Z: Failed with selector //span[contains(text(), 'Ask to join')]: Waiting for element to be located By(xpath, //span[contains(text(), 'Ask to join')])
+Wait timed out after 10211ms
+2025-04-16T07:06:28.814Z: Failed with selector //div[contains(@aria-label, 'Join now')]: Waiting for element to be located By(xpath, //div[contains(@aria-label, 'Join now')])
+Wait timed out after 10099ms
+2025-04-16T07:06:38.897Z: Failed with selector //div[contains(@aria-label, 'Ask to join')]: Waiting for element to be located By(xpath, //div[contains(@aria-label, 'Ask to join')])
+Wait timed out after 10039ms
+2025-04-16T07:06:49.040Z: Failed with selector [aria-label*='Join now']: Waiting for element to be located By(css selector, [aria-label*='Join now'])
+Wait timed out after 10115ms
+2025-04-16T07:06:59.177Z: Failed with selector [aria-label*='Ask to join']: Waiting for element to be located By(css selector, [aria-label*='Ask to join'])
+Wait timed out after 10120ms
+2025-04-16T07:06:59.197Z: Join button not found on attempt 1, waiting and retrying...
+2025-04-16T07:07:14.252Z: Failed with selector //span[contains(text(), 'Join now')]: Waiting for element to be located By(xpath, //span[contains(text(), 'Join now')])
+Wait timed out after 10022ms
+2025-04-16T07:07:24.333Z: Failed with selector //span[contains(text(), 'Ask to join')]: Waiting for element to be located By(xpath, //span[contains(text(), 'Ask to join')])
+Wait timed out after 10059ms
+2025-04-16T07:07:34.492Z: Failed with selector //div[contains(@aria-label, 'Join now')]: Waiting for element to be located By(xpath, //div[contains(@aria-label, 'Join now')])
+Wait timed out after 10136ms
+2025-04-16T07:07:44.635Z: Failed with selector //div[contains(@aria-label, 'Ask to join')]: Waiting for element to be located By(xpath, //div[contains(@aria-label, 'Ask to join')])
+Wait timed out after 10118ms
+2025-04-16T07:07:54.798Z: Failed with selector [aria-label*='Join now']: Waiting for element to be located By(css selector, [aria-label*='Join now'])
+Wait timed out after 10139ms
+2025-04-16T07:08:04.991Z: Failed with selector [aria-label*='Ask to join']: Waiting for element to be located By(css selector, [aria-label*='Ask to join'])
+Wait timed out after 10168ms
+2025-04-16T07:08:05.015Z: Join button not found on attempt 2, waiting and retrying...
+2025-04-16T07:08:20.202Z: Failed with selector //span[contains(text(), 'Join now')]: Waiting for element to be located By(xpath, //span[contains(text(), 'Join now')])
+Wait timed out after 10097ms
+2025-04-16T07:08:20.742Z: Killed existing Chrome processes
+2025-04-16T07:08:20.777Z: Starting browser...
+2025-04-16T07:08:20.807Z: Starting browser initialization...
+2025-04-16T07:08:20.828Z: Chrome options configured
+2025-04-16T07:08:21.473Z: Failed with selector //span[contains(text(), 'Ask to join')]: invalid session id: session deleted as the browser has closed the connection
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=135.0.7049.85)
+2025-04-16T07:08:21.501Z: Failed with selector //div[contains(@aria-label, 'Join now')]: invalid session id
+2025-04-16T07:08:21.546Z: Failed with selector //div[contains(@aria-label, 'Ask to join')]: invalid session id
+2025-04-16T07:08:21.574Z: Failed with selector [aria-label*='Join now']: invalid session id
+2025-04-16T07:08:21.602Z: Failed with selector [aria-label*='Ask to join']: invalid session id
+2025-04-16T07:08:21.627Z: Error joining meeting:
+Error: NoSuchSessionError: invalid session id
+    at Object.throwDecodedError (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\error.js:523:15)
+    at parseHttpResponse (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:524:13)
+    at Executor.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:456:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Driver.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:745:17)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.js:247:13)
+    at async main (D:\Project\notulen.ai\src\meet.js:288:13)
+2025-04-16T07:08:21.653Z: Attempt 2/3 failed: invalid session id
+2025-04-16T07:08:21.691Z: Retrying in 10 seconds...
+2025-04-16T07:08:22.918Z: Browser started successfully
+2025-04-16T07:08:22.950Z: Browser initialized successfully
+2025-04-16T07:08:23.087Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T07:08:29.687Z: Looking for join button...
+2025-04-16T07:08:32.003Z: Killed existing Chrome processes
+2025-04-16T07:08:32.032Z: Starting browser...
+2025-04-16T07:08:32.058Z: Starting browser initialization...
+2025-04-16T07:08:32.090Z: Chrome options configured
+2025-04-16T07:08:32.125Z: ChromeDriver service configured
+2025-04-16T07:08:32.235Z: Failed with selector button[jsname='Qx7uuf']
+2025-04-16T07:08:32.265Z: Failed with selector button[jsname='QgEvt']
+2025-04-16T07:08:32.310Z: Failed with selector //span[normalize-space()='Join now']
+2025-04-16T07:08:32.360Z: Failed with selector //span[normalize-space()='Ask to join']
+2025-04-16T07:08:32.394Z: Failed with selector [aria-label='Join now']
+2025-04-16T07:08:32.428Z: Failed with selector [aria-label='Ask to join']
+2025-04-16T07:08:32.460Z: Failed with selector //div[contains(@role, 'button')]//span[contains(text(), 'Join')]
+2025-04-16T07:08:32.491Z: Failed with selector //div[@role='button'][contains(., 'Join')]
+2025-04-16T07:08:32.519Z: Attempt 2 to find join button...
+2025-04-16T07:08:34.814Z: Browser started successfully
+2025-04-16T07:08:34.840Z: Browser initialized successfully
+2025-04-16T07:08:34.871Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T07:08:35.581Z: Failed with selector button[jsname='Qx7uuf']
+2025-04-16T07:08:35.640Z: Failed with selector button[jsname='QgEvt']
+2025-04-16T07:08:35.747Z: Failed with selector //span[normalize-space()='Join now']
+2025-04-16T07:08:35.869Z: Failed with selector //span[normalize-space()='Ask to join']
+2025-04-16T07:08:36.001Z: Failed with selector [aria-label='Join now']
+2025-04-16T07:08:36.084Z: Failed with selector [aria-label='Ask to join']
+2025-04-16T07:08:36.151Z: Failed with selector //div[contains(@role, 'button')]//span[contains(text(), 'Join')]
+2025-04-16T07:08:36.180Z: Failed with selector //div[@role='button'][contains(., 'Join')]
+2025-04-16T07:08:36.202Z: Attempt 3 to find join button...
+2025-04-16T07:08:39.224Z: Failed with selector button[jsname='Qx7uuf']
+2025-04-16T07:08:39.246Z: Failed with selector button[jsname='QgEvt']
+2025-04-16T07:08:39.268Z: Failed with selector //span[normalize-space()='Join now']
+2025-04-16T07:08:39.291Z: Failed with selector //span[normalize-space()='Ask to join']
+2025-04-16T07:08:39.314Z: Failed with selector [aria-label='Join now']
+2025-04-16T07:08:39.341Z: Failed with selector [aria-label='Ask to join']
+2025-04-16T07:08:39.369Z: Failed with selector //div[contains(@role, 'button')]//span[contains(text(), 'Join')]
+2025-04-16T07:08:39.396Z: Failed with selector //div[@role='button'][contains(., 'Join')]
+2025-04-16T07:08:39.420Z: Attempt 4 to find join button...
+2025-04-16T07:08:41.425Z: Looking for join button...
+2025-04-16T07:08:42.453Z: Failed with selector button[jsname='Qx7uuf']
+2025-04-16T07:08:42.479Z: Failed with selector button[jsname='QgEvt']
+2025-04-16T07:08:42.500Z: Failed with selector //span[normalize-space()='Join now']
+2025-04-16T07:08:42.520Z: Failed with selector //span[normalize-space()='Ask to join']
+2025-04-16T07:08:42.543Z: Failed with selector [aria-label='Join now']
+2025-04-16T07:08:42.566Z: Failed with selector [aria-label='Ask to join']
+2025-04-16T07:08:42.601Z: Failed with selector //div[contains(@role, 'button')]//span[contains(text(), 'Join')]
+2025-04-16T07:08:42.629Z: Failed with selector //div[@role='button'][contains(., 'Join')]
+2025-04-16T07:08:42.649Z: Attempt 5 to find join button...
+2025-04-16T07:08:45.678Z: Failed with selector button[jsname='Qx7uuf']
+2025-04-16T07:08:45.699Z: Failed with selector button[jsname='QgEvt']
+2025-04-16T07:08:45.718Z: Failed with selector //span[normalize-space()='Join now']
+2025-04-16T07:08:45.737Z: Failed with selector //span[normalize-space()='Ask to join']
+2025-04-16T07:08:45.755Z: Failed with selector [aria-label='Join now']
+2025-04-16T07:08:45.777Z: Failed with selector [aria-label='Ask to join']
+2025-04-16T07:08:45.797Z: Failed with selector //div[contains(@role, 'button')]//span[contains(text(), 'Join')]
+2025-04-16T07:08:45.824Z: Failed with selector //div[@role='button'][contains(., 'Join')]
+2025-04-16T07:08:45.848Z: Error joining meeting:
+Error: NoSuchSessionError: invalid session id
+    at Object.throwDecodedError (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\error.js:523:15)
+    at parseHttpResponse (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:524:13)
+    at Executor.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:456:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Driver.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:745:17)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.js:230:13)
+    at async main (D:\Project\notulen.ai\src\meet.js:271:13)
+2025-04-16T07:08:45.871Z: Attempt 1/3 failed: invalid session id
+2025-04-16T07:08:45.899Z: Retrying in 5 seconds...
+2025-04-16T07:08:51.098Z: Killed existing Chrome processes
+2025-04-16T07:08:51.119Z: Starting browser...
+2025-04-16T07:08:51.137Z: Starting browser initialization...
+2025-04-16T07:08:51.155Z: Chrome options configured
+2025-04-16T07:08:51.367Z: Failed with selector //span[contains(text(), 'Join now')]: invalid session id: session deleted as the browser has closed the connection
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=135.0.7049.85)
+2025-04-16T07:08:51.392Z: Failed with selector //span[contains(text(), 'Ask to join')]: invalid session id
+2025-04-16T07:08:51.418Z: Failed with selector //div[contains(@aria-label, 'Join now')]: invalid session id
+2025-04-16T07:08:51.441Z: Failed with selector //div[contains(@aria-label, 'Ask to join')]: invalid session id
+2025-04-16T07:08:51.467Z: Failed with selector [aria-label*='Join now']: invalid session id
+2025-04-16T07:08:51.491Z: Failed with selector [aria-label*='Ask to join']: invalid session id
+2025-04-16T07:08:51.514Z: Join button not found on attempt 1, waiting and retrying...
+2025-04-16T07:08:52.615Z: Browser started successfully
+2025-04-16T07:08:52.638Z: Browser initialized successfully
+2025-04-16T07:08:52.687Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T07:08:56.559Z: Failed with selector //span[contains(text(), 'Join now')]: invalid session id
+2025-04-16T07:08:56.600Z: Failed with selector //span[contains(text(), 'Ask to join')]: invalid session id
+2025-04-16T07:08:56.634Z: Failed with selector //div[contains(@aria-label, 'Join now')]: invalid session id
+2025-04-16T07:08:56.661Z: Failed with selector //div[contains(@aria-label, 'Ask to join')]: invalid session id
+2025-04-16T07:08:56.699Z: Failed with selector [aria-label*='Join now']: invalid session id
+2025-04-16T07:08:56.731Z: Failed with selector [aria-label*='Ask to join']: invalid session id
+2025-04-16T07:08:56.751Z: Join button not found on attempt 2, waiting and retrying...
+2025-04-16T07:08:58.947Z: Looking for join button...
+2025-04-16T07:09:01.775Z: Failed with selector //span[contains(text(), 'Join now')]: invalid session id
+2025-04-16T07:09:01.802Z: Failed with selector //span[contains(text(), 'Ask to join')]: invalid session id
+2025-04-16T07:09:01.827Z: Failed with selector //div[contains(@aria-label, 'Join now')]: invalid session id
+2025-04-16T07:09:01.858Z: Failed with selector //div[contains(@aria-label, 'Ask to join')]: invalid session id
+2025-04-16T07:09:01.884Z: Failed with selector [aria-label*='Join now']: invalid session id
+2025-04-16T07:09:01.911Z: Failed with selector [aria-label*='Ask to join']: invalid session id
+2025-04-16T07:09:01.937Z: Error joining meeting:
+Error: NoSuchSessionError: invalid session id
+    at Object.throwDecodedError (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\error.js:523:15)
+    at parseHttpResponse (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:524:13)
+    at Executor.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:456:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Driver.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:745:17)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.js:247:13)
+    at async main (D:\Project\notulen.ai\src\meet.js:288:13)
+2025-04-16T07:09:01.962Z: Attempt 3/3 failed: invalid session id
+2025-04-16T07:09:01.985Z: Max retries reached, exiting...
+2025-04-16T07:09:09.151Z: Failed with selector button[jsname='Qx7uuf']
+2025-04-16T07:09:19.375Z: Failed with selector button[jsname='QgEvt']
+2025-04-16T07:09:29.485Z: Failed with selector //span[normalize-space()='Join now']
+2025-04-16T07:09:39.665Z: Failed with selector //span[normalize-space()='Ask to join']
+2025-04-16T07:09:49.749Z: Failed with selector [aria-label='Join now']
+2025-04-16T07:09:58.974Z: Killed existing Chrome processes
+2025-04-16T07:09:58.996Z: Starting browser...
+2025-04-16T07:09:59.014Z: Starting browser initialization...
+2025-04-16T07:09:59.031Z: Chrome options configured
+2025-04-16T07:09:59.097Z: Failed with selector [aria-label='Ask to join']
+2025-04-16T07:09:59.117Z: Failed with selector //div[contains(@role, 'button')]//span[contains(text(), 'Join')]
+2025-04-16T07:09:59.135Z: Failed with selector //div[@role='button'][contains(., 'Join')]
+2025-04-16T07:09:59.153Z: Attempt 2 to find join button...
+2025-04-16T07:10:01.201Z: Browser started successfully
+2025-04-16T07:10:01.225Z: Browser initialized successfully
+2025-04-16T07:10:01.252Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T07:10:02.232Z: Failed with selector button[jsname='Qx7uuf']
+2025-04-16T07:10:02.278Z: Failed with selector button[jsname='QgEvt']
+2025-04-16T07:10:02.347Z: Failed with selector //span[normalize-space()='Join now']
+2025-04-16T07:10:02.370Z: Failed with selector //span[normalize-space()='Ask to join']
+2025-04-16T07:10:02.394Z: Failed with selector [aria-label='Join now']
+2025-04-16T07:10:02.434Z: Failed with selector [aria-label='Ask to join']
+2025-04-16T07:10:02.482Z: Failed with selector //div[contains(@role, 'button')]//span[contains(text(), 'Join')]
+2025-04-16T07:10:02.525Z: Failed with selector //div[@role='button'][contains(., 'Join')]
+2025-04-16T07:10:02.560Z: Attempt 3 to find join button...
+2025-04-16T07:10:05.636Z: Failed with selector button[jsname='Qx7uuf']
+2025-04-16T07:10:05.669Z: Failed with selector button[jsname='QgEvt']
+2025-04-16T07:10:05.699Z: Failed with selector //span[normalize-space()='Join now']
+2025-04-16T07:10:05.724Z: Failed with selector //span[normalize-space()='Ask to join']
+2025-04-16T07:10:05.751Z: Failed with selector [aria-label='Join now']
+2025-04-16T07:10:05.786Z: Failed with selector [aria-label='Ask to join']
+2025-04-16T07:10:05.826Z: Failed with selector //div[contains(@role, 'button')]//span[contains(text(), 'Join')]
+2025-04-16T07:10:05.860Z: Failed with selector //div[@role='button'][contains(., 'Join')]
+2025-04-16T07:10:05.891Z: Attempt 4 to find join button...
+2025-04-16T07:10:07.602Z: Waiting for meeting page to load...
+2025-04-16T07:10:08.938Z: Failed with selector button[jsname='Qx7uuf']
+2025-04-16T07:10:08.967Z: Failed with selector button[jsname='QgEvt']
+2025-04-16T07:10:08.997Z: Failed with selector //span[normalize-space()='Join now']
+2025-04-16T07:10:09.022Z: Failed with selector //span[normalize-space()='Ask to join']
+2025-04-16T07:10:09.052Z: Failed with selector [aria-label='Join now']
+2025-04-16T07:10:09.087Z: Failed with selector [aria-label='Ask to join']
+2025-04-16T07:10:09.116Z: Failed with selector //div[contains(@role, 'button')]//span[contains(text(), 'Join')]
+2025-04-16T07:10:09.141Z: Failed with selector //div[@role='button'][contains(., 'Join')]
+2025-04-16T07:10:09.170Z: Attempt 5 to find join button...
+2025-04-16T07:10:12.249Z: Failed with selector button[jsname='Qx7uuf']
+2025-04-16T07:10:12.290Z: Failed with selector button[jsname='QgEvt']
+2025-04-16T07:10:12.320Z: Failed with selector //span[normalize-space()='Join now']
+2025-04-16T07:10:12.365Z: Failed with selector //span[normalize-space()='Ask to join']
+2025-04-16T07:10:12.385Z: Failed with selector [aria-label='Join now']
+2025-04-16T07:10:12.409Z: Failed with selector [aria-label='Ask to join']
+2025-04-16T07:10:12.436Z: Failed with selector //div[contains(@role, 'button')]//span[contains(text(), 'Join')]
+2025-04-16T07:10:12.460Z: Failed with selector //div[@role='button'][contains(., 'Join')]
+2025-04-16T07:10:12.485Z: Error joining meeting:
+Error: NoSuchSessionError: invalid session id
+    at Object.throwDecodedError (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\error.js:523:15)
+    at parseHttpResponse (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:524:13)
+    at Executor.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:456:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Driver.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:745:17)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.js:230:13)
+    at async main (D:\Project\notulen.ai\src\meet.js:271:13)
+2025-04-16T07:10:12.510Z: Attempt 2/3 failed: invalid session id
+2025-04-16T07:10:12.539Z: Retrying in 10 seconds...
+2025-04-16T07:10:22.792Z: Killed existing Chrome processes
+2025-04-16T07:10:22.817Z: Starting browser...
+2025-04-16T07:10:22.841Z: Starting browser initialization...
+2025-04-16T07:10:22.868Z: Chrome options configured
+2025-04-16T07:10:22.939Z: Error while waiting for meeting load:
+Error: NoSuchSessionError: invalid session id: session deleted as the browser has closed the connection
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=135.0.7049.85)
+    at Object.throwDecodedError (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\error.js:523:15)
+    at parseHttpResponse (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:524:13)
+    at Executor.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:456:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Driver.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:745:17)
+    at async Driver.findElements (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:1073:17)
+2025-04-16T07:10:22.971Z: Error in joinMeet:
+Error: Error: Meeting page failed to load properly
+    at joinMeet (D:\Project\notulen.ai\src\meet.js:253:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async main (D:\Project\notulen.ai\src\meet.js:299:13)
+2025-04-16T07:10:23.006Z: Attempt 1/3 failed: Meeting page failed to load properly
+2025-04-16T07:10:23.055Z: Retrying in 5 seconds...
+2025-04-16T07:10:25.097Z: Browser started successfully
+2025-04-16T07:10:25.128Z: Browser initialized successfully
+2025-04-16T07:10:25.154Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T07:10:28.297Z: Killed existing Chrome processes
+2025-04-16T07:10:28.319Z: Starting browser...
+2025-04-16T07:10:28.345Z: Starting browser initialization...
+2025-04-16T07:10:28.368Z: Chrome options configured
+2025-04-16T07:10:30.100Z: Browser started successfully
+2025-04-16T07:10:30.133Z: Browser initialized successfully
+2025-04-16T07:10:30.214Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T07:10:31.298Z: Error joining meeting:
+Error: NoSuchSessionError: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=135.0.7049.85)
+    at Object.throwDecodedError (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\error.js:523:15)
+    at parseHttpResponse (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:524:13)
+    at Executor.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:456:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Driver.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:745:17)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.js:175:28)
+    at async main (D:\Project\notulen.ai\src\meet.js:271:13)
+2025-04-16T07:10:31.331Z: Attempt 3/3 failed: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=135.0.7049.85)
+2025-04-16T07:10:31.360Z: Max retries reached, exiting...
+2025-04-16T07:10:36.641Z: Waiting for meeting page to load...
+2025-04-16T07:10:56.667Z: Error while waiting for meeting load:
+Error: TimeoutError: Waiting for element to be located By(css selector, [data-meeting-title])
+Wait timed out after 20000ms
+    at D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:929:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-16T07:10:56.701Z: Error in joinMeet:
+Error: Error: Meeting page failed to load properly
+    at joinMeet (D:\Project\notulen.ai\src\meet.js:253:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async main (D:\Project\notulen.ai\src\meet.js:299:13)
+2025-04-16T07:10:56.733Z: Attempt 2/3 failed: Meeting page failed to load properly
+2025-04-16T07:10:57.088Z: Retrying in 10 seconds...
+2025-04-16T07:11:07.431Z: Killed existing Chrome processes
+2025-04-16T07:11:07.474Z: Starting browser...
+2025-04-16T07:11:07.538Z: Starting browser initialization...
+2025-04-16T07:11:07.581Z: Chrome options configured
+2025-04-16T07:11:09.588Z: Browser started successfully
+2025-04-16T07:11:09.615Z: Browser initialized successfully
+2025-04-16T07:11:09.642Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T07:11:15.907Z: Waiting for meeting page to load...
+2025-04-16T07:11:36.099Z: Error while waiting for meeting load:
+Error: TimeoutError: Waiting for element to be located By(css selector, [data-meeting-title])
+Wait timed out after 20159ms
+    at D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:929:22
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-16T07:11:36.125Z: Error in joinMeet:
+Error: Error: Meeting page failed to load properly
+    at joinMeet (D:\Project\notulen.ai\src\meet.js:253:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async main (D:\Project\notulen.ai\src\meet.js:299:13)
+2025-04-16T07:11:36.152Z: Attempt 3/3 failed: Meeting page failed to load properly
+2025-04-16T07:11:36.463Z: Max retries reached, exiting...
+2025-04-16T07:45:54.751Z: No Chrome processes to kill
+2025-04-16T07:45:54.803Z: Starting browser...
+2025-04-16T07:45:54.852Z: Starting browser initialization...
+2025-04-16T07:45:55.332Z: No Chrome processes to kill
+2025-04-16T07:45:55.354Z: Created user data directory
+2025-04-16T07:45:55.404Z: Chrome options configured
+2025-04-16T07:45:59.550Z: Browser started successfully
+2025-04-16T07:45:59.594Z: Browser initialized successfully
+2025-04-16T07:45:59.650Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T07:46:11.818Z: Waiting for meeting page to load...
+2025-04-16T07:46:11.862Z: Waiting for page load...
+2025-04-16T07:46:11.931Z: Waiting for meeting UI elements...
+2025-04-16T07:46:22.164Z: Selector [data-meeting-title] not found, trying next...
+2025-04-16T07:46:32.375Z: Selector [data-premeeting-ui] not found, trying next...
+2025-04-16T07:46:42.435Z: Selector .VfPpkd-Bz112c-LgbsSe.yHy1rc.eT1oJ.tWDL4c.Cs0vCd not found, trying next...
+2025-04-16T07:46:52.539Z: Selector [aria-label*="join"] not found, trying next...
+2025-04-16T07:47:02.626Z: Selector [aria-label*="Join"] not found, trying next...
+2025-04-16T07:47:03.402Z: Error while waiting for meeting load:
+Error: Error: No meeting UI elements found
+    at waitForMeetingLoad (D:\Project\notulen.ai\src\meet.js:236:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.js:317:26)
+    at async main (D:\Project\notulen.ai\src\meet.js:394:13)
+2025-04-16T07:47:04.180Z: Error in joinMeet:
+Error: Error: Meeting page failed to load properly
+    at joinMeet (D:\Project\notulen.ai\src\meet.js:319:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async main (D:\Project\notulen.ai\src\meet.js:394:13)
+2025-04-16T07:47:04.878Z: Attempt 1/3 failed: Meeting page failed to load properly
+2025-04-16T07:47:05.286Z: Retrying in 5 seconds...
+2025-04-16T07:47:10.538Z: No Chrome processes to kill
+2025-04-16T07:47:10.554Z: Starting browser...
+2025-04-16T07:47:10.570Z: Starting browser initialization...
+2025-04-16T07:47:10.788Z: No Chrome processes to kill
+2025-04-16T07:47:10.802Z: Chrome options configured
+2025-04-16T07:47:13.448Z: Browser started successfully
+2025-04-16T07:47:13.475Z: Browser initialized successfully
+2025-04-16T07:47:13.496Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T07:47:23.550Z: Waiting for meeting page to load...
+2025-04-16T07:47:23.576Z: Waiting for page load...
+2025-04-16T07:47:23.619Z: Waiting for meeting UI elements...
+2025-04-16T07:47:33.675Z: Selector [data-meeting-title] not found, trying next...
+2025-04-16T07:47:43.722Z: Selector [data-premeeting-ui] not found, trying next...
+2025-04-16T07:47:53.866Z: Selector .VfPpkd-Bz112c-LgbsSe.yHy1rc.eT1oJ.tWDL4c.Cs0vCd not found, trying next...
+2025-04-16T07:48:03.928Z: Selector [aria-label*="join"] not found, trying next...
+2025-04-16T07:48:14.043Z: Selector [aria-label*="Join"] not found, trying next...
+2025-04-16T07:48:14.775Z: Error while waiting for meeting load:
+Error: Error: No meeting UI elements found
+    at waitForMeetingLoad (D:\Project\notulen.ai\src\meet.js:236:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.js:317:26)
+    at async main (D:\Project\notulen.ai\src\meet.js:394:13)
+2025-04-16T07:48:15.487Z: Error in joinMeet:
+Error: Error: Meeting page failed to load properly
+    at joinMeet (D:\Project\notulen.ai\src\meet.js:319:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async main (D:\Project\notulen.ai\src\meet.js:394:13)
+2025-04-16T07:48:16.225Z: Attempt 2/3 failed: Meeting page failed to load properly
+2025-04-16T07:48:16.744Z: Retrying in 10 seconds...
+2025-04-16T07:48:27.006Z: No Chrome processes to kill
+2025-04-16T07:48:27.024Z: Starting browser...
+2025-04-16T07:48:27.044Z: Starting browser initialization...
+2025-04-16T07:48:27.263Z: No Chrome processes to kill
+2025-04-16T07:48:27.280Z: Chrome options configured
+2025-04-16T07:48:28.948Z: Browser started successfully
+2025-04-16T07:48:28.986Z: Browser initialized successfully
+2025-04-16T07:48:29.049Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T07:48:38.904Z: Waiting for meeting page to load...
+2025-04-16T07:48:38.931Z: Waiting for page load...
+2025-04-16T07:48:38.965Z: Waiting for meeting UI elements...
+2025-04-16T07:48:49.049Z: Selector [data-meeting-title] not found, trying next...
+2025-04-16T07:48:59.140Z: Selector [data-premeeting-ui] not found, trying next...
+2025-04-16T07:49:09.215Z: Selector .VfPpkd-Bz112c-LgbsSe.yHy1rc.eT1oJ.tWDL4c.Cs0vCd not found, trying next...
+2025-04-16T07:49:09.281Z: Found UI element: [aria-label*="join"]
+2025-04-16T07:49:09.306Z: Setting up media preferences...
+2025-04-16T07:49:09.357Z: Looking for join button...
+2025-04-16T07:49:09.379Z: Attempt 1 to find join button...
+2025-04-16T07:49:50.656Z: Waiting before next attempt...
+2025-04-16T07:49:53.694Z: Attempt 2 to find join button...
+2025-04-16T07:50:34.572Z: Waiting before next attempt...
+2025-04-16T07:50:37.603Z: Attempt 3 to find join button...
+2025-04-16T07:51:13.599Z: Failed with selector Ask to join button (aria-label): invalid session id: session deleted as the browser has closed the connection
+from disconnected: Unable to receive message from renderer
+  (Session info: chrome=135.0.7049.85)
+2025-04-16T07:51:13.634Z: No Chrome processes to kill
+2025-04-16T07:51:13.654Z: Starting browser...
+2025-04-16T07:51:13.671Z: Starting browser initialization...
+2025-04-16T07:51:13.699Z: Error in joinMeet:
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:49140
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T07:51:13.863Z: Attempt 3/3 failed: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:49140
+2025-04-16T07:51:13.933Z: Error while quitting driver:
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:49140
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T07:51:13.951Z: Max retries reached, exiting...
+2025-04-16T07:51:14.191Z: No Chrome processes to kill
+2025-04-16T07:51:14.213Z: Created user data directory
+2025-04-16T07:51:14.233Z: Chrome options configured
+2025-04-16T07:51:16.822Z: Browser started successfully
+2025-04-16T07:51:16.903Z: Browser initialized successfully
+2025-04-16T07:51:16.931Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T07:51:28.339Z: Waiting for meeting page to load...
+2025-04-16T07:51:28.364Z: Waiting for page load...
+2025-04-16T07:51:28.399Z: Waiting for meeting UI elements...
+2025-04-16T07:51:38.440Z: Selector [data-meeting-title] not found, trying next...
+2025-04-16T07:51:48.580Z: Selector [data-premeeting-ui] not found, trying next...
+2025-04-16T07:51:59.127Z: Selector .VfPpkd-Bz112c-LgbsSe.yHy1rc.eT1oJ.tWDL4c.Cs0vCd not found, trying next...
+2025-04-16T07:52:09.197Z: Selector [aria-label*="join"] not found, trying next...
+2025-04-16T07:52:19.303Z: Selector [aria-label*="Join"] not found, trying next...
+2025-04-16T07:52:19.765Z: Error while waiting for meeting load:
+Error: Error: No meeting UI elements found
+    at waitForMeetingLoad (D:\Project\notulen.ai\src\meet.js:247:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.js:328:26)
+    at async main (D:\Project\notulen.ai\src\meet.js:405:13)
+2025-04-16T07:52:20.253Z: Error in joinMeet:
+Error: Error: Meeting page failed to load properly
+    at joinMeet (D:\Project\notulen.ai\src\meet.js:330:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async main (D:\Project\notulen.ai\src\meet.js:405:13)
+2025-04-16T07:52:20.722Z: Attempt 1/3 failed: Meeting page failed to load properly
+2025-04-16T07:52:21.012Z: Retrying in 5 seconds...
+2025-04-16T07:52:26.218Z: No Chrome processes to kill
+2025-04-16T07:52:26.236Z: Starting browser...
+2025-04-16T07:52:26.253Z: Starting browser initialization...
+2025-04-16T07:52:26.437Z: No Chrome processes to kill
+2025-04-16T07:52:26.454Z: Chrome options configured
+2025-04-16T07:52:28.271Z: Browser started successfully
+2025-04-16T07:52:28.296Z: Browser initialized successfully
+2025-04-16T07:52:28.324Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T07:52:37.969Z: Waiting for meeting page to load...
+2025-04-16T07:52:37.994Z: Waiting for page load...
+2025-04-16T07:52:38.048Z: Waiting for meeting UI elements...
+2025-04-16T07:52:48.073Z: Selector [data-meeting-title] not found, trying next...
+2025-04-16T07:52:58.180Z: Selector [data-premeeting-ui] not found, trying next...
+2025-04-16T07:53:08.277Z: Selector .VfPpkd-Bz112c-LgbsSe.yHy1rc.eT1oJ.tWDL4c.Cs0vCd not found, trying next...
+2025-04-16T07:53:08.334Z: Found UI element: [aria-label*="join"]
+2025-04-16T07:53:08.378Z: Setting up media preferences...
+2025-04-16T07:53:08.419Z: Looking for join button...
+2025-04-16T07:53:08.443Z: Attempt 1 to find join button...
+2025-04-16T07:53:50.005Z: Waiting before next attempt...
+2025-04-16T07:53:53.034Z: Attempt 2 to find join button...
+2025-04-16T07:54:33.697Z: Waiting before next attempt...
+2025-04-16T07:54:36.743Z: Attempt 3 to find join button...
+2025-04-16T07:55:10.207Z: Skipping Chrome process kill on non-server environment
+2025-04-16T07:55:10.260Z: Starting browser...
+2025-04-16T07:55:10.280Z: Starting browser initialization...
+2025-04-16T07:55:10.296Z: Skipping Chrome process kill on non-server environment
+2025-04-16T07:55:10.311Z: Created user data directory
+2025-04-16T07:55:10.324Z: Chrome options configured
+2025-04-16T07:55:13.241Z: Browser started successfully
+2025-04-16T07:55:13.287Z: Browser initialized successfully
+2025-04-16T07:55:13.319Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T07:55:19.101Z: Waiting before next attempt...
+2025-04-16T07:55:22.852Z: Attempt 4 to find join button...
+2025-04-16T07:55:33.257Z: Waiting for meeting page to load...
+2025-04-16T07:55:33.786Z: Waiting for page load...
+2025-04-16T07:55:33.837Z: Waiting for meeting UI elements...
+2025-04-16T07:55:44.063Z: Selector [data-meeting-title] not found, trying next...
+2025-04-16T07:55:54.148Z: Selector [data-premeeting-ui] not found, trying next...
+2025-04-16T07:56:04.014Z: Waiting before next attempt...
+2025-04-16T07:56:04.193Z: Selector .VfPpkd-Bz112c-LgbsSe.yHy1rc.eT1oJ.tWDL4c.Cs0vCd not found, trying next...
+2025-04-16T07:56:04.248Z: Found UI element: [aria-label*="join"]
+2025-04-16T07:56:04.272Z: Setting up media preferences...
+2025-04-16T07:56:04.309Z: Looking for join button...
+2025-04-16T07:56:04.329Z: Attempt 1 to find join button...
+2025-04-16T07:56:07.054Z: Attempt 5 to find join button...
+2025-04-16T07:56:48.322Z: Error in joinMeet:
+Error: Error: Failed to find join button after all attempts
+    at findJoinButton (D:\Project\notulen.ai\src\meet.js:309:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.js:361:28)
+    at async main (D:\Project\notulen.ai\src\meet.js:405:13)
+2025-04-16T07:56:49.056Z: Attempt 2/3 failed: Failed to find join button after all attempts
+2025-04-16T07:56:50.588Z: Retrying in 10 seconds...
+2025-04-16T07:57:01.256Z: No Chrome processes to kill
+2025-04-16T07:57:01.283Z: Starting browser...
+2025-04-16T07:57:01.312Z: Starting browser initialization...
+2025-04-16T07:57:01.345Z: Failed with selector Ask to join (aria-label): ECONNREFUSED connect ECONNREFUSED 127.0.0.1:49540
+2025-04-16T07:57:01.419Z: Failed with selector Join button (class): ECONNREFUSED connect ECONNREFUSED 127.0.0.1:49540
+2025-04-16T07:57:01.510Z: Error in joinMeet:
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:49540
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T07:57:01.532Z: No Chrome processes to kill
+2025-04-16T07:57:01.549Z: Chrome options configured
+2025-04-16T07:57:01.601Z: Attempt 1/3 failed: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:49540
+2025-04-16T07:57:01.699Z: Error while quitting driver:
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:49540
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T07:57:01.723Z: Retrying in 5 seconds...
+2025-04-16T07:57:02.984Z: Browser started successfully
+2025-04-16T07:57:03.006Z: Browser initialized successfully
+2025-04-16T07:57:03.026Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T07:57:06.762Z: Skipping Chrome process kill on non-server environment
+2025-04-16T07:57:06.802Z: Starting browser...
+2025-04-16T07:57:06.846Z: Starting browser initialization...
+2025-04-16T07:57:06.883Z: Skipping Chrome process kill on non-server environment
+2025-04-16T07:57:06.914Z: Chrome options configured
+2025-04-16T07:57:10.086Z: Browser started successfully
+2025-04-16T07:57:10.116Z: Browser initialized successfully
+2025-04-16T07:57:10.142Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T07:57:10.358Z: Waiting for meeting page to load...
+2025-04-16T07:57:10.382Z: Waiting for page load...
+2025-04-16T07:57:10.863Z: Waiting for meeting UI elements...
+2025-04-16T07:57:20.962Z: Selector [data-meeting-title] not found, trying next...
+2025-04-16T07:57:31.001Z: Selector [data-premeeting-ui] not found, trying next...
+2025-04-16T07:57:41.072Z: Selector .VfPpkd-Bz112c-LgbsSe.yHy1rc.eT1oJ.tWDL4c.Cs0vCd not found, trying next...
+2025-04-16T07:57:41.139Z: Found UI element: [aria-label*="join"]
+2025-04-16T07:57:41.154Z: Setting up media preferences...
+2025-04-16T07:57:41.186Z: Looking for join button...
+2025-04-16T07:57:41.208Z: Attempt 1 to find join button...
+2025-04-16T07:58:21.967Z: Waiting before next attempt...
+2025-04-16T07:58:25.007Z: Attempt 2 to find join button...
+2025-04-16T07:59:06.316Z: Waiting before next attempt...
+2025-04-16T07:59:09.348Z: Attempt 3 to find join button...
+2025-04-16T07:59:09.873Z: Starting browser...
+2025-04-16T07:59:09.903Z: Starting browser initialization...
+2025-04-16T07:59:09.943Z: Created user data directory
+2025-04-16T07:59:12.620Z: Browser started successfully
+2025-04-16T07:59:12.644Z: Browser initialized successfully
+2025-04-16T07:59:12.669Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T07:59:22.920Z: Waiting for meeting page to load...
+2025-04-16T07:59:22.940Z: Waiting for page load...
+2025-04-16T07:59:22.982Z: Waiting for meeting UI elements...
+2025-04-16T07:59:28.072Z: Selector [data-meeting-title] not found, trying next...
+2025-04-16T07:59:33.250Z: Selector [data-premeeting-ui] not found, trying next...
+2025-04-16T07:59:38.403Z: Selector .VfPpkd-Bz112c-LgbsSe.yHy1rc.eT1oJ.tWDL4c.Cs0vCd not found, trying next...
+2025-04-16T07:59:43.730Z: Selector [aria-label*="join"] not found, trying next...
+2025-04-16T07:59:48.950Z: Selector [aria-label*="Join"] not found, trying next...
+2025-04-16T07:59:49.346Z: Error while waiting for meeting load:
+Error: Error: No meeting UI elements found
+    at waitForMeetingLoad (D:\Project\notulen.ai\src\meet.js:231:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.js:312:26)
+    at async main (D:\Project\notulen.ai\src\meet.js:389:13)
+2025-04-16T07:59:49.805Z: Error in joinMeet:
+Error: Error: Meeting page failed to load properly
+    at joinMeet (D:\Project\notulen.ai\src\meet.js:314:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async main (D:\Project\notulen.ai\src\meet.js:389:13)
+2025-04-16T07:59:50.253Z: Attempt 1/3 failed: Meeting page failed to load properly
+2025-04-16T07:59:50.260Z: Waiting before next attempt...
+2025-04-16T07:59:51.267Z: Retrying in 5 seconds...
+2025-04-16T07:59:53.377Z: Attempt 4 to find join button...
+2025-04-16T07:59:56.311Z: Starting browser...
+2025-04-16T07:59:56.378Z: Starting browser initialization...
+2025-04-16T07:59:59.134Z: Browser started successfully
+2025-04-16T07:59:59.163Z: Browser initialized successfully
+2025-04-16T07:59:59.188Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T08:00:08.331Z: Waiting for meeting page to load...
+2025-04-16T08:00:08.356Z: Waiting for page load...
+2025-04-16T08:00:09.221Z: Waiting for meeting UI elements...
+2025-04-16T08:00:14.251Z: Selector [data-meeting-title] not found, trying next...
+2025-04-16T08:00:19.399Z: Selector [data-premeeting-ui] not found, trying next...
+2025-04-16T08:00:24.617Z: Selector .VfPpkd-Bz112c-LgbsSe.yHy1rc.eT1oJ.tWDL4c.Cs0vCd not found, trying next...
+2025-04-16T08:00:29.848Z: Selector [aria-label*="join"] not found, trying next...
+2025-04-16T08:00:34.721Z: Waiting before next attempt...
+2025-04-16T08:00:35.173Z: Selector [aria-label*="Join"] not found, trying next...
+2025-04-16T08:00:36.053Z: Error while waiting for meeting load:
+Error: Error: No meeting UI elements found
+    at waitForMeetingLoad (D:\Project\notulen.ai\src\meet.js:231:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.js:312:26)
+    at async main (D:\Project\notulen.ai\src\meet.js:389:13)
+2025-04-16T08:00:37.506Z: Error in joinMeet:
+Error: Error: Meeting page failed to load properly
+    at joinMeet (D:\Project\notulen.ai\src\meet.js:314:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async main (D:\Project\notulen.ai\src\meet.js:389:13)
+2025-04-16T08:00:37.922Z: Attempt 5 to find join button...
+2025-04-16T08:00:38.568Z: Attempt 2/3 failed: Meeting page failed to load properly
+2025-04-16T08:00:44.239Z: Retrying in 10 seconds...
+2025-04-16T08:00:54.278Z: Starting browser...
+2025-04-16T08:00:54.365Z: Starting browser initialization...
+2025-04-16T08:00:57.499Z: Browser started successfully
+2025-04-16T08:00:57.528Z: Browser initialized successfully
+2025-04-16T08:00:57.563Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T08:01:12.015Z: Waiting for meeting page to load...
+2025-04-16T08:01:12.035Z: Waiting for page load...
+2025-04-16T08:01:12.066Z: Waiting for meeting UI elements...
+2025-04-16T08:01:17.278Z: Selector [data-meeting-title] not found, trying next...
+2025-04-16T08:01:19.680Z: Error in joinMeet:
+Error: Error: Failed to find join button after all attempts
+    at findJoinButton (D:\Project\notulen.ai\src\meet.js:309:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.js:361:28)
+    at async main (D:\Project\notulen.ai\src\meet.js:405:13)
+2025-04-16T08:01:20.752Z: Attempt 3/3 failed: Failed to find join button after all attempts
+2025-04-16T08:01:22.397Z: Selector [data-premeeting-ui] not found, trying next...
+2025-04-16T08:01:23.469Z: Max retries reached, exiting...
+2025-04-16T08:01:27.643Z: Selector .VfPpkd-Bz112c-LgbsSe.yHy1rc.eT1oJ.tWDL4c.Cs0vCd not found, trying next...
+2025-04-16T08:01:32.760Z: Selector [aria-label*="join"] not found, trying next...
+2025-04-16T08:01:38.009Z: Selector [aria-label*="Join"] not found, trying next...
+2025-04-16T08:01:38.351Z: Error while waiting for meeting load:
+Error: Error: No meeting UI elements found
+    at waitForMeetingLoad (D:\Project\notulen.ai\src\meet.js:231:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.js:312:26)
+    at async main (D:\Project\notulen.ai\src\meet.js:389:13)
+2025-04-16T08:01:38.692Z: Error in joinMeet:
+Error: Error: Meeting page failed to load properly
+    at joinMeet (D:\Project\notulen.ai\src\meet.js:314:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async main (D:\Project\notulen.ai\src\meet.js:389:13)
+2025-04-16T08:01:38.994Z: Attempt 3/3 failed: Meeting page failed to load properly
+2025-04-16T08:01:39.243Z: Max retries reached, exiting...
+2025-04-16T08:02:08.683Z: Starting browser...
+2025-04-16T08:02:08.712Z: Starting browser initialization...
+2025-04-16T08:02:08.730Z: Created user data directory
+2025-04-16T08:02:11.133Z: Browser started successfully
+2025-04-16T08:02:11.166Z: Browser initialized successfully
+2025-04-16T08:02:11.201Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T08:02:21.766Z: Waiting for meeting page to load...
+2025-04-16T08:02:21.784Z: Waiting for page load...
+2025-04-16T08:02:22.125Z: Handled permission prompt if present
+2025-04-16T08:02:22.162Z: Checking for meeting UI elements...
+2025-04-16T08:02:22.250Z: Found UI element with check: document.querySelector('.VfPpkd-LgbsSe')
+2025-04-16T08:02:22.277Z: Setting up media preferences...
+2025-04-16T08:02:22.327Z: Looking for join button...
+2025-04-16T08:02:22.351Z: Attempt 1 to find join button...
+2025-04-16T08:02:23.907Z: Trying selector: Material button with join text
+2025-04-16T08:02:24.073Z: Found 0 potential elements
+2025-04-16T08:02:24.097Z: Trying selector: Join text in button role div
+2025-04-16T08:02:24.193Z: Found 0 potential elements
+2025-04-16T08:02:24.220Z: Trying selector: Join button after mute controls
+2025-04-16T08:02:24.353Z: Found 0 potential elements
+2025-04-16T08:02:24.377Z: Trying selector: Join button by class
+2025-04-16T08:02:24.455Z: Found 0 potential elements
+2025-04-16T08:02:24.479Z: Waiting before next attempt...
+2025-04-16T08:02:26.504Z: Attempt 2 to find join button...
+2025-04-16T08:02:28.357Z: Trying selector: Material button with join text
+2025-04-16T08:02:28.527Z: Found 0 potential elements
+2025-04-16T08:02:28.554Z: Trying selector: Join text in button role div
+2025-04-16T08:02:28.602Z: Found 0 potential elements
+2025-04-16T08:02:28.626Z: Trying selector: Join button after mute controls
+2025-04-16T08:02:28.696Z: Found 0 potential elements
+2025-04-16T08:02:28.721Z: Trying selector: Join button by class
+2025-04-16T08:02:28.845Z: Found 0 potential elements
+2025-04-16T08:02:28.872Z: Waiting before next attempt...
+2025-04-16T08:02:30.917Z: Attempt 3 to find join button...
+2025-04-16T08:02:32.155Z: Trying selector: Material button with join text
+2025-04-16T08:02:32.207Z: Found 0 potential elements
+2025-04-16T08:02:32.239Z: Trying selector: Join text in button role div
+2025-04-16T08:02:32.281Z: Found 0 potential elements
+2025-04-16T08:02:32.309Z: Trying selector: Join button after mute controls
+2025-04-16T08:02:32.355Z: Found 0 potential elements
+2025-04-16T08:02:32.377Z: Trying selector: Join button by class
+2025-04-16T08:02:32.416Z: Found 0 potential elements
+2025-04-16T08:02:32.439Z: Waiting before next attempt...
+2025-04-16T08:02:34.470Z: Attempt 4 to find join button...
+2025-04-16T08:02:35.602Z: Trying selector: Material button with join text
+2025-04-16T08:02:35.657Z: Found 0 potential elements
+2025-04-16T08:02:35.680Z: Trying selector: Join text in button role div
+2025-04-16T08:02:35.727Z: Found 0 potential elements
+2025-04-16T08:02:35.757Z: Trying selector: Join button after mute controls
+2025-04-16T08:02:35.795Z: Found 0 potential elements
+2025-04-16T08:02:35.821Z: Trying selector: Join button by class
+2025-04-16T08:02:35.860Z: Found 0 potential elements
+2025-04-16T08:02:35.886Z: Waiting before next attempt...
+2025-04-16T08:02:37.915Z: Attempt 5 to find join button...
+2025-04-16T08:02:39.356Z: Trying selector: Material button with join text
+2025-04-16T08:02:39.415Z: Found 0 potential elements
+2025-04-16T08:02:39.434Z: Trying selector: Join text in button role div
+2025-04-16T08:02:39.487Z: Found 0 potential elements
+2025-04-16T08:02:39.514Z: Trying selector: Join button after mute controls
+2025-04-16T08:02:39.560Z: Found 0 potential elements
+2025-04-16T08:02:39.588Z: Trying selector: Join button by class
+2025-04-16T08:02:39.636Z: Found 0 potential elements
+2025-04-16T08:02:39.662Z: Waiting before next attempt...
+2025-04-16T08:02:41.693Z: Attempt 6 to find join button...
+2025-04-16T08:02:43.006Z: Trying selector: Material button with join text
+2025-04-16T08:02:43.053Z: Found 0 potential elements
+2025-04-16T08:02:43.081Z: Trying selector: Join text in button role div
+2025-04-16T08:02:43.157Z: Found 0 potential elements
+2025-04-16T08:02:43.185Z: Trying selector: Join button after mute controls
+2025-04-16T08:02:43.232Z: Found 0 potential elements
+2025-04-16T08:02:43.260Z: Trying selector: Join button by class
+2025-04-16T08:02:43.320Z: Found 0 potential elements
+2025-04-16T08:02:43.346Z: Waiting before next attempt...
+2025-04-16T08:02:45.392Z: Attempt 7 to find join button...
+2025-04-16T08:02:46.760Z: Trying selector: Material button with join text
+2025-04-16T08:02:46.805Z: Found 0 potential elements
+2025-04-16T08:02:46.834Z: Trying selector: Join text in button role div
+2025-04-16T08:02:46.883Z: Found 0 potential elements
+2025-04-16T08:02:46.909Z: Trying selector: Join button after mute controls
+2025-04-16T08:02:46.953Z: Found 0 potential elements
+2025-04-16T08:02:46.980Z: Trying selector: Join button by class
+2025-04-16T08:02:47.020Z: Found 0 potential elements
+2025-04-16T08:02:47.050Z: Waiting before next attempt...
+2025-04-16T08:02:49.153Z: Attempt 8 to find join button...
+2025-04-16T08:02:50.892Z: Trying selector: Material button with join text
+2025-04-16T08:02:50.936Z: Found 0 potential elements
+2025-04-16T08:02:50.960Z: Trying selector: Join text in button role div
+2025-04-16T08:02:51.016Z: Found 0 potential elements
+2025-04-16T08:02:51.037Z: Trying selector: Join button after mute controls
+2025-04-16T08:02:51.154Z: Found 0 potential elements
+2025-04-16T08:02:51.176Z: Trying selector: Join button by class
+2025-04-16T08:02:51.210Z: Found 0 potential elements
+2025-04-16T08:02:51.235Z: Waiting before next attempt...
+2025-04-16T08:02:53.265Z: Attempt 9 to find join button...
+2025-04-16T08:02:54.583Z: Trying selector: Material button with join text
+2025-04-16T08:02:54.621Z: Found 0 potential elements
+2025-04-16T08:02:54.650Z: Trying selector: Join text in button role div
+2025-04-16T08:02:54.705Z: Found 0 potential elements
+2025-04-16T08:02:54.728Z: Trying selector: Join button after mute controls
+2025-04-16T08:02:54.766Z: Found 0 potential elements
+2025-04-16T08:02:54.787Z: Trying selector: Join button by class
+2025-04-16T08:02:54.827Z: Found 0 potential elements
+2025-04-16T08:02:54.860Z: Waiting before next attempt...
+2025-04-16T08:02:56.898Z: Attempt 10 to find join button...
+2025-04-16T08:02:58.216Z: Trying selector: Material button with join text
+2025-04-16T08:02:58.256Z: Found 0 potential elements
+2025-04-16T08:02:58.285Z: Trying selector: Join text in button role div
+2025-04-16T08:02:58.342Z: Found 0 potential elements
+2025-04-16T08:02:58.368Z: Trying selector: Join button after mute controls
+2025-04-16T08:02:58.411Z: Found 0 potential elements
+2025-04-16T08:02:58.435Z: Trying selector: Join button by class
+2025-04-16T08:02:58.491Z: Found 0 potential elements
+2025-04-16T08:02:58.518Z: Error in joinMeet:
+Error: Error: Failed to find join button after all attempts. Last error: undefined
+    at findJoinButton (D:\Project\notulen.ai\src\meet.js:333:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.js:385:28)
+    at async main (D:\Project\notulen.ai\src\meet.js:429:13)
+2025-04-16T08:02:58.868Z: Attempt 1/3 failed: Failed to find join button after all attempts. Last error: undefined
+2025-04-16T08:02:59.115Z: Retrying in 5 seconds...
+2025-04-16T08:03:04.154Z: Starting browser...
+2025-04-16T08:03:04.177Z: Starting browser initialization...
+2025-04-16T08:03:05.827Z: Browser started successfully
+2025-04-16T08:03:05.859Z: Browser initialized successfully
+2025-04-16T08:03:05.917Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T08:03:14.671Z: Waiting for meeting page to load...
+2025-04-16T08:03:14.693Z: Waiting for page load...
+2025-04-16T08:03:15.025Z: Handled permission prompt if present
+2025-04-16T08:03:15.057Z: Checking for meeting UI elements...
+2025-04-16T08:03:15.110Z: Found UI element with check: document.querySelector('.VfPpkd-LgbsSe')
+2025-04-16T08:03:15.132Z: Setting up media preferences...
+2025-04-16T08:03:15.181Z: Looking for join button...
+2025-04-16T08:03:15.204Z: Attempt 1 to find join button...
+2025-04-16T08:03:17.829Z: Trying selector: Material button with join text
+2025-04-16T08:03:17.896Z: Found 0 potential elements
+2025-04-16T08:03:17.924Z: Trying selector: Join text in button role div
+2025-04-16T08:03:17.978Z: Found 0 potential elements
+2025-04-16T08:03:18.007Z: Trying selector: Join button after mute controls
+2025-04-16T08:03:18.057Z: Found 0 potential elements
+2025-04-16T08:03:18.079Z: Trying selector: Join button by class
+2025-04-16T08:03:18.125Z: Found 0 potential elements
+2025-04-16T08:03:18.147Z: Waiting before next attempt...
+2025-04-16T08:03:20.190Z: Attempt 2 to find join button...
+2025-04-16T08:03:21.837Z: Trying selector: Material button with join text
+2025-04-16T08:03:21.948Z: Found 0 potential elements
+2025-04-16T08:03:21.981Z: Trying selector: Join text in button role div
+2025-04-16T08:03:22.030Z: Found 0 potential elements
+2025-04-16T08:03:22.059Z: Trying selector: Join button after mute controls
+2025-04-16T08:03:22.104Z: Found 0 potential elements
+2025-04-16T08:03:22.126Z: Trying selector: Join button by class
+2025-04-16T08:03:22.161Z: Found 0 potential elements
+2025-04-16T08:03:22.188Z: Waiting before next attempt...
+2025-04-16T08:03:24.226Z: Attempt 3 to find join button...
+2025-04-16T08:03:25.437Z: Trying selector: Material button with join text
+2025-04-16T08:03:25.553Z: Found 0 potential elements
+2025-04-16T08:03:25.582Z: Trying selector: Join text in button role div
+2025-04-16T08:03:25.636Z: Found 0 potential elements
+2025-04-16T08:03:25.658Z: Trying selector: Join button after mute controls
+2025-04-16T08:03:25.729Z: Found 0 potential elements
+2025-04-16T08:03:25.754Z: Trying selector: Join button by class
+2025-04-16T08:03:25.824Z: Found 0 potential elements
+2025-04-16T08:03:25.847Z: Waiting before next attempt...
+2025-04-16T08:03:27.875Z: Attempt 4 to find join button...
+2025-04-16T08:03:29.192Z: Trying selector: Material button with join text
+2025-04-16T08:03:29.235Z: Found 0 potential elements
+2025-04-16T08:03:29.259Z: Trying selector: Join text in button role div
+2025-04-16T08:03:29.337Z: Found 0 potential elements
+2025-04-16T08:03:29.357Z: Trying selector: Join button after mute controls
+2025-04-16T08:03:29.411Z: Found 0 potential elements
+2025-04-16T08:03:29.435Z: Trying selector: Join button by class
+2025-04-16T08:03:29.493Z: Found 0 potential elements
+2025-04-16T08:03:29.513Z: Waiting before next attempt...
+2025-04-16T08:03:31.539Z: Attempt 5 to find join button...
+2025-04-16T08:03:32.756Z: Trying selector: Material button with join text
+2025-04-16T08:03:32.780Z: Found 0 potential elements
+2025-04-16T08:03:32.796Z: Trying selector: Join text in button role div
+2025-04-16T08:03:32.837Z: Found 0 potential elements
+2025-04-16T08:03:32.862Z: Trying selector: Join button after mute controls
+2025-04-16T08:03:32.974Z: Found 0 potential elements
+2025-04-16T08:03:32.992Z: Trying selector: Join button by class
+2025-04-16T08:03:33.028Z: Found 0 potential elements
+2025-04-16T08:03:33.050Z: Waiting before next attempt...
+2025-04-16T08:03:35.077Z: Attempt 6 to find join button...
+2025-04-16T08:03:36.430Z: Trying selector: Material button with join text
+2025-04-16T08:03:36.491Z: Found 0 potential elements
+2025-04-16T08:03:36.521Z: Trying selector: Join text in button role div
+2025-04-16T08:03:36.605Z: Found 0 potential elements
+2025-04-16T08:03:36.625Z: Trying selector: Join button after mute controls
+2025-04-16T08:03:36.660Z: Found 0 potential elements
+2025-04-16T08:03:36.675Z: Trying selector: Join button by class
+2025-04-16T08:03:36.711Z: Found 0 potential elements
+2025-04-16T08:03:36.736Z: Waiting before next attempt...
+2025-04-16T08:03:38.760Z: Attempt 7 to find join button...
+2025-04-16T08:03:39.903Z: Trying selector: Material button with join text
+2025-04-16T08:03:39.944Z: Found 0 potential elements
+2025-04-16T08:03:39.972Z: Trying selector: Join text in button role div
+2025-04-16T08:03:40.019Z: Found 0 potential elements
+2025-04-16T08:03:40.041Z: Trying selector: Join button after mute controls
+2025-04-16T08:03:40.075Z: Found 0 potential elements
+2025-04-16T08:03:40.093Z: Trying selector: Join button by class
+2025-04-16T08:03:40.115Z: Found 0 potential elements
+2025-04-16T08:03:40.128Z: Waiting before next attempt...
+2025-04-16T08:03:42.158Z: Attempt 8 to find join button...
+2025-04-16T08:03:43.298Z: Trying selector: Material button with join text
+2025-04-16T08:03:43.335Z: Found 0 potential elements
+2025-04-16T08:03:43.370Z: Trying selector: Join text in button role div
+2025-04-16T08:03:43.419Z: Found 0 potential elements
+2025-04-16T08:03:43.441Z: Trying selector: Join button after mute controls
+2025-04-16T08:03:43.486Z: Found 0 potential elements
+2025-04-16T08:03:43.512Z: Trying selector: Join button by class
+2025-04-16T08:03:43.575Z: Found 0 potential elements
+2025-04-16T08:03:43.601Z: Waiting before next attempt...
+2025-04-16T08:03:45.632Z: Attempt 9 to find join button...
+2025-04-16T08:03:46.978Z: Trying selector: Material button with join text
+2025-04-16T08:03:47.248Z: Found 0 potential elements
+2025-04-16T08:03:47.269Z: Trying selector: Join text in button role div
+2025-04-16T08:03:47.337Z: Found 0 potential elements
+2025-04-16T08:03:47.364Z: Trying selector: Join button after mute controls
+2025-04-16T08:03:47.419Z: Found 0 potential elements
+2025-04-16T08:03:47.447Z: Trying selector: Join button by class
+2025-04-16T08:03:47.480Z: Found 0 potential elements
+2025-04-16T08:03:47.502Z: Waiting before next attempt...
+2025-04-16T08:03:47.834Z: Starting browser...
+2025-04-16T08:03:47.867Z: Starting browser initialization...
+2025-04-16T08:03:47.890Z: Created user data directory
+2025-04-16T08:03:49.617Z: Attempt 10 to find join button...
+2025-04-16T08:03:52.820Z: Trying selector: Material button with join text
+2025-04-16T08:03:52.869Z: Found 0 potential elements
+2025-04-16T08:03:52.891Z: Trying selector: Join text in button role div
+2025-04-16T08:03:52.933Z: Found 0 potential elements
+2025-04-16T08:03:52.956Z: Trying selector: Join button after mute controls
+2025-04-16T08:03:52.989Z: Found 0 potential elements
+2025-04-16T08:03:53.010Z: Trying selector: Join button by class
+2025-04-16T08:03:53.061Z: Found 0 potential elements
+2025-04-16T08:03:53.087Z: Error in joinMeet:
+Error: Error: Failed to find join button after all attempts. Last error: undefined
+    at findJoinButton (D:\Project\notulen.ai\src\meet.js:333:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.js:385:28)
+    at async main (D:\Project\notulen.ai\src\meet.js:429:13)
+2025-04-16T08:03:53.492Z: Attempt 2/3 failed: Failed to find join button after all attempts. Last error: undefined
+2025-04-16T08:03:53.731Z: Browser started successfully
+2025-04-16T08:03:53.769Z: Browser initialized successfully
+2025-04-16T08:03:53.838Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T08:04:02.607Z: Retrying in 10 seconds...
+2025-04-16T08:04:04.085Z: Waiting for meeting page to load...
+2025-04-16T08:04:04.109Z: Waiting for page load...
+2025-04-16T08:04:04.642Z: Handled permission prompt if present
+2025-04-16T08:04:04.769Z: Checking for meeting UI elements...
+2025-04-16T08:04:04.948Z: Found UI element with check: document.querySelector('.VfPpkd-LgbsSe')
+2025-04-16T08:04:04.970Z: Setting up media preferences...
+2025-04-16T08:04:05.049Z: Looking for join button...
+2025-04-16T08:04:10.202Z: Pre-meeting UI not found, continuing...
+2025-04-16T08:04:10.222Z: Attempt 1 to find join button...
+2025-04-16T08:04:10.702Z: Trying selector: VfPpkd button with join text
+2025-04-16T08:04:10.782Z: Found 0 potential elements
+2025-04-16T08:04:10.801Z: Trying selector: VfPpkd button
+2025-04-16T08:04:10.902Z: Found 1 potential elements
+2025-04-16T08:04:11.085Z: Element: displayed=true, enabled=true, text="Learn more", classes="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-dgl2Hf ksBjEc lKxP2d LQeN7"
+2025-04-16T08:04:11.193Z: Clicked via JavaScript
+2025-04-16T08:04:11.213Z: Clicking join button...
+2025-04-16T08:04:11.314Z: Error in joinMeet:
+Error: JavascriptError: javascript error: arguments[0].click is not a function
+  (Session info: chrome=135.0.7049.85)
+    at Object.throwDecodedError (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\error.js:523:15)
+    at parseHttpResponse (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:524:13)
+    at Executor.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:456:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Driver.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:745:17)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.js:433:9)
+    at async main (D:\Project\notulen.ai\src\meet.js:474:13)
+2025-04-16T08:04:11.717Z: Attempt 1/3 failed: javascript error: arguments[0].click is not a function
+  (Session info: chrome=135.0.7049.85)
+2025-04-16T08:04:12.417Z: Retrying in 5 seconds...
+2025-04-16T08:04:12.632Z: Starting browser...
+2025-04-16T08:04:12.660Z: Starting browser initialization...
+2025-04-16T08:04:14.868Z: Browser started successfully
+2025-04-16T08:04:14.896Z: Browser initialized successfully
+2025-04-16T08:04:14.928Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T08:04:17.440Z: Starting browser...
+2025-04-16T08:04:17.551Z: Starting browser initialization...
+2025-04-16T08:04:19.849Z: Browser started successfully
+2025-04-16T08:04:19.876Z: Browser initialized successfully
+2025-04-16T08:04:19.932Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T08:04:22.892Z: Waiting for meeting page to load...
+2025-04-16T08:04:22.930Z: Waiting for page load...
+2025-04-16T08:04:24.380Z: Handled permission prompt if present
+2025-04-16T08:04:24.433Z: Checking for meeting UI elements...
+2025-04-16T08:04:24.800Z: Found UI element with check: document.querySelector('.VfPpkd-LgbsSe')
+2025-04-16T08:04:24.830Z: Setting up media preferences...
+2025-04-16T08:04:25.022Z: Looking for join button...
+2025-04-16T08:04:25.050Z: Attempt 1 to find join button...
+2025-04-16T08:04:26.422Z: Waiting for meeting page to load...
+2025-04-16T08:04:26.462Z: Waiting for page load...
+2025-04-16T08:04:27.231Z: Handled permission prompt if present
+2025-04-16T08:04:27.494Z: Trying selector: Material button with join text
+2025-04-16T08:04:27.737Z: Checking for meeting UI elements...
+2025-04-16T08:04:27.798Z: Found 0 potential elements
+2025-04-16T08:04:27.828Z: Trying selector: Join text in button role div
+2025-04-16T08:04:27.841Z: Found UI element with check: document.querySelector('.VfPpkd-LgbsSe')
+2025-04-16T08:04:27.899Z: Setting up media preferences...
+2025-04-16T08:04:27.962Z: Found 0 potential elements
+2025-04-16T08:04:27.988Z: Trying selector: Join button after mute controls
+2025-04-16T08:04:28.141Z: Looking for join button...
+2025-04-16T08:04:28.188Z: Found 0 potential elements
+2025-04-16T08:04:28.214Z: Trying selector: Join button by class
+2025-04-16T08:04:28.524Z: Found 0 potential elements
+2025-04-16T08:04:28.552Z: Waiting before next attempt...
+2025-04-16T08:04:30.603Z: Attempt 2 to find join button...
+2025-04-16T08:04:32.261Z: Trying selector: Material button with join text
+2025-04-16T08:04:32.332Z: Found 0 potential elements
+2025-04-16T08:04:32.366Z: Trying selector: Join text in button role div
+2025-04-16T08:04:32.424Z: Found 0 potential elements
+2025-04-16T08:04:32.462Z: Trying selector: Join button after mute controls
+2025-04-16T08:04:32.522Z: Found 0 potential elements
+2025-04-16T08:04:32.558Z: Trying selector: Join button by class
+2025-04-16T08:04:32.641Z: Found 0 potential elements
+2025-04-16T08:04:32.674Z: Waiting before next attempt...
+2025-04-16T08:04:33.357Z: Pre-meeting UI not found, continuing...
+2025-04-16T08:04:33.389Z: Attempt 1 to find join button...
+2025-04-16T08:04:34.079Z: Trying selector: VfPpkd button with join text
+2025-04-16T08:04:34.446Z: Found 0 potential elements
+2025-04-16T08:04:34.473Z: Trying selector: VfPpkd button
+2025-04-16T08:04:34.578Z: Found 1 potential elements
+2025-04-16T08:04:34.727Z: Element: displayed=true, enabled=true, text="Learn more", classes="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-dgl2Hf ksBjEc lKxP2d LQeN7"
+2025-04-16T08:04:34.732Z: Attempt 3 to find join button...
+2025-04-16T08:04:35.022Z: Clicked via JavaScript
+2025-04-16T08:04:35.053Z: Clicking join button...
+2025-04-16T08:04:35.161Z: Error in joinMeet:
+Error: JavascriptError: javascript error: arguments[0].click is not a function
+  (Session info: chrome=135.0.7049.85)
+    at Object.throwDecodedError (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\error.js:523:15)
+    at parseHttpResponse (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:524:13)
+    at Executor.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:456:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Driver.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:745:17)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.js:433:9)
+    at async main (D:\Project\notulen.ai\src\meet.js:474:13)
+2025-04-16T08:04:35.713Z: Attempt 2/3 failed: javascript error: arguments[0].click is not a function
+  (Session info: chrome=135.0.7049.85)
+2025-04-16T08:04:37.013Z: Trying selector: Material button with join text
+2025-04-16T08:04:37.094Z: Found 0 potential elements
+2025-04-16T08:04:37.126Z: Trying selector: Join text in button role div
+2025-04-16T08:04:37.198Z: Found 0 potential elements
+2025-04-16T08:04:37.226Z: Trying selector: Join button after mute controls
+2025-04-16T08:04:37.273Z: Found 0 potential elements
+2025-04-16T08:04:37.308Z: Trying selector: Join button by class
+2025-04-16T08:04:37.374Z: Found 0 potential elements
+2025-04-16T08:04:37.406Z: Waiting before next attempt...
+2025-04-16T08:04:37.664Z: Retrying in 10 seconds...
+2025-04-16T08:04:39.451Z: Attempt 4 to find join button...
+2025-04-16T08:04:40.853Z: Trying selector: Material button with join text
+2025-04-16T08:04:40.906Z: Found 0 potential elements
+2025-04-16T08:04:40.938Z: Trying selector: Join text in button role div
+2025-04-16T08:04:40.988Z: Found 0 potential elements
+2025-04-16T08:04:41.012Z: Trying selector: Join button after mute controls
+2025-04-16T08:04:41.063Z: Found 0 potential elements
+2025-04-16T08:04:41.092Z: Trying selector: Join button by class
+2025-04-16T08:04:41.140Z: Found 0 potential elements
+2025-04-16T08:04:41.169Z: Waiting before next attempt...
+2025-04-16T08:04:43.197Z: Attempt 5 to find join button...
+2025-04-16T08:04:45.297Z: Trying selector: Material button with join text
+2025-04-16T08:04:45.335Z: Found 0 potential elements
+2025-04-16T08:04:45.361Z: Trying selector: Join text in button role div
+2025-04-16T08:04:45.418Z: Found 0 potential elements
+2025-04-16T08:04:45.442Z: Trying selector: Join button after mute controls
+2025-04-16T08:04:45.487Z: Found 0 potential elements
+2025-04-16T08:04:45.512Z: Trying selector: Join button by class
+2025-04-16T08:04:45.638Z: Found 0 potential elements
+2025-04-16T08:04:45.660Z: Waiting before next attempt...
+2025-04-16T08:04:47.688Z: Attempt 6 to find join button...
+2025-04-16T08:04:47.698Z: Starting browser...
+2025-04-16T08:04:47.769Z: Starting browser initialization...
+2025-04-16T08:04:49.368Z: Trying selector: Material button with join text
+2025-04-16T08:04:49.545Z: Found 0 potential elements
+2025-04-16T08:04:49.582Z: Trying selector: Join text in button role div
+2025-04-16T08:04:50.324Z: Found 0 potential elements
+2025-04-16T08:04:50.354Z: Trying selector: Join button after mute controls
+2025-04-16T08:04:50.886Z: Found 0 potential elements
+2025-04-16T08:04:50.919Z: Trying selector: Join button by class
+2025-04-16T08:04:50.985Z: Browser started successfully
+2025-04-16T08:04:50.994Z: Found 0 potential elements
+2025-04-16T08:04:51.015Z: Browser initialized successfully
+2025-04-16T08:04:51.045Z: Waiting before next attempt...
+2025-04-16T08:04:51.105Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T08:04:53.338Z: Attempt 7 to find join button...
+2025-04-16T08:04:57.834Z: Trying selector: Material button with join text
+2025-04-16T08:04:57.887Z: Found 0 potential elements
+2025-04-16T08:04:57.915Z: Trying selector: Join text in button role div
+2025-04-16T08:04:57.952Z: Found 0 potential elements
+2025-04-16T08:04:57.981Z: Trying selector: Join button after mute controls
+2025-04-16T08:04:58.062Z: Found 0 potential elements
+2025-04-16T08:04:58.087Z: Trying selector: Join button by class
+2025-04-16T08:04:58.137Z: Found 0 potential elements
+2025-04-16T08:04:58.168Z: Waiting before next attempt...
+2025-04-16T08:05:00.210Z: Attempt 8 to find join button...
+2025-04-16T08:05:01.610Z: Trying selector: Material button with join text
+2025-04-16T08:05:01.653Z: Found 0 potential elements
+2025-04-16T08:05:01.671Z: Trying selector: Join text in button role div
+2025-04-16T08:05:01.709Z: Found 0 potential elements
+2025-04-16T08:05:01.731Z: Trying selector: Join button after mute controls
+2025-04-16T08:05:01.767Z: Found 0 potential elements
+2025-04-16T08:05:01.786Z: Trying selector: Join button by class
+2025-04-16T08:05:01.811Z: Found 0 potential elements
+2025-04-16T08:05:01.831Z: Waiting before next attempt...
+2025-04-16T08:05:02.659Z: Waiting for meeting page to load...
+2025-04-16T08:05:02.693Z: Waiting for page load...
+2025-04-16T08:05:03.023Z: Handled permission prompt if present
+2025-04-16T08:05:03.048Z: Checking for meeting UI elements...
+2025-04-16T08:05:03.100Z: Found UI element with check: document.querySelector('.VfPpkd-LgbsSe')
+2025-04-16T08:05:03.119Z: Setting up media preferences...
+2025-04-16T08:05:03.151Z: Looking for join button...
+2025-04-16T08:05:03.856Z: Attempt 9 to find join button...
+2025-04-16T08:05:05.611Z: Trying selector: Material button with join text
+2025-04-16T08:05:05.804Z: Found 0 potential elements
+2025-04-16T08:05:05.827Z: Trying selector: Join text in button role div
+2025-04-16T08:05:05.971Z: Found 0 potential elements
+2025-04-16T08:05:05.991Z: Trying selector: Join button after mute controls
+2025-04-16T08:05:06.106Z: Found 0 potential elements
+2025-04-16T08:05:06.128Z: Trying selector: Join button by class
+2025-04-16T08:05:06.229Z: Found 0 potential elements
+2025-04-16T08:05:06.250Z: Waiting before next attempt...
+2025-04-16T08:05:08.280Z: Attempt 10 to find join button...
+2025-04-16T08:05:08.510Z: Pre-meeting UI not found, continuing...
+2025-04-16T08:05:08.530Z: Attempt 1 to find join button...
+2025-04-16T08:05:09.158Z: Trying selector: VfPpkd button with join text
+2025-04-16T08:05:09.609Z: Found 0 potential elements
+2025-04-16T08:05:09.626Z: Trying selector: VfPpkd button
+2025-04-16T08:05:09.687Z: Found 1 potential elements
+2025-04-16T08:05:09.825Z: Element: displayed=true, enabled=true, text="Learn more", classes="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-dgl2Hf ksBjEc lKxP2d LQeN7"
+2025-04-16T08:05:09.901Z: Clicked via JavaScript
+2025-04-16T08:05:09.921Z: Clicking join button...
+2025-04-16T08:05:09.986Z: Error in joinMeet:
+Error: JavascriptError: javascript error: arguments[0].click is not a function
+  (Session info: chrome=135.0.7049.85)
+    at Object.throwDecodedError (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\error.js:523:15)
+    at parseHttpResponse (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:524:13)
+    at Executor.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:456:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Driver.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\webdriver.js:745:17)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.js:433:9)
+    at async main (D:\Project\notulen.ai\src\meet.js:474:13)
+2025-04-16T08:05:10.456Z: Trying selector: Material button with join text
+2025-04-16T08:05:10.778Z: Found 0 potential elements
+2025-04-16T08:05:10.799Z: Trying selector: Join text in button role div
+2025-04-16T08:05:11.020Z: Found 0 potential elements
+2025-04-16T08:05:11.022Z: Attempt 3/3 failed: javascript error: arguments[0].click is not a function
+  (Session info: chrome=135.0.7049.85)
+2025-04-16T08:05:11.048Z: Trying selector: Join button after mute controls
+2025-04-16T08:05:11.131Z: Found 0 potential elements
+2025-04-16T08:05:11.158Z: Trying selector: Join button by class
+2025-04-16T08:05:11.201Z: Found 0 potential elements
+2025-04-16T08:05:11.224Z: Error in joinMeet:
+Error: Error: Failed to find join button after all attempts. Last error: undefined
+    at findJoinButton (D:\Project\notulen.ai\src\meet.js:333:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.js:385:28)
+    at async main (D:\Project\notulen.ai\src\meet.js:429:13)
+2025-04-16T08:05:11.562Z: Attempt 3/3 failed: Failed to find join button after all attempts. Last error: undefined
+2025-04-16T08:05:11.615Z: Max retries reached, exiting...
+2025-04-16T08:05:11.779Z: Max retries reached, exiting...
+2025-04-16T08:07:09.464Z: Starting browser...
+2025-04-16T08:07:09.509Z: Starting browser initialization...
+2025-04-16T08:07:09.582Z: Created user data directory
+2025-04-16T08:07:13.104Z: Browser started successfully
+2025-04-16T08:07:13.130Z: Browser initialized successfully
+2025-04-16T08:07:13.169Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T08:07:23.002Z: Waiting for meeting page to load...
+2025-04-16T08:07:23.025Z: Waiting for page load...
+2025-04-16T08:07:23.351Z: Handled permission prompt if present
+2025-04-16T08:07:23.380Z: Checking for meeting UI elements...
+2025-04-16T08:07:23.466Z: Found UI element with check: document.querySelector('.VfPpkd-LgbsSe')
+2025-04-16T08:07:23.503Z: Setting up media preferences...
+2025-04-16T08:07:23.556Z: Looking for join button...
+2025-04-16T08:07:23.599Z: JavaScript click failed, trying Selenium...
+2025-04-16T08:07:28.809Z: Pre-meeting UI not found, continuing...
+2025-04-16T08:07:28.836Z: Attempt 1 to find join button...
+2025-04-16T08:07:29.172Z: Trying selector: VfPpkd button with join text
+2025-04-16T08:07:29.220Z: Found 0 potential elements
+2025-04-16T08:07:29.242Z: Trying selector: VfPpkd button
+2025-04-16T08:07:29.293Z: Found 1 potential elements
+2025-04-16T08:07:29.388Z: Element: displayed=true, enabled=true, text="Learn more", classes="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-dgl2Hf ksBjEc lKxP2d LQeN7"
+2025-04-16T08:07:29.437Z: Clicked via JavaScript
+2025-04-16T08:07:34.789Z: Successfully joined the meeting
+2025-04-16T08:08:53.764Z: Starting browser...
+2025-04-16T08:08:53.963Z: Starting browser initialization...
+2025-04-16T08:08:54.091Z: Created user data directory
+2025-04-16T08:08:58.506Z: Browser started successfully
+2025-04-16T08:08:58.535Z: Browser initialized successfully
+2025-04-16T08:08:58.559Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T08:09:09.635Z: Waiting for meeting page to load...
+2025-04-16T08:09:09.659Z: Waiting for page load...
+2025-04-16T08:09:10.259Z: Handled permission prompt if present
+2025-04-16T08:09:10.358Z: Checking for meeting UI elements...
+2025-04-16T08:09:10.592Z: Found UI element with check: document.querySelector('.VfPpkd-LgbsSe')
+2025-04-16T08:09:10.628Z: Setting up media preferences...
+2025-04-16T08:09:10.836Z: Looking for join button...
+2025-04-16T08:09:11.032Z: Successfully clicked join button via JavaScript
+2025-04-16T08:09:16.432Z: Successfully joined the meeting
+2025-04-16T08:10:11.314Z: Starting browser...
+2025-04-16T08:10:11.372Z: Starting browser initialization...
+2025-04-16T08:10:11.411Z: Created user data directory:
+Error: undefined
+2025-04-16T08:10:16.676Z: Browser started successfully
+2025-04-16T08:10:16.788Z: Browser initialized successfully
+2025-04-16T08:10:16.826Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T08:10:29.908Z: Waiting for meeting page to load...
+2025-04-16T08:10:29.928Z: Waiting for page load...
+2025-04-16T08:10:30.344Z: Handled permission prompt if present
+2025-04-16T08:10:30.384Z: Checking for meeting UI elements...
+2025-04-16T08:10:30.461Z: Found UI element with check: document.querySelector('.VfPpkd-LgbsSe')
+2025-04-16T08:10:30.490Z: Setting up media preferences...
+2025-04-16T08:10:30.791Z: Looking for join button...
+2025-04-16T08:10:31.028Z: Successfully clicked join button via JavaScript
+2025-04-16T08:10:37.034Z: Successfully joined the meeting
+2025-04-16T08:12:40.772Z: Starting browser...
+2025-04-16T08:12:40.803Z: Starting browser initialization...
+2025-04-16T08:12:40.835Z: Created user data directory:
+Error: undefined
+2025-04-16T08:12:44.471Z: Browser started successfully
+2025-04-16T08:12:44.745Z: Browser initialized successfully
+2025-04-16T08:12:44.776Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T08:13:09.768Z: Waiting for meeting page to load...
+2025-04-16T08:13:09.805Z: Waiting for page load...
+2025-04-16T08:13:10.206Z: Handled permission prompt if present
+2025-04-16T08:13:10.246Z: Checking for meeting UI elements...
+2025-04-16T08:13:10.350Z: Found UI element with check: document.querySelector('.VfPpkd-LgbsSe')
+2025-04-16T08:13:10.377Z: Setting up media preferences...
+2025-04-16T08:13:10.442Z: Looking for join button...
+2025-04-16T08:13:10.497Z: Successfully clicked join button via JavaScript
+2025-04-16T08:13:15.759Z: Successfully joined the meeting
+2025-04-16T08:14:11.051Z: Starting browser...
+2025-04-16T08:14:11.568Z: Starting browser initialization...
+2025-04-16T08:14:11.712Z: Created user data directory:
+Error: undefined
+2025-04-16T08:14:22.960Z: Browser started successfully
+2025-04-16T08:14:23.538Z: Browser initialized successfully
+2025-04-16T08:14:24.142Z: Navigating to meeting URL:
+Error: undefined
+2025-04-16T08:55:13.976Z: No Chrome processes to kill
+2025-04-16T08:55:14.014Z: Starting browser (attempt 1/3)...
+2025-04-16T08:55:14.053Z: Starting browser initialization...
+2025-04-16T08:55:14.102Z: Created user data directory
+2025-04-16T08:55:14.129Z: Chrome options configured
+2025-04-16T08:55:14.235Z: Error in startBrowser:
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:4444
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T08:55:14.262Z: Attempt 1 failed
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:4444
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T08:55:14.295Z: Retrying in 5 seconds...
+2025-04-16T08:55:19.552Z: No Chrome processes to kill
+2025-04-16T08:55:19.575Z: Starting browser (attempt 2/3)...
+2025-04-16T08:55:19.601Z: Starting browser initialization...
+2025-04-16T08:55:19.622Z: Chrome options configured
+2025-04-16T08:55:19.721Z: Error in startBrowser:
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:4444
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T08:55:19.749Z: Attempt 2 failed
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:4444
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T08:55:19.774Z: Retrying in 5 seconds...
+2025-04-16T08:55:25.039Z: No Chrome processes to kill
+2025-04-16T08:55:25.060Z: Starting browser (attempt 3/3)...
+2025-04-16T08:55:25.081Z: Starting browser initialization...
+2025-04-16T08:55:25.105Z: Chrome options configured
+2025-04-16T08:55:25.210Z: Error in startBrowser:
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:4444
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T08:55:25.236Z: Attempt 3 failed
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:4444
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T08:55:25.269Z: Max retries reached, exiting...
+2025-04-16T08:55:45.579Z: No Chrome processes to kill
+2025-04-16T08:55:45.611Z: Starting browser (attempt 1/3)...
+2025-04-16T08:55:45.645Z: Starting browser initialization...
+2025-04-16T08:55:45.675Z: Created user data directory
+2025-04-16T08:55:45.727Z: Chrome options configured
+2025-04-16T08:55:45.864Z: Error in startBrowser:
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:4444
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T08:55:45.897Z: Attempt 1 failed
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:4444
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T08:55:45.931Z: Retrying in 5 seconds...
+2025-04-16T08:55:51.221Z: No Chrome processes to kill
+2025-04-16T08:55:51.245Z: Starting browser (attempt 2/3)...
+2025-04-16T08:55:51.266Z: Starting browser initialization...
+2025-04-16T08:55:51.295Z: Chrome options configured
+2025-04-16T08:55:51.414Z: Error in startBrowser:
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:4444
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T08:55:51.438Z: Attempt 2 failed
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:4444
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T08:55:51.466Z: Retrying in 5 seconds...
+2025-04-16T08:55:56.734Z: No Chrome processes to kill
+2025-04-16T08:55:56.756Z: Starting browser (attempt 3/3)...
+2025-04-16T08:55:56.778Z: Starting browser initialization...
+2025-04-16T08:55:56.817Z: Chrome options configured
+2025-04-16T08:55:56.956Z: Error in startBrowser:
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:4444
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T08:55:56.985Z: Attempt 3 failed
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:4444
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T08:55:57.017Z: Max retries reached, exiting...
+2025-04-16T08:57:29.547Z: No Chrome processes to kill
+2025-04-16T08:57:29.567Z: Starting browser (attempt 1/3)...
+2025-04-16T08:57:29.588Z: Starting browser initialization...
+2025-04-16T08:57:29.608Z: Created user data directory
+2025-04-16T08:57:29.627Z: Chrome options configured
+2025-04-16T08:57:29.725Z: Error in startBrowser:
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:4444
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T08:57:29.746Z: Attempt 1 failed
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:4444
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T08:57:29.766Z: Retrying in 5 seconds...
+2025-04-16T08:57:34.990Z: No Chrome processes to kill
+2025-04-16T08:57:35.009Z: Starting browser (attempt 2/3)...
+2025-04-16T08:57:35.031Z: Starting browser initialization...
+2025-04-16T08:57:35.052Z: Chrome options configured
+2025-04-16T08:57:35.151Z: Error in startBrowser:
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:4444
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T08:57:35.176Z: Attempt 2 failed
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:4444
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T08:57:35.200Z: Retrying in 5 seconds...
+2025-04-16T08:57:40.412Z: No Chrome processes to kill
+2025-04-16T08:57:40.432Z: Starting browser (attempt 3/3)...
+2025-04-16T08:57:40.455Z: Starting browser initialization...
+2025-04-16T08:57:40.481Z: Chrome options configured
+2025-04-16T08:57:40.592Z: Error in startBrowser:
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:4444
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T08:57:40.614Z: Attempt 3 failed
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:4444
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T08:57:40.639Z: Max retries reached, exiting...
+2025-04-16T08:59:30.074Z: No Chrome processes to kill
+2025-04-16T08:59:30.099Z: Starting browser (attempt 1/3)...
+2025-04-16T08:59:30.120Z: Starting browser initialization...
+2025-04-16T08:59:30.145Z: Created user data directory
+2025-04-16T08:59:33.771Z: Browser started successfully
+2025-04-16T08:59:33.797Z: Attempting to join meeting: https://meet.google.com/gpx-qdzm-twm
+2025-04-16T09:00:03.845Z: Error in joinMeet:
+Error: TimeoutError: Navigation timeout of 30000 ms exceeded
+    at new Deferred (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\util\Deferred.js:60:34)
+    at Deferred.create (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\util\Deferred.js:21:16)
+    at new LifecycleWatcher (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\LifecycleWatcher.js:69:60)
+    at CdpFrame.goto (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\Frame.js:148:29)
+    at CdpFrame.<anonymous> (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\util\decorators.js:109:27)
+    at CdpPage.goto (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Page.js:574:43)
+    at joinMeet (D:\Project\notulen.ai\src\meet.cjs:129:20)
+    at main (D:\Project\notulen.ai\src\meet.cjs:193:19)
+2025-04-16T09:00:03.933Z: Attempt 1 failed:
+Error: TimeoutError: Navigation timeout of 30000 ms exceeded
+    at new Deferred (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\util\Deferred.js:60:34)
+    at Deferred.create (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\util\Deferred.js:21:16)
+    at new LifecycleWatcher (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\LifecycleWatcher.js:69:60)
+    at CdpFrame.goto (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\Frame.js:148:29)
+    at CdpFrame.<anonymous> (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\util\decorators.js:109:27)
+    at CdpPage.goto (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Page.js:574:43)
+    at joinMeet (D:\Project\notulen.ai\src\meet.cjs:129:20)
+    at main (D:\Project\notulen.ai\src\meet.cjs:193:19)
+2025-04-16T09:00:08.748Z: Retrying in 5 seconds...
+2025-04-16T09:00:13.968Z: No Chrome processes to kill
+2025-04-16T09:00:13.986Z: Starting browser (attempt 2/3)...
+2025-04-16T09:00:14.005Z: Starting browser initialization...
+2025-04-16T09:00:16.519Z: Browser started successfully
+2025-04-16T09:00:16.541Z: Attempting to join meeting: https://meet.google.com/gpx-qdzm-twm
+2025-04-16T09:00:44.306Z: Navigated to meeting URL
+2025-04-16T09:00:46.996Z: Login required - attempting login
+2025-04-16T09:00:47.018Z: Starting login process...
+2025-04-16T09:00:50.269Z: Entering email...
+2025-04-16T09:00:58.031Z: Entering password...
+2025-04-16T09:01:02.816Z: Waiting for login completion...
+2025-04-16T09:01:11.269Z: Login process completed
+2025-04-16T09:01:36.944Z: Returned to meeting URL after login
+2025-04-16T09:01:36.977Z: Looking for join button...
+2025-04-16T09:02:37.017Z: Error in joinMeet:
+Error: TimeoutError: Waiting for selector `button[aria-label*="Join now"], button[aria-label*="Ask to join"]` failed: Waiting failed: 60000ms exceeded
+    at new WaitTask (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\common\WaitTask.js:48:34)
+    at IsolatedWorld.waitForFunction (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Realm.js:25:26)
+    at CSSQueryHandler.waitFor (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\common\QueryHandler.js:178:95)
+    at async CdpFrame.waitForSelector (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Frame.js:548:21)
+    at async CdpPage.waitForSelector (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Page.js:1378:20)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.cjs:146:9)
+    at async main (D:\Project\notulen.ai\src\meet.cjs:193:13)
+2025-04-16T09:02:37.054Z: Attempt 2 failed:
+Error: TimeoutError: Waiting for selector `button[aria-label*="Join now"], button[aria-label*="Ask to join"]` failed: Waiting failed: 60000ms exceeded
+    at new WaitTask (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\common\WaitTask.js:48:34)
+    at IsolatedWorld.waitForFunction (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Realm.js:25:26)
+    at CSSQueryHandler.waitFor (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\common\QueryHandler.js:178:95)
+    at async CdpFrame.waitForSelector (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Frame.js:548:21)
+    at async CdpPage.waitForSelector (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Page.js:1378:20)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.cjs:146:9)
+    at async main (D:\Project\notulen.ai\src\meet.cjs:193:13)
+2025-04-16T09:02:38.484Z: Retrying in 10 seconds...
+2025-04-16T09:02:49.130Z: Killed existing Chrome processes
+2025-04-16T09:02:51.171Z: Starting browser (attempt 3/3)...
+2025-04-16T09:02:51.215Z: Starting browser initialization...
+2025-04-16T09:02:53.094Z: Browser started successfully
+2025-04-16T09:02:53.125Z: Attempting to join meeting: https://meet.google.com/gpx-qdzm-twm
+2025-04-16T09:03:02.588Z: Navigated to meeting URL
+2025-04-16T09:03:02.946Z: Looking for join button...
+2025-04-16T09:04:02.988Z: Error in joinMeet:
+Error: TimeoutError: Waiting for selector `button[aria-label*="Join now"], button[aria-label*="Ask to join"]` failed: Waiting failed: 60000ms exceeded
+    at new WaitTask (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\common\WaitTask.js:48:34)
+    at IsolatedWorld.waitForFunction (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Realm.js:25:26)
+    at CSSQueryHandler.waitFor (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\common\QueryHandler.js:178:95)
+    at async CdpFrame.waitForSelector (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Frame.js:548:21)
+    at async CdpPage.waitForSelector (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Page.js:1378:20)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.cjs:146:9)
+    at async main (D:\Project\notulen.ai\src\meet.cjs:193:13)
+2025-04-16T09:04:03.079Z: Attempt 3 failed:
+Error: TimeoutError: Waiting for selector `button[aria-label*="Join now"], button[aria-label*="Ask to join"]` failed: Waiting failed: 60000ms exceeded
+    at new WaitTask (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\common\WaitTask.js:48:34)
+    at IsolatedWorld.waitForFunction (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Realm.js:25:26)
+    at CSSQueryHandler.waitFor (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\common\QueryHandler.js:178:95)
+    at async CdpFrame.waitForSelector (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Frame.js:548:21)
+    at async CdpPage.waitForSelector (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Page.js:1378:20)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.cjs:146:9)
+    at async main (D:\Project\notulen.ai\src\meet.cjs:193:13)
+2025-04-16T09:04:06.255Z: Max retries reached, exiting...
+2025-04-16T09:04:21.880Z: Killed existing Chrome processes
+2025-04-16T09:04:23.931Z: Starting browser (attempt 1/3)...
+2025-04-16T09:04:23.958Z: Starting browser initialization...
+2025-04-16T09:04:23.984Z: Created user data directory
+2025-04-16T09:04:26.233Z: Browser started successfully
+2025-04-16T09:04:26.266Z: Attempting to join meeting: https://meet.google.com/gpx-qdzm-twm
+2025-04-16T09:04:49.372Z: Navigated to meeting URL
+2025-04-16T09:04:50.928Z: Login required - attempting login
+2025-04-16T09:04:50.958Z: Starting login process...
+2025-04-16T09:04:54.880Z: Entering email...
+2025-04-16T09:06:06.420Z: Starting browser (attempt 1/3)...
+2025-04-16T09:06:06.445Z: Starting browser initialization...
+2025-04-16T09:06:06.462Z: Created user data directory
+2025-04-16T09:06:06.479Z: Chrome options configured
+2025-04-16T09:06:06.589Z: Error in startBrowser:
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:4444
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T09:06:06.608Z: Attempt 1 failed
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:4444
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T09:06:06.634Z: Retrying in 5 seconds...
+2025-04-16T09:06:11.675Z: Cleaning up previous session...
+2025-04-16T09:06:11.935Z: No previous session to clean up
+2025-04-16T09:06:11.956Z: Starting browser (attempt 2/3)...
+2025-04-16T09:06:11.979Z: Starting browser initialization...
+2025-04-16T09:06:12.003Z: Chrome options configured
+2025-04-16T09:06:12.102Z: Error in startBrowser:
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:4444
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T09:06:12.135Z: Attempt 2 failed
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:4444
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T09:06:12.177Z: Retrying in 5 seconds...
+2025-04-16T09:06:17.214Z: Cleaning up previous session...
+2025-04-16T09:06:17.390Z: No previous session to clean up
+2025-04-16T09:06:17.413Z: Starting browser (attempt 3/3)...
+2025-04-16T09:06:17.434Z: Starting browser initialization...
+2025-04-16T09:06:17.455Z: Chrome options configured
+2025-04-16T09:06:17.544Z: Error in startBrowser:
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:4444
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T09:06:17.560Z: Attempt 3 failed
+Error: Error: ECONNREFUSED connect ECONNREFUSED 127.0.0.1:4444
+    at ClientRequest.<anonymous> (D:\Project\notulen.ai\node_modules\selenium-webdriver\http\index.js:293:15)
+    at ClientRequest.emit (node:events:518:28)
+    at emitErrorEvent (node:_http_client:101:11)
+    at Socket.socketErrorListener (node:_http_client:504:5)
+    at Socket.emit (node:events:518:28)
+    at emitErrorNT (node:internal/streams/destroy:169:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2025-04-16T09:06:17.575Z: Max retries reached, exiting...
+2025-04-16T09:07:58.724Z: Starting browser (attempt 1/3)...
+2025-04-16T09:07:58.747Z: Starting browser initialization...
+2025-04-16T09:07:58.763Z: Created user data directory
+2025-04-16T09:08:02.761Z: Browser started successfully
+2025-04-16T09:08:02.784Z: Attempting to join meeting: https://meet.google.com/gpx-qdzm-twm
+2025-04-16T09:08:30.286Z: Navigated to meeting URL
+2025-04-16T09:08:31.447Z: Login required - attempting login
+2025-04-16T09:08:31.464Z: Starting login process...
+2025-04-16T09:08:34.151Z: Entering email...
+2025-04-16T09:08:39.377Z: Entering password...
+2025-04-16T09:08:43.820Z: Waiting for login completion...
+2025-04-16T09:08:52.093Z: Error during login:
+Error: ProtocolError: Protocol error (Page.captureScreenshot): Unable to capture screenshot
+    at <instance_members_initializer> (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\common\CallbackRegistry.js:101:14)
+    at new Callback (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\common\CallbackRegistry.js:105:16)
+    at CallbackRegistry.create (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\common\CallbackRegistry.js:23:26)
+    at Connection._rawSend (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\Connection.js:99:26)
+    at CdpCDPSession.send (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\CdpSession.js:73:33)
+    at CdpPage._screenshot (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\Page.js:765:62)
+    at CdpPage.screenshot (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Page.js:1071:41)
+    at async CdpPage.<anonymous> (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\util\decorators.js:172:24)
+    at async login (D:\Project\notulen.ai\src\meet.cjs:129:9)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.cjs:161:13)
+2025-04-16T09:08:52.170Z: Error in joinMeet:
+Error: ProtocolError: Protocol error (Page.captureScreenshot): Unable to capture screenshot
+    at <instance_members_initializer> (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\common\CallbackRegistry.js:101:14)
+    at new Callback (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\common\CallbackRegistry.js:105:16)
+    at CallbackRegistry.create (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\common\CallbackRegistry.js:23:26)
+    at Connection._rawSend (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\Connection.js:99:26)
+    at CdpCDPSession.send (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\CdpSession.js:73:33)
+    at CdpPage._screenshot (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\Page.js:765:62)
+    at CdpPage.screenshot (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Page.js:1071:41)
+    at async CdpPage.<anonymous> (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\util\decorators.js:172:24)
+    at async login (D:\Project\notulen.ai\src\meet.cjs:129:9)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.cjs:161:13)
+2025-04-16T09:08:52.241Z: Attempt 1 failed:
+Error: ProtocolError: Protocol error (Page.captureScreenshot): Unable to capture screenshot
+    at <instance_members_initializer> (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\common\CallbackRegistry.js:101:14)
+    at new Callback (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\common\CallbackRegistry.js:105:16)
+    at CallbackRegistry.create (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\common\CallbackRegistry.js:23:26)
+    at Connection._rawSend (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\Connection.js:99:26)
+    at CdpCDPSession.send (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\CdpSession.js:73:33)
+    at CdpPage._screenshot (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\cdp\Page.js:765:62)
+    at CdpPage.screenshot (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Page.js:1071:41)
+    at async CdpPage.<anonymous> (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\util\decorators.js:172:24)
+    at async login (D:\Project\notulen.ai\src\meet.cjs:129:9)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.cjs:161:13)
+2025-04-16T09:08:54.084Z: Retrying in 5 seconds...
+2025-04-16T09:08:59.123Z: Cleaning up previous session...
+2025-04-16T09:08:59.317Z: No previous session to clean up
+2025-04-16T09:08:59.333Z: Starting browser (attempt 2/3)...
+2025-04-16T09:08:59.352Z: Starting browser initialization...
+2025-04-16T09:09:01.714Z: Browser started successfully
+2025-04-16T09:09:01.738Z: Attempting to join meeting: https://meet.google.com/gpx-qdzm-twm
+2025-04-16T09:09:11.569Z: Navigated to meeting URL
+2025-04-16T09:09:12.011Z: Looking for join button...
+2025-04-16T09:10:42.025Z: Error in joinMeet:
+Error: TimeoutError: Waiting for selector `button[aria-label*="Join now"], button[aria-label*="Ask to join"]` failed: Waiting failed: 90000ms exceeded
+    at new WaitTask (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\common\WaitTask.js:48:34)
+    at IsolatedWorld.waitForFunction (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Realm.js:25:26)
+    at CSSQueryHandler.waitFor (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\common\QueryHandler.js:178:95)
+    at async CdpFrame.waitForSelector (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Frame.js:548:21)
+    at async CdpPage.waitForSelector (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Page.js:1378:20)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.cjs:171:9)
+    at async main (D:\Project\notulen.ai\src\meet.cjs:221:13)
+2025-04-16T09:10:42.046Z: Attempt 2 failed:
+Error: TimeoutError: Waiting for selector `button[aria-label*="Join now"], button[aria-label*="Ask to join"]` failed: Waiting failed: 90000ms exceeded
+    at new WaitTask (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\common\WaitTask.js:48:34)
+    at IsolatedWorld.waitForFunction (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Realm.js:25:26)
+    at CSSQueryHandler.waitFor (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\common\QueryHandler.js:178:95)
+    at async CdpFrame.waitForSelector (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Frame.js:548:21)
+    at async CdpPage.waitForSelector (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Page.js:1378:20)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.cjs:171:9)
+    at async main (D:\Project\notulen.ai\src\meet.cjs:221:13)
+2025-04-16T09:10:43.565Z: Retrying in 10 seconds...
+2025-04-16T09:10:53.591Z: Cleaning up previous session...
+2025-04-16T09:10:53.835Z: No previous session to clean up
+2025-04-16T09:10:53.856Z: Starting browser (attempt 3/3)...
+2025-04-16T09:10:53.881Z: Starting browser initialization...
+2025-04-16T09:10:57.366Z: Browser started successfully
+2025-04-16T09:10:57.403Z: Attempting to join meeting: https://meet.google.com/gpx-qdzm-twm
+2025-04-16T09:11:08.398Z: Navigated to meeting URL
+2025-04-16T09:11:13.332Z: Looking for join button...
+2025-04-16T09:12:43.385Z: Error in joinMeet:
+Error: TimeoutError: Waiting for selector `button[aria-label*="Join now"], button[aria-label*="Ask to join"]` failed: Waiting failed: 90000ms exceeded
+    at new WaitTask (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\common\WaitTask.js:48:34)
+    at IsolatedWorld.waitForFunction (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Realm.js:25:26)
+    at CSSQueryHandler.waitFor (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\common\QueryHandler.js:178:95)
+    at async CdpFrame.waitForSelector (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Frame.js:548:21)
+    at async CdpPage.waitForSelector (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Page.js:1378:20)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.cjs:171:9)
+    at async main (D:\Project\notulen.ai\src\meet.cjs:221:13)
+2025-04-16T09:12:43.416Z: Attempt 3 failed:
+Error: TimeoutError: Waiting for selector `button[aria-label*="Join now"], button[aria-label*="Ask to join"]` failed: Waiting failed: 90000ms exceeded
+    at new WaitTask (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\common\WaitTask.js:48:34)
+    at IsolatedWorld.waitForFunction (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Realm.js:25:26)
+    at CSSQueryHandler.waitFor (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\common\QueryHandler.js:178:95)
+    at async CdpFrame.waitForSelector (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Frame.js:548:21)
+    at async CdpPage.waitForSelector (D:\Project\notulen.ai\node_modules\puppeteer-core\lib\cjs\puppeteer\api\Page.js:1378:20)
+    at async joinMeet (D:\Project\notulen.ai\src\meet.cjs:171:9)
+    at async main (D:\Project\notulen.ai\src\meet.cjs:221:13)
+2025-04-16T09:12:45.066Z: Max retries reached, exiting...
+2025-04-17T02:48:59.116Z: No Chrome processes to kill
+2025-04-17T02:48:59.121Z: Starting browser (attempt 1/3)...
+2025-04-17T02:48:59.124Z: Using Chrome binary path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2025-04-17T02:49:02.173Z: Attempting to join meeting: https://meet.google.com/coh-kyoz-oga
+2025-04-17T02:49:05.295Z: Navigated to meeting URL
+2025-04-17T02:49:10.474Z: Saved pre-join screenshot
+2025-04-17T02:49:12.568Z: Disabled camera and microphone
+2025-04-17T02:49:12.601Z: Trying join button selector: //span[contains(text(), 'Join now')]
+2025-04-17T02:49:22.818Z: Selector //span[contains(text(), 'Join now')] failed: Waiting for element to be located By(xpath, //span[contains(text(), 'Join now')])
+Wait timed out after 10170ms
+2025-04-17T02:49:22.820Z: Trying join button selector: //span[contains(text(), 'Ask to join')]
+2025-04-17T02:49:33.052Z: Selector //span[contains(text(), 'Ask to join')] failed: Waiting for element to be located By(xpath, //span[contains(text(), 'Ask to join')])
+Wait timed out after 10231ms
+2025-04-17T02:49:33.060Z: Trying join button selector: //button[contains(@aria-label, 'Join now')]
+2025-04-17T02:49:43.063Z: Selector //button[contains(@aria-label, 'Join now')] failed: Waiting for element to be located By(xpath, //button[contains(@aria-label, 'Join now')])
+Wait timed out after 10000ms
+2025-04-17T02:49:43.064Z: Trying join button selector: //button[contains(@aria-label, 'Ask to join')]
+2025-04-17T02:49:53.299Z: Selector //button[contains(@aria-label, 'Ask to join')] failed: Waiting for element to be located By(xpath, //button[contains(@aria-label, 'Ask to join')])
+Wait timed out after 10233ms
+2025-04-17T02:49:53.302Z: Trying join button selector: //div[contains(@role, 'button')]/span[contains(text(), 'Join now')]
+2025-04-17T02:50:03.420Z: Selector //div[contains(@role, 'button')]/span[contains(text(), 'Join now')] failed: Waiting for element to be located By(xpath, //div[contains(@role, 'button')]/span[contains(text(), 'Join now')])
+Wait timed out after 10116ms
+2025-04-17T02:50:03.421Z: Trying join button selector: //div[contains(@role, 'button')]/span[contains(text(), 'Ask to join')]
+2025-04-17T02:50:13.632Z: Selector //div[contains(@role, 'button')]/span[contains(text(), 'Ask to join')] failed: Waiting for element to be located By(xpath, //div[contains(@role, 'button')]/span[contains(text(), 'Ask to join')])
+Wait timed out after 10208ms
+2025-04-17T02:50:13.640Z: Failed to find join button with standard selectors, trying JavaScript injection
+2025-04-17T02:50:13.733Z: Error in joinMeet
+Error: Error: Could not find join button
+    at joinMeet (D:\Project\notulen.ai\meet.cjs:217:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async main (D:\Project\notulen.ai\meet.cjs:262:13)
+2025-04-17T02:50:13.964Z: Saved error screenshot
+2025-04-17T02:50:13.965Z: Attempt 1 failed
+Error: Error: Could not find join button
+    at joinMeet (D:\Project\notulen.ai\meet.cjs:217:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async main (D:\Project\notulen.ai\meet.cjs:262:13)
+2025-04-17T02:50:14.329Z: Retrying in 5 seconds...
+2025-04-17T02:50:19.385Z: No Chrome processes to kill
+2025-04-17T02:50:19.386Z: Starting browser (attempt 2/3)...
+2025-04-17T02:50:19.387Z: Using Chrome binary path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2025-04-17T02:50:20.933Z: Attempting to join meeting: https://meet.google.com/coh-kyoz-oga
+2025-04-17T02:50:23.775Z: Navigated to meeting URL
+2025-04-17T02:50:28.995Z: Saved pre-join screenshot
+2025-04-17T02:50:31.185Z: Disabled camera and microphone
+2025-04-17T02:50:31.189Z: Trying join button selector: //span[contains(text(), 'Join now')]
+2025-04-17T02:50:41.386Z: Selector //span[contains(text(), 'Join now')] failed: Waiting for element to be located By(xpath, //span[contains(text(), 'Join now')])
+Wait timed out after 10190ms
+2025-04-17T02:50:41.388Z: Trying join button selector: //span[contains(text(), 'Ask to join')]
+2025-04-17T02:50:51.447Z: Selector //span[contains(text(), 'Ask to join')] failed: Waiting for element to be located By(xpath, //span[contains(text(), 'Ask to join')])
+Wait timed out after 10058ms
+2025-04-17T02:50:51.451Z: Trying join button selector: //button[contains(@aria-label, 'Join now')]
+2025-04-17T02:51:01.464Z: Selector //button[contains(@aria-label, 'Join now')] failed: Waiting for element to be located By(xpath, //button[contains(@aria-label, 'Join now')])
+Wait timed out after 10012ms
+2025-04-17T02:51:01.466Z: Trying join button selector: //button[contains(@aria-label, 'Ask to join')]
+2025-04-17T02:51:05.509Z: No Chrome processes to kill
+2025-04-17T02:51:05.514Z: Starting browser (attempt 1/3)...
+2025-04-17T02:51:05.515Z: Using Chrome binary path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2025-04-17T02:51:06.204Z: Attempt 1 failed
+Error: SessionNotCreatedError: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+    at Object.throwDecodedError (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\error.js:523:15)
+    at parseHttpResponse (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:524:13)
+    at Executor.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:456:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-17T02:51:06.206Z: Retrying in 5 seconds...
+2025-04-17T02:51:11.263Z: No Chrome processes to kill
+2025-04-17T02:51:11.264Z: Starting browser (attempt 2/3)...
+2025-04-17T02:51:11.273Z: Using Chrome binary path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2025-04-17T02:51:11.572Z: Selector //button[contains(@aria-label, 'Ask to join')] failed: Waiting for element to be located By(xpath, //button[contains(@aria-label, 'Ask to join')])
+Wait timed out after 10105ms
+2025-04-17T02:51:11.574Z: Trying join button selector: //div[contains(@role, 'button')]/span[contains(text(), 'Join now')]
+2025-04-17T02:51:11.800Z: Attempt 2 failed
+Error: SessionNotCreatedError: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+    at Object.throwDecodedError (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\error.js:523:15)
+    at parseHttpResponse (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:524:13)
+    at Executor.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:456:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-17T02:51:11.803Z: Retrying in 5 seconds...
+2025-04-17T02:51:16.863Z: No Chrome processes to kill
+2025-04-17T02:51:16.865Z: Starting browser (attempt 3/3)...
+2025-04-17T02:51:16.867Z: Using Chrome binary path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2025-04-17T02:51:17.417Z: Attempt 3 failed
+Error: SessionNotCreatedError: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+    at Object.throwDecodedError (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\error.js:523:15)
+    at parseHttpResponse (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:524:13)
+    at Executor.execute (D:\Project\notulen.ai\node_modules\selenium-webdriver\lib\http.js:456:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-17T02:51:17.421Z: Max retries reached, exiting...
+2025-04-17T02:51:21.718Z: Selector //div[contains(@role, 'button')]/span[contains(text(), 'Join now')] failed: Waiting for element to be located By(xpath, //div[contains(@role, 'button')]/span[contains(text(), 'Join now')])
+Wait timed out after 10144ms
+2025-04-17T02:51:21.721Z: Trying join button selector: //div[contains(@role, 'button')]/span[contains(text(), 'Ask to join')]
+2025-04-17T02:51:31.950Z: Selector //div[contains(@role, 'button')]/span[contains(text(), 'Ask to join')] failed: Waiting for element to be located By(xpath, //div[contains(@role, 'button')]/span[contains(text(), 'Ask to join')])
+Wait timed out after 10226ms
+2025-04-17T02:51:31.952Z: Failed to find join button with standard selectors, trying JavaScript injection
+2025-04-17T02:51:31.982Z: Error in joinMeet
+Error: Error: Could not find join button
+    at joinMeet (D:\Project\notulen.ai\meet.cjs:217:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async main (D:\Project\notulen.ai\meet.cjs:262:13)
+2025-04-17T02:51:32.157Z: Saved error screenshot
+2025-04-17T02:51:32.158Z: Attempt 2 failed
+Error: Error: Could not find join button
+    at joinMeet (D:\Project\notulen.ai\meet.cjs:217:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async main (D:\Project\notulen.ai\meet.cjs:262:13)
+2025-04-17T02:51:33.415Z: Retrying in 5 seconds...
+2025-04-17T02:51:38.462Z: No Chrome processes to kill
+2025-04-17T02:51:38.463Z: Starting browser (attempt 3/3)...
+2025-04-17T02:51:38.464Z: Using Chrome binary path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2025-04-17T02:51:40.571Z: Attempting to join meeting: https://meet.google.com/coh-kyoz-oga
+2025-04-17T02:51:45.996Z: Navigated to meeting URL
+2025-04-17T02:51:51.168Z: Saved pre-join screenshot
+2025-04-17T02:51:53.267Z: Disabled camera and microphone
+2025-04-17T02:51:53.269Z: Trying join button selector: //span[contains(text(), 'Join now')]
+2025-04-17T02:52:03.469Z: Selector //span[contains(text(), 'Join now')] failed: Waiting for element to be located By(xpath, //span[contains(text(), 'Join now')])
+Wait timed out after 10198ms
+2025-04-17T02:52:03.471Z: Trying join button selector: //span[contains(text(), 'Ask to join')]
+2025-04-17T02:52:13.536Z: Selector //span[contains(text(), 'Ask to join')] failed: Waiting for element to be located By(xpath, //span[contains(text(), 'Ask to join')])
+Wait timed out after 10063ms
+2025-04-17T02:52:13.540Z: Trying join button selector: //button[contains(@aria-label, 'Join now')]
+2025-04-17T02:52:19.409Z: No Chrome processes to kill
+2025-04-17T02:52:19.415Z: Starting browser (attempt 1/3)...
+2025-04-17T02:52:19.417Z: Using Chrome binary path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2025-04-17T02:52:19.423Z: Attempt 1 failed
+Error: TypeError: chrome.setDefaultService is not a function
+    at startBrowser (D:\Project\notulen.ai\meet.cjs:84:12)
+    at main (D:\Project\notulen.ai\meet.cjs:331:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-17T02:52:19.425Z: Retrying in 5 seconds...
+2025-04-17T02:52:23.681Z: Selector //button[contains(@aria-label, 'Join now')] failed: Waiting for element to be located By(xpath, //button[contains(@aria-label, 'Join now')])
+Wait timed out after 10122ms
+2025-04-17T02:52:23.684Z: Trying join button selector: //button[contains(@aria-label, 'Ask to join')]
+2025-04-17T02:52:24.484Z: No Chrome processes to kill
+2025-04-17T02:52:24.486Z: Starting browser (attempt 2/3)...
+2025-04-17T02:52:24.487Z: Using Chrome binary path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2025-04-17T02:52:24.489Z: Attempt 2 failed
+Error: TypeError: chrome.setDefaultService is not a function
+    at startBrowser (D:\Project\notulen.ai\meet.cjs:84:12)
+    at main (D:\Project\notulen.ai\meet.cjs:331:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-17T02:52:24.490Z: Retrying in 5 seconds...
+2025-04-17T02:52:29.534Z: No Chrome processes to kill
+2025-04-17T02:52:29.536Z: Starting browser (attempt 3/3)...
+2025-04-17T02:52:29.538Z: Using Chrome binary path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2025-04-17T02:52:29.544Z: Attempt 3 failed
+Error: TypeError: chrome.setDefaultService is not a function
+    at startBrowser (D:\Project\notulen.ai\meet.cjs:84:12)
+    at main (D:\Project\notulen.ai\meet.cjs:331:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-17T02:52:29.546Z: Max retries reached, exiting...
+2025-04-17T02:52:33.828Z: Selector //button[contains(@aria-label, 'Ask to join')] failed: Waiting for element to be located By(xpath, //button[contains(@aria-label, 'Ask to join')])
+Wait timed out after 10143ms
+2025-04-17T02:52:33.829Z: Trying join button selector: //div[contains(@role, 'button')]/span[contains(text(), 'Join now')]
+2025-04-17T02:52:44.325Z: Selector //div[contains(@role, 'button')]/span[contains(text(), 'Join now')] failed: Waiting for element to be located By(xpath, //div[contains(@role, 'button')]/span[contains(text(), 'Join now')])
+Wait timed out after 10495ms
+2025-04-17T02:52:44.327Z: Trying join button selector: //div[contains(@role, 'button')]/span[contains(text(), 'Ask to join')]
+2025-04-17T02:52:54.480Z: Selector //div[contains(@role, 'button')]/span[contains(text(), 'Ask to join')] failed: Waiting for element to be located By(xpath, //div[contains(@role, 'button')]/span[contains(text(), 'Ask to join')])
+Wait timed out after 10152ms
+2025-04-17T02:52:54.483Z: Failed to find join button with standard selectors, trying JavaScript injection
+2025-04-17T02:52:54.507Z: Error in joinMeet
+Error: Error: Could not find join button
+    at joinMeet (D:\Project\notulen.ai\meet.cjs:217:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async main (D:\Project\notulen.ai\meet.cjs:262:13)
+2025-04-17T02:52:54.749Z: Saved error screenshot
+2025-04-17T02:52:54.750Z: Attempt 3 failed
+Error: Error: Could not find join button
+    at joinMeet (D:\Project\notulen.ai\meet.cjs:217:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async main (D:\Project\notulen.ai\meet.cjs:262:13)
+2025-04-17T02:52:55.030Z: Max retries reached, exiting...
+2025-04-17T02:52:58.342Z: No Chrome processes to kill
+2025-04-17T02:52:58.348Z: Starting browser (attempt 1/3)...
+2025-04-17T02:52:58.350Z: Using Chrome binary path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2025-04-17T02:52:58.355Z: Starting browser initialization...
+2025-04-17T02:52:58.359Z: Attempt 1 failed
+Error: TypeError: not a chrome.ServiceBuilder object
+    at Builder.setChromeService (D:\Project\notulen.ai\node_modules\selenium-webdriver\index.js:452:13)
+    at startBrowser (D:\Project\notulen.ai\meet.cjs:89:10)
+    at main (D:\Project\notulen.ai\meet.cjs:331:28)
+2025-04-17T02:52:58.360Z: Retrying in 5 seconds...
+2025-04-17T02:53:03.396Z: No Chrome processes to kill
+2025-04-17T02:53:03.397Z: Starting browser (attempt 2/3)...
+2025-04-17T02:53:03.398Z: Using Chrome binary path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2025-04-17T02:53:03.400Z: Starting browser initialization...
+2025-04-17T02:53:03.401Z: Attempt 2 failed
+Error: TypeError: not a chrome.ServiceBuilder object
+    at Builder.setChromeService (D:\Project\notulen.ai\node_modules\selenium-webdriver\index.js:452:13)
+    at startBrowser (D:\Project\notulen.ai\meet.cjs:89:10)
+    at main (D:\Project\notulen.ai\meet.cjs:331:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-17T02:53:03.404Z: Retrying in 5 seconds...
+2025-04-17T02:53:08.429Z: No Chrome processes to kill
+2025-04-17T02:53:08.430Z: Starting browser (attempt 3/3)...
+2025-04-17T02:53:08.432Z: Using Chrome binary path: C:\Program Files\Google\Chrome\Application\chrome.exe
+2025-04-17T02:53:08.434Z: Starting browser initialization...
+2025-04-17T02:53:08.435Z: Attempt 3 failed
+Error: TypeError: not a chrome.ServiceBuilder object
+    at Builder.setChromeService (D:\Project\notulen.ai\node_modules\selenium-webdriver\index.js:452:13)
+    at startBrowser (D:\Project\notulen.ai\meet.cjs:89:10)
+    at main (D:\Project\notulen.ai\meet.cjs:331:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2025-04-17T02:53:08.437Z: Max retries reached, exiting...
+2025-04-17T02:54:03.021Z: Starting browser (attempt 1/3)...
+2025-04-17T02:54:05.391Z: Attempt 1 failed
+Error: TypeError: page.setPermissions is not a function
+    at main (D:\Project\notulen.ai\meet-puppeteer.js:194:24)
+2025-04-17T02:54:07.320Z: Retrying in 5 seconds...
+2025-04-17T02:54:12.332Z: Starting browser (attempt 2/3)...
+2025-04-17T02:54:14.984Z: Attempt 2 failed
+Error: TypeError: page.setPermissions is not a function
+    at main (D:\Project\notulen.ai\meet-puppeteer.js:194:24)
+2025-04-17T02:54:16.710Z: Retrying in 5 seconds...
+2025-04-17T03:31:11.608Z: No Chrome processes to kill
+2025-04-17T03:31:11.616Z: Starting browser...
+2025-04-17T03:31:11.618Z: Starting browser initialization...
+2025-04-17T03:31:11.620Z: Created user data directory
+2025-04-17T03:31:11.622Z: Chrome options configured
