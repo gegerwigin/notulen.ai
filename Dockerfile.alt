@@ -1,0 +1,37 @@
+FROM node:18-slim
+
+# Instal Chrome
+RUN apt-get update && apt-get install -y \
+    wget \
+    gnupg \
+    ca-certificates \
+    procps \
+    libxss1 \
+    && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+    && echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list \
+    && apt-get update \
+    && apt-get install -y google-chrome-stable \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Puppeteer tanpa Chrome (karena kita sudah menginstall Chrome)
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+
+# Port yang digunakan
+EXPOSE 3002
+
+# Buat direktori kerja
+WORKDIR /app
+
+# Salin file package.json dan instal dependensi
+COPY package.json .
+RUN npm install
+
+# Salin file aplikasi
+COPY docker-server.js server.js
+COPY docker-meet-bot.js .
+
+# Buat direktori logs dengan izin yang tepat
+RUN mkdir -p /app/logs && chmod 777 /app/logs
+
+# Jalankan server
+CMD ["node", "server.js"] 

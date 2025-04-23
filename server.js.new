@@ -1,0 +1,106 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const { fork } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
+const app = express();
+app.use(bodyParser.json());
+
+// Log folder
+const logFolder = path.join(__dirname, 'logs');
+if (!fs.existsSync(logFolder)) {
+    fs.mkdirSync(logFolder);
+}
+
+// Bot process
+let botProcess = null;
+
+// Start bot process
+function startBot() {
+    if (!botProcess) {
+        console.log('Starting bot process...');
+
+        botProcess = fork('./meet-bot.js', [], {
+            stdio: ['pipe', 'pipe', 'pipe', 'ipc']
+        });
+
+        console.log('Bot process started with PID:', botProcess.pid);
+
+        // Log stdout
+        botProcess.stdout.on('data', (data) => {
+            const message = data.toString().trim();
+            console.log('Bot stdout:', message);
+            fs.appendFileSync(path.join(logFolder, 'bot.log'), `[stdout] ${message}\n`);
+        });
+
+        // Log stderr
+        botProcess.stderr.on('data', (data) => {
+            const message = data.toString().trim();
+            console.error('Bot stderr:', message);
+            fs.appendFileSync(path.join(logFolder, 'bot.log'), `[stderr] ${message}\n`);
+        });
+
+        // Process messages from bot
+        botProcess.on('message', (message) => {
+            console.log('Message from bot:', message);
+            fs.appendFileSync(path.join(logFolder, 'bot.log'), `[message] ${JSON.stringify(message)}\n`);
+        });
+
+        // Handle bot process exit
+        botProcess.on('exit', (code) => {
+            console.log('Bot process exited with code:', code);
+            fs.appendFileSync(path.join(logFolder, 'bot.log'), `[exit] Bot process exited with code: ${code}\n`);
+            botProcess = null;
+        });
+    }
+}
+
+// Start bot on server startup
+startBot();
+
+// API route to join a meeting
+app.post('/join-meeting', (req, res) => {
+    const { meetingUrl } = req.body;
+
+    if (!meetingUrl) {
+        return res.status(400).json({
+            success: false,
+            message: 'meetingUrl is required'
+        });
+    }
+
+    if (!botProcess) {
+        startBot();
+    }
+
+    // Send message to bot
+    botProcess.send({
+        type: 'join',
+        meetingUrl
+    });
+
+    console.log('Sending join request for URL:', meetingUrl);
+    fs.appendFileSync(path.join(logFolder, 'bot.log'), `[request] Sending join request for URL: ${meetingUrl}\n`);
+
+    res.json({
+        success: true,
+        message: 'Join request sent to bot'
+    });
+});
+
+// API route to check the status of the bot
+app.get('/status', (req, res) => {
+    res.json({
+        success: true,
+        botRunning: botProcess !== null,
+        serverTime: new Date().toISOString()
+    });
+});
+
+// Start server
+const port = process.env.PORT || 3002;
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Server running at http://0.0.0.0:${port}`);
+    console.log('Environment:', process.env.NODE_ENV || 'development');
+}); 

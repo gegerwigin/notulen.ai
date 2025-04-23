@@ -59,7 +59,7 @@ export class MeetingController {
                 url: meetingUrl
             });
 
-            session.status = 'joined';
+                session.status = 'joined';
             return sessionId;
 
         } catch (error: any) {
@@ -107,7 +107,7 @@ export class MeetingController {
         if (!session) {
             return null;
         }
-
+        
         const botStatus = session.bot.getStatus();
         return {
             sessionId: session.id,

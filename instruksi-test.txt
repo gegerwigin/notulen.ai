@@ -1,0 +1,31 @@
+1. SSH ke server menggunakan:
+ssh -i "C:/Users/mahar/Downloads/LightsailDefaultKey-ap-southeast-1 (5).pem" bitnami@18.141.229.165
+
+2. Setelah login ke server, jalankan perintah berikut:
+curl -X POST http://localhost:3002/join \
+  -H "Content-Type: application/json" \
+  -d '{"url": "https://meet.google.com/abc-defg-hij", "username": "Test Bot"}'
+
+3. Atau gunakan Python di server:
+python3 -c '
+import requests
+import json
+
+data = {
+    "url": "https://meet.google.com/abc-defg-hij",
+    "username": "Test Bot"
+}
+
+headers = {
+    "Content-Type": "application/json"
+}
+
+response = requests.post("http://localhost:3002/join", headers=headers, json=data)
+
+print("Status Code:", response.status_code)
+print("Response:")
+print(response.text)
+'
+
+4. Untuk melihat log meet-bot:
+docker logs meet-bot --tail 100 

@@ -21,7 +21,9 @@
       "@/*": ["src/*"]
     },
     "types": ["react", "react-dom", "node"],
-    "jsxImportSource": "react"
+    "jsxImportSource": "react",
+    "allowImportingTsExtensions": true,
+    "noImplicitAny": false
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]

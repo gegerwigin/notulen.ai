@@ -4,12 +4,12 @@ import { MeetingBotInterface, MeetingBotCredentials, MeetingJoinOptions, Meeting
  * Implementation of MeetingBotInterface for Zoom using server-side approach
  */
 export class ZoomBot implements MeetingBotInterface {
-    private apiEndpoint: string;
-    private apiKey: string;
-    private initialized: boolean = false;
+  private apiEndpoint: string;
+  private apiKey: string;
+  private initialized: boolean = false;
     private credentials: MeetingBotCredentials;
-    private activeSessions: Map<string, MeetingSession> = new Map();
-    private pollingIntervals: Map<string, NodeJS.Timeout> = new Map();
+  private activeSessions: Map<string, MeetingSession> = new Map();
+  private pollingIntervals: Map<string, NodeJS.Timeout> = new Map();
     private currentSession: MeetingSession | null = null;
 
     constructor() {
@@ -23,53 +23,53 @@ export class ZoomBot implements MeetingBotInterface {
      */
     supportsUrl(url: string): boolean {
         return url.includes('zoom.us') || url.includes('zoomgov.com');
-    }
-
-    /**
-     * Get the platform name
-     */
-    getPlatformName(): string {
-        return 'Zoom';
-    }
-
-    /**
+  }
+  
+  /**
+   * Get the platform name
+   */
+  getPlatformName(): string {
+    return 'Zoom';
+  }
+  
+  /**
      * Initialize the bot with credentials
-     */
-    async initialize(credentials: MeetingBotCredentials): Promise<void> {
+   */
+  async initialize(credentials: MeetingBotCredentials): Promise<void> {
         this.credentials = credentials;
         if (!credentials.token) {
             throw new Error('Zoom token is required');
         }
         this.initialized = true;
-    }
-
-    /**
-     * Check if the bot is initialized
-     */
-    isInitialized(): boolean {
-        return this.initialized;
-    }
-
-    /**
-     * Join a Zoom meeting
-     */
+  }
+  
+  /**
+   * Check if the bot is initialized
+   */
+  isInitialized(): boolean {
+    return this.initialized;
+  }
+  
+  /**
+   * Join a Zoom meeting
+   */
     async joinMeeting(url: string, options: MeetingJoinOptions = {}): Promise<MeetingSession> {
-        if (!this.initialized) {
+    if (!this.initialized) {
             throw new Error('Bot not initialized');
         }
 
         if (!this.supportsUrl(url)) {
             throw new Error('Invalid Zoom URL');
-        }
-
-        try {
+    }
+    
+    try {
             // Extract meeting ID from URL
             const meetingId = this.extractMeetingId(url);
             
             // Join meeting using Zoom API
             const response = await fetch(`${this.apiEndpoint}/meetings/${meetingId}/join`, {
                 method: 'POST',
-                headers: {
+          headers: {
                     'Authorization': `Bearer ${this.credentials.token}`,
                     'Content-Type': 'application/json'
                 },
@@ -84,38 +84,38 @@ export class ZoomBot implements MeetingBotInterface {
                 throw new Error('Failed to join meeting');
             }
 
-            const session: MeetingSession = {
+      const session: MeetingSession = {
                 id: meetingId,
                 platform: this.getPlatformName(),
                 url: url,
-                startTime: new Date(),
+        startTime: new Date(),
                 logs: ['Joined meeting successfully']
             };
 
             this.currentSession = session;
             this.activeSessions.set(meetingId, session);
             this.startStatusPolling(meetingId);
-
-            return session;
-        } catch (error) {
+      
+      return session;
+    } catch (error) {
             throw new Error(`Failed to join meeting: ${error instanceof Error ? error.message : 'Unknown error'}`);
-        }
     }
-
-    /**
+  }
+  
+  /**
      * Leave the meeting
      */
     async leaveMeeting(): Promise<void> {
         if (!this.currentSession) {
             return;
-        }
-
-        try {
+    }
+    
+    try {
             const meetingId = this.currentSession.id;
             
             await fetch(`${this.apiEndpoint}/meetings/${meetingId}/leave`, {
                 method: 'POST',
-                headers: {
+        headers: {
                     'Authorization': `Bearer ${this.credentials.token}`
                 }
             });
@@ -130,12 +130,12 @@ export class ZoomBot implements MeetingBotInterface {
             // Remove from active sessions
             this.activeSessions.delete(meetingId);
             this.currentSession = null;
-        } catch (error) {
+    } catch (error) {
             throw new Error(`Failed to leave meeting: ${error instanceof Error ? error.message : 'Unknown error'}`);
-        }
     }
-
-    /**
+  }
+  
+  /**
      * Get the current status of the meeting
      */
     async getStatus(): Promise<MeetingStatus> {
@@ -143,11 +143,11 @@ export class ZoomBot implements MeetingBotInterface {
             return {
                 status: 'disconnected'
             };
-        }
-
-        try {
+    }
+    
+    try {
             const response = await fetch(`${this.apiEndpoint}/meetings/${this.currentSession.id}/status`, {
-                headers: {
+        headers: {
                     'Authorization': `Bearer ${this.credentials.token}`
                 }
             });
@@ -169,15 +169,15 @@ export class ZoomBot implements MeetingBotInterface {
                 transcriptionStatus: data.transcription_status,
                 logs: this.currentSession.logs
             };
-        } catch (error) {
+    } catch (error) {
             return {
                 status: 'error',
                 error: error instanceof Error ? error.message : 'Unknown error'
             };
-        }
     }
-
-    /**
+  }
+  
+  /**
      * Extract meeting ID from Zoom URL
      */
     private extractMeetingId(url: string): string {
@@ -186,11 +186,11 @@ export class ZoomBot implements MeetingBotInterface {
             throw new Error('Invalid Zoom meeting URL');
         }
         return match[1];
-    }
-
-    /**
-     * Start polling for session status
-     */
+  }
+  
+  /**
+   * Start polling for session status
+   */
     private startStatusPolling(meetingId: string) {
         const interval = setInterval(async () => {
             try {
@@ -198,12 +198,12 @@ export class ZoomBot implements MeetingBotInterface {
                 const session = this.activeSessions.get(meetingId);
                 if (session) {
                     session.logs.push(`Status update: ${JSON.stringify(status)}`);
-                }
-            } catch (error) {
+        }
+      } catch (error) {
                 console.error('Status polling error:', error);
             }
         }, 30000); // Poll every 30 seconds
 
         this.pollingIntervals.set(meetingId, interval);
-    }
+  }
 }

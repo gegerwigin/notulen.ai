@@ -1,7 +1,7 @@
 import { 
   MeetingBotInterface, 
   MeetingJoinOptions, 
-  MeetingSession,
+  MeetingSession, 
   MeetingStatus 
 } from './MeetingBotInterface';
 import { GoogleMeetBot } from './platforms/GoogleMeetBot';
@@ -159,7 +159,7 @@ export class MeetingBotService {
           'Authorization': `Bearer ${this.apiKey}`
         }
       });
-
+      
       if (!response.success) {
         throw new Error(response.error || 'Gagal check status meeting');
       }
@@ -187,11 +187,11 @@ export class MeetingBotService {
           }
         }
       );
-
+      
       if (!response.success) {
         throw new Error(response.error || 'Gagal stop session meeting');
       }
-
+      
       // Hapus session dari daftar aktif
       this.activeSessions.delete(sessionId);
       console.log('Berhasil stop session meeting:', sessionId);

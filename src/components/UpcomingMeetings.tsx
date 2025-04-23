@@ -176,22 +176,13 @@ const UpcomingMeetings = () => {
 
   const handleJoinWithBot = async (meetingUrl: string, meetingTitle: string) => {
     try {
-      const botService = new MeetingBotService({
-        serverUrl: process.env.REACT_APP_BOT_API_ENDPOINT || 'http://localhost:3001',
-        apiKey: process.env.REACT_APP_BOT_API_KEY || ''
-      });
+      // Create MeetingBotService instance without params as per constructor
+      const botService = new MeetingBotService();
 
       toast.loading('Connecting bot to meeting...', { id: 'bot-join' });
       
-      const { sessionId } = await botService.joinMeeting(meetingUrl, {
-        captureAudio: true,
-        displayName: `Notulen.ai Bot - ${meetingTitle}`,
-        enableCamera: false,
-        enableMicrophone: false,
-        onTranscriptionUpdate: (text: string) => {
-          console.log('Transcription update:', text);
-        }
-      });
+      // Call with empty options object to match the expected function signature
+      const { sessionId } = await botService.joinMeeting(meetingUrl, {});
       
       // Poll for status
       const checkStatus = async () => {
@@ -203,19 +194,22 @@ const UpcomingMeetings = () => {
             return;
           }
           
-          if (status.status === 'recording') {
-            toast.success('Bot is now recording the meeting', { id: 'bot-join' });
+          // Check for known valid status values
+          if (status.status === 'connected') {
+            toast.success('Bot is now connected to the meeting', { id: 'bot-join' });
             return;
           }
           
-          // Continue polling if still connecting or joining
+          // Continue polling if still connecting
           setTimeout(checkStatus, 3000);
         } catch (error) {
           toast.error('Failed to check bot status', { id: 'bot-join' });
         }
       };
 
+      // Start polling
       checkStatus();
+      
     } catch (error) {
       toast.error('Failed to join meeting with bot', { id: 'bot-join' });
       console.error('Bot join error:', error);

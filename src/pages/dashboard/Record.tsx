@@ -6,61 +6,54 @@ import { db } from '../../firebase';
 import { v4 as uuidv4 } from 'uuid';
 import { generateMeetingSummary } from '../../services/deepseekAPI';
 import { correctTranscription } from '../../services/transcriptionCorrectionService';
+import { UserCircle, ArrowRight, Save, PenLine, FileText, TimerReset } from 'lucide-react';
 
-// Define the SpeechRecognition type
+interface SpeechRecognitionResult {
+  readonly transcript: string;
+  readonly confidence: number;
+  readonly isFinal?: boolean;
+}
+
+interface SpeechRecognitionResultList {
+  readonly length: number;
+  readonly item: (index: number) => SpeechRecognitionResult;
+  [index: number]: {
+    readonly isFinal: boolean;
+    readonly length: number;
+    readonly item: (index: number) => SpeechRecognitionResult;
+    [index: number]: SpeechRecognitionResult;
+  };
+}
+
+interface SpeechRecognitionEvent extends Event {
+  readonly resultIndex: number;
+  readonly results: SpeechRecognitionResultList;
+}
+
+interface SpeechRecognitionErrorEvent extends Event {
+  readonly error: string;
+  readonly message?: string;
+}
+
 interface SpeechRecognition extends EventTarget {
   continuous: boolean;
   interimResults: boolean;
   lang: string;
   maxAlternatives: number;
-  onaudioend: ((this: SpeechRecognition, ev: Event) => any) | null;
-  onaudiostart: ((this: SpeechRecognition, ev: Event) => any) | null;
-  onend: ((this: SpeechRecognition, ev: Event) => any) | null;
-  onerror: ((this: SpeechRecognition, ev: SpeechRecognitionErrorEvent) => any) | null;
-  onnomatch: ((this: SpeechRecognition, ev: SpeechRecognitionEvent) => any) | null;
-  onresult: ((this: SpeechRecognition, ev: SpeechRecognitionEvent) => any) | null;
-  onsoundend: ((this: SpeechRecognition, ev: Event) => any) | null;
-  onsoundstart: ((this: SpeechRecognition, ev: Event) => any) | null;
-  onspeechend: ((this: SpeechRecognition, ev: Event) => any) | null;
-  onspeechstart: ((this: SpeechRecognition, ev: Event) => any) | null;
-  onstart: ((this: SpeechRecognition, ev: Event) => any) | null;
+  onresult: ((this: SpeechRecognition, ev: SpeechRecognitionEvent) => void) | null;
+  onerror: ((this: SpeechRecognition, ev: SpeechRecognitionErrorEvent) => void) | null;
+  onend: ((this: SpeechRecognition, ev: Event) => void) | null;
   start(): void;
   stop(): void;
   abort(): void;
 }
 
-interface SpeechRecognitionErrorEvent extends Event {
-  error: string;
-  message?: string;
-}
-
-interface SpeechRecognitionEvent extends Event {
-  resultIndex: number;
-  results: SpeechRecognitionResultList;
-}
-
-interface SpeechRecognitionResultList {
-  length: number;
-  item(index: number): SpeechRecognitionResult;
-  [index: number]: SpeechRecognitionResult;
-}
-
-interface SpeechRecognitionResult {
-  length: number;
-  item(index: number): SpeechRecognitionAlternative;
-  [index: number]: SpeechRecognitionAlternative;
-  isFinal?: boolean;
-}
-
-interface SpeechRecognitionAlternative {
-  transcript: string;
-  confidence: number;
-}
+type SpeechRecognitionCtor = new () => SpeechRecognition;
 
 declare global {
   interface Window {
-    SpeechRecognition: new () => SpeechRecognition;
-    webkitSpeechRecognition: new () => SpeechRecognition;
+    SpeechRecognition?: SpeechRecognitionCtor;
+    webkitSpeechRecognition?: SpeechRecognitionCtor;
   }
 }
 
@@ -93,7 +86,7 @@ const Record = () => {
   const [recordingComplete, setRecordingComplete] = useState(false);
 
   const { currentUser } = useAuth();
-  const recognitionRef = useRef<SpeechRecognition | null>(null);
+  const recognitionRef = useRef<any>(null);
   const isRecordingRef = useRef(false);
   const lastSpeechRef = useRef<number>(Date.now());
 
@@ -139,17 +132,22 @@ const Record = () => {
 
   const initializeRecognition = () => {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+      return null;
+    }
+    
     const recognition = new SpeechRecognition();
-
+    
     recognition.continuous = true;
     recognition.interimResults = true;
     recognition.lang = selectedLanguage;
 
-    recognition.onstart = () => {
+    // @ts-ignore - Browser API menggunakan onstart meskipun tidak didefinisikan dalam interface
+    recognition.onstart = function() {
       console.log('Speech recognition started');
     };
 
-    recognition.onresult = (event: SpeechRecognitionEvent) => {
+    recognition.onresult = function(event) {
       let interimTranscript = '';
       let finalTranscript = '';
 
@@ -179,12 +177,12 @@ const Record = () => {
       setInterimTranscript(interimTranscript);
     };
 
-    recognition.onerror = (event: SpeechRecognitionErrorEvent) => {
+    recognition.onerror = function(event) {
       console.error('Speech recognition error:', event.error);
       setError(`Error: ${event.error}`);
     };
 
-    recognition.onend = () => {
+    recognition.onend = function() {
       console.log('Speech recognition ended');
       if (isRecordingRef.current) {
         recognition.start();
@@ -205,7 +203,12 @@ const Record = () => {
       const newMomId = uuidv4();
       setMomId(newMomId);
 
-      recognitionRef.current = initializeRecognition();
+      const recognition = initializeRecognition();
+      if (!recognition) {
+        throw new Error('Failed to initialize speech recognition');
+      }
+      
+      recognitionRef.current = recognition;
       recognitionRef.current.start();
       isRecordingRef.current = true;
       setIsRecording(true);

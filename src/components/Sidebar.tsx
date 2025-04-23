@@ -5,6 +5,15 @@ import clsx from 'clsx';
 import { useAuth } from '../contexts/AuthContext';
 import UpcomingMeetings from './UpcomingMeetings';
 
+// Deklarasi untuk JSX.IntrinsicElements
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      [elemName: string]: any;
+    }
+  }
+}
+
 export default function Sidebar() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -196,7 +205,7 @@ export default function Sidebar() {
             
             {/* Profile Dropdown Menu */}
             {profileMenuOpen && (
-              <div className="absolute left-0 right-0 mt-2 bg-white rounded-xl shadow-lg z-10 border border-gray-100">
+              <div ref={profileMenuRef} className="absolute left-0 right-0 mt-2 bg-white rounded-xl shadow-lg z-10 border border-gray-100">
                 <div className="py-2">
                   <Link 
                     to="/dashboard/upgrade" 

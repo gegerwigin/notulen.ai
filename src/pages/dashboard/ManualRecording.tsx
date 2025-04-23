@@ -64,8 +64,8 @@ type SpeechRecognitionCtor = new () => SpeechRecognition;
 
 declare global {
   interface Window {
-    SpeechRecognition: SpeechRecognitionCtor;
-    webkitSpeechRecognition: SpeechRecognitionCtor;
+    SpeechRecognition?: SpeechRecognitionCtor;
+    webkitSpeechRecognition?: SpeechRecognitionCtor;
   }
 }
 

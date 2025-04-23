@@ -1,0 +1,57 @@
+version: '3'
+
+services:
+  # Service browserless/chrome
+  chrome:
+    image: browserless/chrome:latest
+    container_name: chrome-headless
+    ports:
+      - "3001:3000"
+    environment:
+      - CONNECTION_TIMEOUT=300000
+      - KEEP_ALIVE=true
+      - PREBOOT_CHROME=true
+      - CHROME_REFRESH_TIME=3600000
+      - MAX_CONCURRENT_SESSIONS=10
+      - DEFAULT_STEALTH=true
+      - DEFAULT_BLOCK_ADS=true
+      - ENABLE_CORS=true
+      - WORKSPACE_DELETE_EXPIRED=true
+      - WORKSPACE_EXPIRE_DAYS=1
+      - TOKEN=
+      - FUNCTION_ENABLE_INCOGNITO_MODE=true
+      - ENABLE_DEBUGGER=true
+      - CHROME_STABLE_LAUNCH_FLAGS=--disable-gpu,--no-sandbox,--disable-web-security,--disable-features=IsolateOrigins,site-per-process,--disable-dev-shm-usage
+    restart: always
+    networks:
+      bot-network:
+        ipv4_address: 172.27.0.2
+
+  # Service meet-bot
+  meet-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile.alt
+    container_name: meet-bot
+    ports:
+      - "3002:3002"
+    depends_on:
+      - chrome
+    restart: unless-stopped
+    volumes:
+      - ./logs:/app/logs
+    environment:
+      - NODE_ENV=production
+      - CHROME_HOST=chrome
+      - CHROME_PORT=3000
+      - CHROME_WS_ENDPOINT=ws://chrome:3000
+    networks:
+      bot-network:
+        ipv4_address: 172.27.0.3
+
+networks:
+  bot-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.27.0.0/16 

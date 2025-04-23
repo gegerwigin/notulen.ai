@@ -1,0 +1,213 @@
+const puppeteer = require('puppeteer');
+const WebSocket = require('ws');
+
+class GoogleMeetBot {
+    constructor() {
+        this.browser = null;
+        this.page = null;
+    }
+
+    async initialize() {
+        try {
+            console.log('Menginisialisasi bot dalam container Docker...');
+            
+            // Connect to browserless service (chrome-headless)
+            this.browser = await puppeteer.connect({
+                browserWSEndpoint: 'ws://chrome-headless:3000',
+                defaultViewport: {
+                    width: 1280,
+                    height: 720
+                }
+            });
+            
+            console.log('Terhubung ke browserless service berhasil');
+            this.page = await this.browser.newPage();
+            console.log('Halaman berhasil dibuat');
+            
+            await this.page.setUserAgent('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36');
+            
+            console.log('Bot berhasil diinisialisasi');
+            return true;
+        } catch (error) {
+            console.error('Gagal menginisialisasi bot:', error);
+            throw error;
+        }
+    }
+
+    async delay(ms) {
+        console.log(`Menunggu ${ms}ms...`);
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async joinMeeting(meetingUrl) {
+        try {
+            console.log(`Bersiap bergabung meeting: ${meetingUrl}`);
+            
+            try {
+                console.log('Membuka Google homepage terlebih dahulu...');
+                await this.page.goto('https://google.com', { 
+                    waitUntil: 'networkidle2', 
+                    timeout: 30000 
+                });
+                console.log('Google homepage berhasil dimuat');
+            } catch (e) {
+                console.error('Gagal memuat Google homepage:', e.message);
+            }
+            
+            await this.delay(2000);
+            
+            console.log(`Menuju URL meeting: ${meetingUrl}`);
+            await this.page.goto(meetingUrl, { 
+                waitUntil: 'domcontentloaded', 
+                timeout: 60000 
+            });
+            console.log('Halaman meeting berhasil dimuat');
+            
+            await this.delay(5000);
+            
+            // Simpel check
+            const title = await this.page.title();
+            console.log('Judul halaman:', title);
+            
+            // Coba klik tombol
+            const joinButtons = [
+                'button[jsname="Qx7uuf"]',
+                '[aria-label="Join now"]',
+                '[aria-label="Ask to join"]',
+                '[data-mdc-dialog-action="join"]',
+                'button:contains("Join now")',
+                'button:contains("Ask to join")'
+            ];
+            
+            let joined = false;
+            for (const selector of joinButtons) {
+                try {
+                    console.log(`Mencari tombol: ${selector}`);
+                    
+                    // Periksa dulu apakah elemen ada
+                    const buttonExists = await this.page.evaluate((sel) => {
+                        return document.querySelector(sel) !== null;
+                    }, selector);
+                    
+                    if (buttonExists) {
+                        console.log(`Menemukan tombol: ${selector}, mengklik...`);
+                        await this.page.click(selector);
+                        console.log(`Berhasil klik tombol: ${selector}`);
+                        joined = true;
+                        break;
+                    }
+                } catch (e) {
+                    console.log(`Error dengan tombol ${selector}:`, e.message);
+                }
+            }
+            
+            if (!joined) {
+                console.log('Tidak dapat menemukan tombol join, mencari tombol apapun...');
+                try {
+                    const buttons = await this.page.$$('button');
+                    console.log(`Menemukan ${buttons.length} tombol di halaman`);
+                    
+                    for (let i = 0; i < buttons.length; i++) {
+                        try {
+                            const text = await this.page.evaluate(el => el.textContent, buttons[i]);
+                            console.log(`Teks tombol: "${text}"`);
+                            if (text.includes('Join') || text.includes('Ask')) {
+                                console.log(`Mengklik tombol dengan teks: "${text}"`);
+                                await buttons[i].click();
+                                joined = true;
+                                break;
+                            }
+                        } catch (e) {
+                            console.log(`Error memeriksa tombol ${i}:`, e.message);
+                        }
+                    }
+                } catch (e) {
+                    console.log('Error saat mencari semua tombol:', e.message);
+                }
+            }
+            
+            if (joined) {
+                console.log('Berhasil mengklik tombol join');
+                return true;
+            } else {
+                console.log('Gagal bergabung meeting - tidak dapat menemukan atau mengklik tombol join');
+                return false;
+            }
+        } catch (error) {
+            console.error('Gagal bergabung meeting:', error);
+            return false;
+        }
+    }
+
+    async leaveMeeting() {
+        try {
+            if (this.page) {
+                await this.page.close();
+                console.log('Halaman ditutup');
+            }
+            if (this.browser) {
+                await this.browser.disconnect();
+                console.log('Terputus dari browser');
+            }
+            console.log('Keluar dari meeting dan menutup browser');
+            return true;
+        } catch (error) {
+            console.error('Error saat keluar meeting:', error);
+            return false;
+        }
+    }
+}
+
+async function main() {
+    let meetBot = null;
+    
+    try {
+        console.log('Memulai bot Google Meet...');
+        meetBot = new GoogleMeetBot();
+        await meetBot.initialize();
+        
+        // Handle process termination
+        process.on('SIGINT', async () => {
+            console.log('Menerima SIGINT. Membersihkan...');
+            if (meetBot) {
+                await meetBot.leaveMeeting();
+            }
+            process.exit(0);
+        });
+
+        // Listen for join meeting requests
+        process.on('message', async (message) => {
+            if (message.type === 'join') {
+                try {
+                    console.log('Bergabung meeting:', message.meetingUrl);
+                    const success = await meetBot.joinMeeting(message.meetingUrl);
+                    
+                    if (process.send) {
+                        process.send({ 
+                            type: 'status', 
+                            success: success, 
+                            message: success ? 'Berhasil bergabung meeting' : 'Gagal bergabung meeting'
+                        });
+                    }
+                } catch (error) {
+                    console.error('Error saat bergabung meeting:', error);
+                    if (process.send) {
+                        process.send({ 
+                            type: 'status', 
+                            success: false, 
+                            message: error.message 
+                        });
+                    }
+                }
+            }
+        });
+
+        console.log('Bot siap menerima perintah');
+        
+    } catch (error) {
+        console.error('Error dalam fungsi main:', error);
+        process.exit(1);
+    }
+}
+
+main(); 

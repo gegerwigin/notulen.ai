@@ -142,13 +142,13 @@ async function joinMeet(driver) {
 
         // Save page source for debugging
         const pageSource = await driver.getPageSource();
-        fs.writeFileSync('page_source.html', pageSource);
-        log('Saved page source');
+        fs.writeFileSync('page_source_1.html', pageSource);
+        log('Saved initial page source');
 
         // Save screenshot for debugging
         const screenshot = await driver.takeScreenshot();
-        fs.writeFileSync('pre-join.png', screenshot, 'base64');
-        log('Saved pre-join screenshot');
+        fs.writeFileSync('initial_page_load.png', screenshot, 'base64');
+        log('Saved initial page load screenshot');
 
         // Check if login is needed
         const loginButtonXPath = "//a[contains(@href, 'accounts.google.com')]";
@@ -159,26 +159,69 @@ async function joinMeet(driver) {
             await driver.get(MEET_LINK);
             log('Returned to meeting URL after login');
             await sleep(5000);
+            
+            // Save post-login screenshot
+            const loginScreenshot = await driver.takeScreenshot();
+            fs.writeFileSync('login_result.png', loginScreenshot, 'base64');
         }
 
-        // Disable camera and microphone using keyboard shortcuts
-        const actions = driver.actions({bridge: true});
-        await actions.keyDown(Key.CONTROL).sendKeys('e').perform(); // Disable camera
-        await sleep(1000);
-        await actions.keyDown(Key.CONTROL).sendKeys('d').perform(); // Disable microphone
-        await sleep(1000);
-        log('Disabled camera and microphone');
+        // Tunggu halaman loading selesai
+        await driver.wait(async () => {
+            const readyState = await driver.executeScript('return document.readyState');
+            return readyState === 'complete';
+        }, 30000, 'Halaman tidak selesai loading');
+        
+        log('Page finished loading');
 
+        // Coba matikan kamera dan mikrofon menggunakan JavaScript
+        await driver.executeScript(`
+            try {
+                // Matikan kamera
+                const cameraButton = document.querySelector('[data-is-muted="false"][data-tooltip="Turn off camera (⌘+e)"]');
+                if (cameraButton) {
+                    cameraButton.click();
+                    console.log('Camera disabled via JavaScript');
+                }
+                
+                // Matikan mikrofon
+                const micButton = document.querySelector('[data-is-muted="false"][data-tooltip="Turn off microphone (⌘+d)"]');
+                if (micButton) {
+                    micButton.click();
+                    console.log('Microphone disabled via JavaScript');
+                }
+            } catch (e) {
+                console.error('Error disabling media:', e);
+            }
+        `);
+        
+        // Backup: gunakan keyboard shortcuts
+        try {
+            const actions = driver.actions({bridge: true});
+            await actions.keyDown(Key.CONTROL).sendKeys('e').perform(); // Disable camera
+            await sleep(1000);
+            await actions.keyDown(Key.CONTROL).sendKeys('d').perform(); // Disable microphone
+            await sleep(1000);
+            log('Attempted to disable camera and microphone with keyboard shortcuts');
+        } catch (mediaError) {
+            log('Error disabling media with keyboard shortcuts', mediaError);
+        }
+
+        // Approach 1: Coba metode klik tombol join yang lebih robust
         let joined = false;
         const joinButtonSelectors = [
-            // Original selectors
+            // Selector prioritas tinggi (text)
+            "//*[contains(text(), 'Join now') or contains(text(), 'Ask to join')]",
+            
+            // Selector untuk Google Meet baru
+            "//button[contains(@class, 'VfPpkd-LgbsSe') and .//span[contains(text(), 'Join') or contains(text(), 'Ask')]]",
+            
+            // Selector lainnya
             "//span[contains(text(), 'Join now')]",
             "//span[contains(text(), 'Ask to join')]",
             "//button[contains(@aria-label, 'Join now')]",
             "//button[contains(@aria-label, 'Ask to join')]",
             "//div[contains(@role, 'button')]/span[contains(text(), 'Join now')]",
             "//div[contains(@role, 'button')]/span[contains(text(), 'Ask to join')]",
-            // New selectors
             "//div[@role='button']//span[text()='Join now']",
             "//div[@role='button']//span[text()='Ask to join']",
             "//button[contains(@data-id, 'join')]",
@@ -186,84 +229,163 @@ async function joinMeet(driver) {
             "//div[@role='button'][contains(., 'Join')]",
             "//div[@role='button'][contains(., 'Ask')]"
         ];
-
-        for (const selector of joinButtonSelectors) {
-            try {
-                log(`Trying join button selector: ${selector}`);
-                // Try to find the element first
-                const elements = await driver.findElements(By.xpath(selector));
-                if (elements.length > 0) {
-                    log(`Found ${elements.length} elements matching selector: ${selector}`);
-                    // Try to get element properties
-                    for (let i = 0; i < elements.length; i++) {
-                        const element = elements[i];
-                        const isDisplayed = await element.isDisplayed();
-                        const isEnabled = await element.isEnabled();
-                        const text = await element.getText();
-                        log(`Element ${i + 1}: displayed=${isDisplayed}, enabled=${isEnabled}, text="${text}"`);
+        
+        // Tunggu halaman bereaksi setelah login
+        await sleep(3000);
+        let attemptCount = 0;
+        const maxAttempts = 5;
+        
+        while (!joined && attemptCount < maxAttempts) {
+            attemptCount++;
+            log(`Join button search attempt ${attemptCount}/${maxAttempts}`);
+            
+            // Save snapshot untuk debugging
+            const pageSource = await driver.getPageSource();
+            fs.writeFileSync(`page_source_${attemptCount}.html`, pageSource);
+            
+            const snapshot = await driver.takeScreenshot();
+            fs.writeFileSync(`join_attempt_${attemptCount}.png`, snapshot, 'base64');
+            
+            for (const selector of joinButtonSelectors) {
+                try {
+                    log(`Trying join button selector: ${selector}`);
+                    // Tunggu sebentar untuk element
+                    try {
+                        await driver.wait(until.elementLocated(By.xpath(selector)), 3000);
+                    } catch (timeoutErr) {
+                        log(`Timeout waiting for selector: ${selector}`);
+                        continue;
+                    }
+                    
+                    // Coba temukan element
+                    const elements = await driver.findElements(By.xpath(selector));
+                    if (elements.length > 0) {
+                        log(`Found ${elements.length} elements matching selector: ${selector}`);
                         
-                        if (isDisplayed && isEnabled) {
-                            // Take screenshot before clicking
-                            const beforeClick = await driver.takeScreenshot();
-                            fs.writeFileSync(`join_button_attempt_${i + 1}.png`, beforeClick, 'base64');
-                            
-                            // Try to click using different methods
+                        // Coba klik elemen yang terlihat dan enabled
+                        for (let i = 0; i < elements.length; i++) {
+                            const element = elements[i];
                             try {
-                                await driver.executeScript("arguments[0].click();", element);
-                                joined = true;
-                                log(`Successfully clicked element ${i + 1} using JavaScript`);
-                            } catch (clickError) {
-                                try {
-                                    await element.click();
-                                    joined = true;
-                                    log(`Successfully clicked element ${i + 1} using WebDriver click`);
-                                } catch (directClickError) {
-                                    log(`Failed to click element ${i + 1}: ${directClickError.message}`);
-                                    continue;
+                                const isDisplayed = await element.isDisplayed();
+                                const isEnabled = await element.isEnabled();
+                                const text = await element.getText();
+                                
+                                log(`Element ${i + 1}: displayed=${isDisplayed}, enabled=${isEnabled}, text="${text}"`);
+                                
+                                if (isDisplayed && isEnabled) {
+                                    // Scroll to element
+                                    await driver.executeScript("arguments[0].scrollIntoView(true);", element);
+                                    await sleep(500);
+                                    
+                                    // Take screenshot before clicking
+                                    const beforeClick = await driver.takeScreenshot();
+                                    fs.writeFileSync(`join_button_attempt_${i + 1}.png`, beforeClick, 'base64');
+                                    
+                                    // Try different click methods
+                                    try {
+                                        // Method 1: JavaScript click
+                                        await driver.executeScript("arguments[0].click();", element);
+                                        joined = true;
+                                        log(`Successfully clicked element ${i + 1} using JavaScript`);
+                                    } catch (clickError) {
+                                        log(`JavaScript click failed: ${clickError.message}, trying WebDriver click`);
+                                        try {
+                                            // Method 2: WebDriver click
+                                            await element.click();
+                                            joined = true;
+                                            log(`Successfully clicked element ${i + 1} using WebDriver click`);
+                                        } catch (directClickError) {
+                                            log(`Failed direct click: ${directClickError.message}, trying Actions click`);
+                                            try {
+                                                // Method 3: Actions click
+                                                const actions = driver.actions({bridge: true});
+                                                await actions.move({origin: element}).click().perform();
+                                                joined = true;
+                                                log(`Successfully clicked element ${i + 1} using Actions click`);
+                                            } catch (actionsError) {
+                                                log(`Failed to click with all methods for element ${i + 1}: ${actionsError.message}`);
+                                            }
+                                        }
+                                    }
+                                    
+                                    if (joined) {
+                                        // Save screenshot after clicking
+                                        await sleep(1000);
+                                        const afterClick = await driver.takeScreenshot();
+                                        fs.writeFileSync('post-join.png', afterClick, 'base64');
+                                        break;
+                                    }
                                 }
-                            }
-                            
-                            if (joined) {
-                                // Save screenshot after clicking
-                                const afterClick = await driver.takeScreenshot();
-                                fs.writeFileSync('post-join.png', afterClick, 'base64');
-                                break;
+                            } catch (elementError) {
+                                log(`Error checking element ${i + 1}: ${elementError.message}`);
                             }
                         }
+                    } else {
+                        log(`No elements found for selector: ${selector}`);
                     }
-                } else {
-                    log(`No elements found for selector: ${selector}`);
+                    
+                    if (joined) break;
+                } catch (error) {
+                    log(`Error with selector ${selector}: ${error.message}`);
                 }
-                
-                if (joined) break;
-            } catch (error) {
-                log(`Error with selector ${selector}: ${error.message}`);
-                continue;
             }
+            
+            if (joined) break;
+            
+            // Wait before next attempt
+            await sleep(2000);
         }
 
+        // Approach 2: JavaScript injection as backup
         if (!joined) {
             log('Failed to find join button with standard selectors, trying JavaScript injection');
-            const pageSource = await driver.getPageSource();
-            fs.writeFileSync('page_source_before_js.html', pageSource);
+            const finalPageSource = await driver.getPageSource();
+            fs.writeFileSync('page_source_before_js.html', finalPageSource);
             
             const joinSuccess = await driver.executeScript(`
                 function findJoinButton() {
+                    // Get all buttons and div elements with role="button"
                     const buttons = Array.from(document.querySelectorAll('button, div[role="button"]'));
                     console.log('Found buttons:', buttons.length);
-                    return buttons.find(button => {
+                    
+                    // Look for any element containing "join" or "ask to join" text
+                    const joinButton = buttons.find(button => {
                         const text = (button.textContent || '').toLowerCase();
                         const hasJoinText = text.includes('join now') || text.includes('ask to join');
-                        console.log('Button text:', text, 'Has join text:', hasJoinText);
                         return hasJoinText;
                     });
+                    
+                    return joinButton;
                 }
+                
+                // First attempt - looking for any join button
                 const joinButton = findJoinButton();
                 if (joinButton) {
                     console.log('Found join button:', joinButton);
                     joinButton.click();
                     return true;
                 }
+                
+                // Second attempt - try to find DOM elements by appearance/position
+                try {
+                    // Look for the most prominent button in the pre-meeting UI
+                    const allButtons = Array.from(document.querySelectorAll('button'));
+                    const prominentButton = allButtons.find(btn => {
+                        const styles = window.getComputedStyle(btn);
+                        const isLarge = parseInt(styles.width) > 80;
+                        const isVisible = styles.display !== 'none' && styles.visibility !== 'hidden';
+                        return isLarge && isVisible;
+                    });
+                    
+                    if (prominentButton) {
+                        console.log('Found prominent button:', prominentButton);
+                        prominentButton.click();
+                        return true;
+                    }
+                } catch (e) {
+                    console.error('Error in finding buttons by appearance:', e);
+                }
+                
                 console.log('No join button found');
                 return false;
             `);
@@ -274,12 +396,19 @@ async function joinMeet(driver) {
             } else {
                 const finalPageSource = await driver.getPageSource();
                 fs.writeFileSync('page_source_after_js.html', finalPageSource);
-                throw new Error('Could not find join button');
+                throw new Error('Could not find join button after all attempts');
             }
         }
 
         await sleep(5000);
         log('Join attempt completed');
+        
+        // Verify we're actually in the meeting
+        const currentUrl = await driver.getCurrentUrl();
+        log(`Current URL after join: ${currentUrl}`);
+        
+        const finalScreenshot = await driver.takeScreenshot();
+        fs.writeFileSync('final_state.png', finalScreenshot, 'base64');
 
         // Keep session alive and monitor meeting status
         while (true) {
