@@ -1,18 +1,12 @@
 {
-  "name": "meet-bot",
+  "name": "notula-bot",
   "version": "1.0.0",
-  "description": "Google Meet Bot with Docker and Browserless Chrome",
-  "main": "docker-server.js",
+  "description": "Bot meeting untuk Notulen.AI",
+  "main": "server-api-lightsail.js",
   "scripts": {
-    "start": "node docker-server.js",
-    "start:dev": "NODE_ENV=development node docker-server.js",
-    "start:prod": "NODE_ENV=production node docker-server.js",
-    "docker:build": "docker-compose build",
-    "docker:up": "docker-compose up -d",
-    "docker:down": "docker-compose down",
-    "docker:logs": "docker-compose logs -f",
-    "docker:restart": "docker-compose restart",
-    "clean": "rm -rf logs/*.log"
+    "start": "node server-api-lightsail.js",
+    "dev": "nodemon server-api-lightsail.js",
+    "setup": "bash run-bot.sh"
   },
   "keywords": [
     "google-meet",
@@ -24,22 +18,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@mui/material": "^7.0.2",
-    "@react-oauth/google": "^0.12.1",
-    "axios": "^1.8.4",
-    "body-parser": "^1.20.3",
-    "clsx": "^2.1.1",
+    "body-parser": "^1.20.2",
     "cors": "^2.8.5",
-    "date-fns": "^4.1.0",
-    "dotenv": "^16.4.5",
-    "express": "^4.21.2",
-    "firebase": "^11.6.0",
-    "lucide-react": "^0.503.0",
-    "puppeteer": "^22.15.0",
-    "react-hot-toast": "^2.5.2",
-    "react-icons": "^5.5.0",
-    "react-router-dom": "^7.5.1",
-    "winston": "^3.17.0"
+    "express": "^4.18.2",
+    "puppeteer": "^22.3.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
   },
   "devDependencies": {
     "@types/axios": "^0.9.36",
@@ -48,7 +32,10 @@
     "@types/react-dom": "^19.1.2",
     "@types/react-router-dom": "^5.3.3",
     "@types/uuid": "^10.0.0",
-    "nodemon": "^3.1.0",
+    "nodemon": "^3.0.3",
     "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
